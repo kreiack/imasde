@@ -59,6 +59,7 @@ investigacionydesarrollo/
 │   ├── interfaces_visualizacion_adaptativas.md  # Diseño de interfaces
 │   ├── estrategia_paralelismo_hpc.md  # Optimización computacional
 │   ├── marco_validacion_fmvse.md      # Protocolo de validación
+│   ├── simulacion_capacidad_hospitalaria.md # Simulación de red sanitaria
 │   └── docx/                          # Versiones en Word
 └── Formulacion-ID25_v3.docx.md       # Versión original (legacy)
 ```
@@ -165,6 +166,7 @@ Estamos validando con estos casos reales:
 - **[Arquitectura](new/arquitectura_sistema_pigem.md)** → Diseño del sistema
 - **[Simulación](new/modelo_simulacion_hibrida.md)** → Cómo funciona el motor
 - **[Paralelismo](new/estrategia_paralelismo_hpc.md)** → Optimización computacional
+- **[Simulación Hospitalaria](new/simulacion_capacidad_hospitalaria.md)** → Gestión de red sanitaria
 
 ### Para validación
 - **[Marco FMVSE](new/marco_validacion_fmvse.md)** → Protocolo de validación

@@ -525,15 +525,19 @@ Diseñar e implementar dashboards interactivos que se adapten automáticamente a
 
 Desarrollar un protocolo estandarizado para calibración, validación y certificación de sistemas de simulación de evacuación, incluyendo métricas cuantitativas reproducibles, base de datos de referencia con casos validados, y procedimientos de benchmarking que permitan certificar herramientas como "aptas para uso operacional" en contextos de emergencia real.
 
-**OE6: Validar el sistema integral mediante estudios empíricos y casos piloto**
+**OE6: Desarrollar un módulo de Simulación de Capacidad Hospitalaria y Respuesta Médica (SCH-RME)**
+
+Implementar un módulo de Simulación de Eventos Discretos (DES) que modele la red sanitaria regional, incluyendo flujos de pacientes, capacidad de camas (UCI, UTI), disponibilidad de personal y recursos críticos. Este módulo se integrará con PIGEM para recibir la demanda de heridos, optimizar el balanceo de carga inter-hospitalario y reducir la mortalidad evitable en al menos un 25%.
+
+**OE7: Validar el sistema integral mediante estudios empíricos y casos piloto**
 
 Realizar validaciones comprehensivas del ecosistema PIGEM completo en al menos dos ciudades costeras chilenas (Valparaíso y Talcahuano), midiendo indicadores de precisión predictiva (>85%), eficiencia computacional (>40% mejora vs métodos tradicionales), usabilidad (>80 puntos SUS) y confianza en toma de decisiones (>4.0/5.0), mediante comparación controlada con herramientas de referencia internacional.
 
-**OE7: Implementar estrategia de transferencia tecnológica y sostenibilidad**
+**OE8: Implementar estrategia de transferencia tecnológica y sostenibilidad**
 
 Diseñar y ejecutar un modelo de transferencia tecnológica escalable que incluya capacitación diferenciada por perfil de usuario, documentación técnica completa, licenciamiento open source (GPL v3.0), y establecimiento de centros regionales de soporte técnico que garanticen la adopción sostenible en al menos 50 municipalidades de alto riesgo y la expansión regional a 3 países andinos.
 
-**OE8: Generar conocimiento científico-tecnológico transferible**
+**OE9: Generar conocimiento científico-tecnológico transferible**
 
 Contribuir al avance del estado del arte mediante la formalización de metodologías innovadoras en simulación híbrida multiamenaza, publicación de al menos 4 artículos en revistas indexadas de alto impacto, desarrollo de 2 tesis de postgrado, y establecimiento de estándares técnicos nacionales que posicionen a Chile como referente regional en tecnologías de gestión de riesgos.
 
@@ -905,6 +909,12 @@ La PIGEM constituirá un ecosistema tecnológico integrado compuesto por cuatro 
 - Integración con Sistema de Alerta de Emergencia (SAE) nacional
 - Capacidades de comunicación multicanal (SMS, redes sociales, radio)
 - Protocolos automatizados de activación de planes de contingencia
+
+**5. Módulo de Simulación de Respuesta Sanitaria (SCH-RME):**
+- Simulación detallada de la red hospitalaria regional (camas, personal, quirófanos)
+- Modelo predictivo de demanda de pacientes basado en los resultados de la evacuación
+- Algoritmos de optimización para el balanceo de carga de pacientes entre hospitales
+- Soporte a la decisión para la gestión de recursos médicos críticos en tiempo real
 
 **Mecanismos de Funcionamiento:**
 
