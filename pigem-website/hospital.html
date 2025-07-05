@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Hospitalaria - PIGEM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">PIGEM</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="problema.html">Problema</a></li>
+                <li class="dropdown">
+                    <a href="nuestra-solucion.html" class="dropdown-toggle">Solución <i data-lucide="chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="arquitectura.html">Arquitectura del Sistema</a></li>
+                        <li><a href="simulacion-hibrida.html">Simulación Híbrida ABM-DES</a></li>
+                        <li><a href="mcu.html">Metamodelo Cartográfico (MCU)</a></li>
+                        <li><a href="interfaces.html">Interfaces Adaptativas</a></li>
+                        <li><a href="hpc.html">Computación Alto Rendimiento</a></li>
+                        <li><a href="hospital.html" class="active">Simulación Hospitalaria</a></li>
+                        <li><a href="validacion.html">Marco de Validación</a></li>
+                        <li><a href="proyecto.html">Información del Proyecto</a></li>
+                    </ul>
+                </li>
+                <li><a href="metodologia.html">Metodología</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="bibliografia.html">Bibliografía</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Simulación de Capacidad Hospitalaria</h1>
+                    <p class="hero-subtitle">Módulo SCH-RME: Modelando la respuesta médica ante eventos de víctimas masivas</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">25%</span>
+                            <span class="stat-label">Reducción Mortalidad</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30%</span>
+                            <span class="stat-label">Mejora Tiempos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">40%</span>
+                            <span class="stat-label">Balanceo Carga</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problemática -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">La Vulnerabilidad Crítica: Saturación de la Red Médica</h2>
+                
+                <div class="problem-dimensions">
+                    <div class="dimension-card">
+                        <div class="dimension-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <h3>Dimensión de Flujo</h3>
+                        <p>Llegada no lineal de pacientes con picos que superan la capacidad de triaje, admisión y tratamiento</p>
+                        <div class="dimension-example">Picos de demanda 10x superiores a capacidad nominal</div>
+                    </div>
+
+                    <div class="dimension-card">
+                        <div class="dimension-icon">
+                            <i data-lucide="server"></i>
+                        </div>
+                        <h3>Dimensión de Recursos</h3>
+                        <p>Escasez de recursos críticos y finitos: camas UCI, ventiladores, personal especializado</p>
+                        <div class="dimension-example">UCI típica: 10-20 camas vs. necesidad emergencia: 100+</div>
+                    </div>
+
+                    <div class="dimension-card">
+                        <div class="dimension-icon">
+                            <i data-lucide="map"></i>
+                        </div>
+                        <h3>Dimensión Espacial</h3>
+                        <p>Distribución geográfica desigual: saturación cerca del epicentro vs. subutilización lejana</p>
+                        <div class="dimension-example">Hospital epicentro: 300% ocupación, Hospital lejano: 40%</div>
+                    </div>
+
+                    <div class="dimension-card">
+                        <div class="dimension-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3>Dimensión Temporal</h3>
+                        <p>Decisiones de asignación en tiempo real bajo alta incertidumbre</p>
+                        <div class="dimension-example">Ventana crítica: primeras 6 horas post-evento</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hipótesis de Investigación -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Hipótesis y Preguntas de Investigación</h2>
+                
+                <div class="hypothesis-section">
+                    <div class="main-hypothesis">
+                        <h3>Hipótesis Principal (H1)</h3>
+                        <p>La implementación de un módulo de <strong>Simulación de Eventos Discretos (DES)</strong>, integrado con los datos de flujo de evacuados generados por PIGEM, permitirá modelar y optimizar la asignación de recursos críticos en la red hospitalaria regional, logrando una <strong>reducción de al menos un 25% en la mortalidad evitable</strong> y un <strong>30% en los tiempos de espera para atención crítica</strong>.</p>
+                    </div>
+
+                    <div class="secondary-hypotheses">
+                        <h3>Hipótesis Secundarias</h3>
+                        <div class="hypothesis-grid">
+                            <div class="hypothesis-card">
+                                <h4>H2 - Optimización de Traslados</h4>
+                                <p>Un algoritmo de optimización basado en simulación permitirá balancear la carga de pacientes entre hospitales</p>
+                                <div class="hypothesis-target">Reducción >40% saturación centros alta complejidad</div>
+                            </div>
+                            <div class="hypothesis-card">
+                                <h4>H3 - Gestión de Recursos</h4>
+                                <p>La simulación predictiva de demanda permitirá asignación proactiva de recursos críticos</p>
+                                <div class="hypothesis-target">Disminución >60% quiebres de stock</div>
+                            </div>
+                            <div class="hypothesis-card">
+                                <h4>H4 - Integración con Evacuación</h4>
+                                <p>La sincronización con el modelo ABM identificará cuellos de botella en la ruta completa</p>
+                                <div class="hypothesis-target">Optimización flujo zona desastre → hospital</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-questions">
+                    <h3>Pregunta Principal de Investigación</h3>
+                    <div class="question-card">
+                        <p>¿Cómo puede un sistema de simulación híbrido (DES-ABM) modelar la interacción compleja entre la evacuación de una población y la respuesta de la red hospitalaria para optimizar la asignación de recursos médicos críticos y minimizar la mortalidad durante un evento de víctimas masivas?</p>
+                    </div>
+
+                    <div class="secondary-questions">
+                        <h4>Preguntas Secundarias</h4>
+                        <ul>
+                            <li>¿Cuáles son las variables clave que determinan la capacidad de respuesta hospitalaria?</li>
+                            <li>¿Qué algoritmos de optimización son más efectivos para el balanceo de carga en tiempo real?</li>
+                            <li>¿Cómo validar un modelo de simulación hospitalaria con datos limitados de eventos pasados?</li>
+                            <li>¿De qué manera las decisiones de evacuación impactan la eficiencia de respuesta sanitaria?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arquitectura y Componentes -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Arquitectura del Módulo SCH-RME</h2>
+                
+                <div class="architecture-overview">
+                    <h3>Modelo Conceptual - Sistema de Colas y Servidores</h3>
+                    <div class="conceptual-elements">
+                        <div class="concept-element">
+                            <h4>Entidades</h4>
+                            <p>Pacientes clasificados por nivel de triaje (START/SALT)</p>
+                            <div class="element-examples">
+                                <span class="example green">Verde - Leve</span>
+                                <span class="example yellow">Amarillo - Urgente</span>
+                                <span class="example red">Rojo - Crítico</span>
+                                <span class="example black">Negro - Fallecido</span>
+                            </div>
+                        </div>
+
+                        <div class="concept-element">
+                            <h4>Servidores</h4>
+                            <p>Recursos hospitalarios con capacidad limitada</p>
+                            <div class="element-examples">
+                                <span class="example">Camas UCI</span>
+                                <span class="example">Pabellones</span>
+                                <span class="example">Personal</span>
+                                <span class="example">Equipos</span>
+                            </div>
+                        </div>
+
+                        <div class="concept-element">
+                            <h4>Colas</h4>
+                            <p>Tiempos de espera para cada recurso</p>
+                            <div class="element-examples">
+                                <span class="example">Cola Triaje</span>
+                                <span class="example">Cola Cirugía</span>
+                                <span class="example">Cola UCI</span>
+                                <span class="example">Cola Traslado</span>
+                            </div>
+                        </div>
+
+                        <div class="concept-element">
+                            <h4>Eventos</h4>
+                            <p>Cambios de estado en el sistema</p>
+                            <div class="element-examples">
+                                <span class="example">Llegada</span>
+                                <span class="example">Inicio Tratamiento</span>
+                                <span class="example">Alta</span>
+                                <span class="example">Traslado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Variables del Modelo -->
+                <div class="model-variables">
+                    <h3>Variables Clave de Simulación</h3>
+                    <div class="variables-grid">
+                        <div class="variable-category">
+                            <h4>Inputs del Modelo</h4>
+                            <div class="variable-list">
+                                <div class="variable-item">
+                                    <strong>Tasa de llegada:</strong> Distribución temporal y geográfica de heridos
+                                </div>
+                                <div class="variable-item">
+                                    <strong>Distribución severidad:</strong> % pacientes por categoría triaje
+                                </div>
+                                <div class="variable-item">
+                                    <strong>Capacidad base:</strong> Camas UCI/UTI/básicas por hospital
+                                </div>
+                                <div class="variable-item">
+                                    <strong>Tiempos servicio:</strong> Duración promedio procedimientos
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="variable-category">
+                            <h4>Outputs del Modelo</h4>
+                            <div class="variable-list">
+                                <div class="variable-item">
+                                    <strong>Mortalidad evitable:</strong> % pacientes fallecidos por falta recursos
+                                </div>
+                                <div class="variable-item">
+                                    <strong>Tiempo espera:</strong> Por categoría triaje y recurso
+                                </div>
+                                <div class="variable-item">
+                                    <strong>Tasa ocupación:</strong> Utilización camas UCI, ventiladores
+                                </div>
+                                <div class="variable-item">
+                                    <strong>Traslados inter-hospitalarios:</strong> Indicador balanceo carga
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integración con PIGEM -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Integración con PIGEM</h2>
+                
+                <div class="integration-flow">
+                    <div class="integration-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Input de PIGEM</h4>
+                            <p>El motor ABM genera flujo de agentes heridos con coordenadas y tiempo</p>
+                            <div class="step-details">Simulación evacuación → Víctimas georreferenciadas</div>
+                        </div>
+                    </div>
+
+                    <div class="integration-arrow">→</div>
+
+                    <div class="integration-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Procesamiento SCH-RME</h4>
+                            <p>Módulo DES procesa llegada de "pacientes virtuales"</p>
+                            <div class="step-details">Asignación hospitales + Simulación tratamiento</div>
+                        </div>
+                    </div>
+
+                    <div class="integration-arrow">→</div>
+
+                    <div class="integration-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Feedback a PIGEM</h4>
+                            <p>Estado de red hospitalaria influye decisiones ambulancias</p>
+                            <div class="step-details">Hospitales saturados → Redirección automática</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Algoritmo de Asignación -->
+                <div class="assignment-algorithm">
+                    <h3>Algoritmo de Asignación Inteligente</h3>
+                    <div class="algorithm-factors">
+                        <div class="factor-card">
+                            <h4>Distancia</h4>
+                            <p>Proximidad geográfica al hospital</p>
+                            <div class="factor-weight">Peso: 30%</div>
+                        </div>
+                        <div class="factor-card">
+                            <h4>Capacidad Disponible</h4>
+                            <p>Recursos libres en tiempo real</p>
+                            <div class="factor-weight">Peso: 40%</div>
+                        </div>
+                        <div class="factor-card">
+                            <h4>Especialización</h4>
+                            <p>Adecuación al tipo de lesión</p>
+                            <div class="factor-weight">Peso: 20%</div>
+                        </div>
+                        <div class="factor-card">
+                            <h4>Tiempo de Transporte</h4>
+                            <p>Considerando congestión vial</p>
+                            <div class="factor-weight">Peso: 10%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodología de Validación -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Metodología de Investigación y Validación</h2>
+                
+                <div class="methodology-steps">
+                    <div class="method-step">
+                        <h3>1. Desarrollo del Modelo DES</h3>
+                        <p>Creación de modelo de eventos discretos para procesos hospitalarios internos</p>
+                        <div class="method-components">
+                            <span>Triaje</span>
+                            <span>Espera</span>
+                            <span>Tratamiento</span>
+                            <span>Alta/Traslado</span>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <h3>2. Calibración del Modelo</h3>
+                        <p>Datos operacionales de hospitales chilenos en condiciones normales</p>
+                        <div class="method-components">
+                            <span>Datos históricos</span>
+                            <span>Simulacros</span>
+                            <span>Tiempos servicio</span>
+                            <span>Capacidades</span>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <h3>3. Validación con Expertos</h3>
+                        <p>Paneles con médicos de urgencia, jefes UCI y gestores de redes</p>
+                        <div class="method-components">
+                            <span>Médicos urgencia</span>
+                            <span>Jefes UCI</span>
+                            <span>Gestores</span>
+                            <span>Paramédicos</span>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <h3>4. Integración con PIGEM</h3>
+                        <p>Acoplamiento del módulo SCH-RME con motor ABM</p>
+                        <div class="method-components">
+                            <span>Flujo pacientes</span>
+                            <span>Tiempo real</span>
+                            <span>Retroalimentación</span>
+                            <span>Optimización</span>
+                        </div>
+                    </div>
+
+                    <div class="method-step">
+                        <h3>5. Experimentación Computacional</h3>
+                        <p>Miles de simulaciones bajo diferentes escenarios de desastre</p>
+                        <div class="method-components">
+                            <span>Múltiples escenarios</span>
+                            <span>Análisis estadístico</span>
+                            <span>Optimización</span>
+                            <span>Validación hipótesis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desafíos y Contribuciones -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Desafíos Científicos y Contribuciones</h2>
+                
+                <div class="challenges-contributions">
+                    <div class="challenges-section">
+                        <h3>Desafíos Científicos</h3>
+                        <div class="challenge-list">
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i data-lucide="brain"></i>
+                                </div>
+                                <h4>Modelado Comportamiento en Crisis</h4>
+                                <p>Tanto de pacientes como del personal médico bajo estrés extremo</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i data-lucide="database"></i>
+                                </div>
+                                <h4>Validación con Datos Escasos</h4>
+                                <p>Los datos de desastres reales son fragmentarios y limitados</p>
+                            </div>
+                            <div class="challenge-item">
+                                <div class="challenge-icon">
+                                    <i data-lucide="zap"></i>
+                                </div>
+                                <h4>Optimización Tiempo Real</h4>
+                                <p>Algoritmos computacionalmente eficientes para decisiones urgentes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contributions-section">
+                        <h3>Contribución del Proyecto</h3>
+                        <div class="contribution-list">
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i data-lucide="award"></i>
+                                </div>
+                                <h4>Herramienta Pionera en Chile</h4>
+                                <p>Primera plataforma de simulación integrada de evacuación y respuesta médica</p>
+                            </div>
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i data-lucide="search"></i>
+                                </div>
+                                <h4>Metodología de Validación</h4>
+                                <p>Nuevo marco para validar simulaciones de sistemas de salud en emergencias</p>
+                            </div>
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i data-lucide="target"></i>
+                                </div>
+                                <h4>Soporte a la Decisión</h4>
+                                <p>Herramienta tangible para Servicios de Salud y SENAPRED</p>
+                            </div>
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i data-lucide="book-open"></i>
+                                </div>
+                                <h4>Publicaciones Científicas</h4>
+                                <p>Contribuciones en investigación de operaciones en salud y sistemas de emergencia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métricas de Impacto -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Métricas de Impacto Esperado</h2>
+                
+                <div class="impact-metrics">
+                    <div class="metric-card primary">
+                        <div class="metric-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <div class="metric-value">25%</div>
+                        <div class="metric-label">Reducción Mortalidad Evitable</div>
+                        <div class="metric-desc">Objetivo principal del módulo SCH-RME</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="metric-value">30%</div>
+                        <div class="metric-label">Mejora Tiempos Espera</div>
+                        <div class="metric-desc">Para atención crítica</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Reducción Saturación</div>
+                        <div class="metric-desc">Centros alta complejidad</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="package"></i>
+                        </div>
+                        <div class="metric-value">60%</div>
+                        <div class="metric-label">Disminución Quiebres</div>
+                        <div class="metric-desc">Stock recursos críticos</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="truck"></i>
+                        </div>
+                        <div class="metric-value">50%</div>
+                        <div class="metric-label">Optimización Traslados</div>
+                        <div class="metric-desc">Inter-hospitalarios</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div class="metric-value">90%</div>
+                        <div class="metric-label">Precisión Predictiva</div>
+                        <div class="metric-desc">Demanda de recursos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PIGEM</h3>
+                    <p>Plataforma Integral de Gestión de Evacuaciones Multiamenaza</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="problema.html">Problema</a></li>
+                        <li><a href="nuestra-solucion.html">Solución</a></li>
+                        <li><a href="metodologia.html">Metodología</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Universidad</h4>
+                    <p>Universidad de Santiago de Chile<br>
+                    Facultad de Ingeniería<br>
+                    Departamento de Ingeniería Informática</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PIGEM - Todos los derechos reservados</p>
+                <p><strong>Pablo Antonio Jordán González</strong><br>
+                Estudiante Doctorado Ciencias de la Ingeniería Mención Informática<br>
+                Director de I+D HealthPixel Spa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

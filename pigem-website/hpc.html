@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computación de Alto Rendimiento - PIGEM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">PIGEM</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="problema.html">Problema</a></li>
+                <li class="dropdown">
+                    <a href="nuestra-solucion.html" class="dropdown-toggle">Solución <i data-lucide="chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="arquitectura.html">Arquitectura del Sistema</a></li>
+                        <li><a href="simulacion-hibrida.html">Simulación Híbrida ABM-DES</a></li>
+                        <li><a href="mcu.html">Metamodelo Cartográfico (MCU)</a></li>
+                        <li><a href="interfaces.html">Interfaces Adaptativas</a></li>
+                        <li><a href="hpc.html" class="active">Computación Alto Rendimiento</a></li>
+                        <li><a href="hospital.html">Simulación Hospitalaria</a></li>
+                        <li><a href="validacion.html">Marco de Validación</a></li>
+                        <li><a href="proyecto.html">Información del Proyecto</a></li>
+                    </ul>
+                </li>
+                <li><a href="metodologia.html">Metodología</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="bibliografia.html">Bibliografía</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Estrategia de Paralelismo y HPC</h1>
+                    <p class="hero-subtitle">Superando los desafíos computacionales extraordinarios de simular millones de agentes en tiempo real</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">1M+</span>
+                            <span class="stat-label">Agentes Simultáneos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100x</span>
+                            <span class="stat-label">Speedup GPU</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10¹³</span>
+                            <span class="stat-label">Operaciones/Simulación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Magnitud del Desafío -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Magnitud del Desafío Computacional</h2>
+                
+                <div class="challenge-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Escenario</th>
+                                <th>Población</th>
+                                <th>Agentes</th>
+                                <th>Área (km²)</th>
+                                <th>Cómputo Requerido</th>
+                                <th>Tiempo Objetivo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Barrio Local</strong></td>
+                                <td>5,000</td>
+                                <td>5,000</td>
+                                <td>1</td>
+                                <td>10⁹ operaciones</td>
+                                <td>&lt;2 minutos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comuna</strong></td>
+                                <td>50,000</td>
+                                <td>50,000</td>
+                                <td>25</td>
+                                <td>10¹¹ operaciones</td>
+                                <td>&lt;10 minutos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ciudad Media</strong></td>
+                                <td>200,000</td>
+                                <td>200,000</td>
+                                <td>100</td>
+                                <td>10¹² operaciones</td>
+                                <td>&lt;30 minutos</td>
+                            </tr>
+                            <tr class="highlight">
+                                <td><strong>Región Metropolitana</strong></td>
+                                <td>1,000,000</td>
+                                <td>1,000,000</td>
+                                <td>500</td>
+                                <td>10¹³ operaciones</td>
+                                <td>&lt;2 horas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Múltiples Ciudades</strong></td>
+                                <td>2,000,000</td>
+                                <td>2,000,000</td>
+                                <td>1,000</td>
+                                <td>10¹⁴ operaciones</td>
+                                <td>&lt;4 horas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Análisis de Complejidad -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Análisis de Complejidad Algorítmica</h2>
+                
+                <div class="complexity-analysis">
+                    <div class="complexity-card">
+                        <div class="complexity-header">
+                            <h3>Social Force Model</h3>
+                            <span class="complexity-order">O(n²)</span>
+                        </div>
+                        <div class="complexity-content">
+                            <div class="complexity-detail">
+                                <span class="label">Complejidad Espacial:</span>
+                                <span class="value">O(n)</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Paralelización:</span>
+                                <span class="value status-excellent">Excelente (GPU)</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Escalabilidad:</span>
+                                <span class="value">Cuadrática</span>
+                            </div>
+                            <div class="optimization-note">
+                                <strong>Cuello de botella principal</strong> - Requiere paralelización masiva
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complexity-card">
+                        <div class="complexity-header">
+                            <h3>Pathfinding A*</h3>
+                            <span class="complexity-order">O(b^d)</span>
+                        </div>
+                        <div class="complexity-content">
+                            <div class="complexity-detail">
+                                <span class="label">Complejidad Espacial:</span>
+                                <span class="value">O(b^d)</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Paralelización:</span>
+                                <span class="value status-good">Buena (CPU)</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Escalabilidad:</span>
+                                <span class="value">Exponencial</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complexity-card">
+                        <div class="complexity-header">
+                            <h3>Collision Detection</h3>
+                            <span class="complexity-order">O(n log n)</span>
+                        </div>
+                        <div class="complexity-content">
+                            <div class="complexity-detail">
+                                <span class="label">Complejidad Espacial:</span>
+                                <span class="value">O(n)</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Paralelización:</span>
+                                <span class="value status-excellent">Excelente (GPU)</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Escalabilidad:</span>
+                                <span class="value">Logarítmica</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complexity-card">
+                        <div class="complexity-header">
+                            <h3>Event Scheduling</h3>
+                            <span class="complexity-order">O(log n)</span>
+                        </div>
+                        <div class="complexity-content">
+                            <div class="complexity-detail">
+                                <span class="label">Complejidad Espacial:</span>
+                                <span class="value">O(n)</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Paralelización:</span>
+                                <span class="value status-limited">Limitada</span>
+                            </div>
+                            <div class="complexity-detail">
+                                <span class="label">Escalabilidad:</span>
+                                <span class="value">Logarítmica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arquitectura HPC Híbrida -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Arquitectura HPC Híbrida</h2>
+                
+                <div class="hpc-architecture">
+                    <div class="hpc-layer">
+                        <h3>Clusters de Cómputo</h3>
+                        <div class="cluster-grid">
+                            <div class="cluster-node">
+                                <h4>Cluster CPU</h4>
+                                <div class="cluster-specs">
+                                    <div class="spec">64 nodos</div>
+                                    <div class="spec">2048 cores</div>
+                                    <div class="spec">4TB RAM</div>
+                                    <div class="spec">InfiniBand</div>
+                                </div>
+                                <div class="cluster-use">Lógica Compleja</div>
+                            </div>
+                            
+                            <div class="cluster-node">
+                                <h4>Cluster GPU</h4>
+                                <div class="cluster-specs">
+                                    <div class="spec">16 nodos GPU</div>
+                                    <div class="spec">128 GPUs</div>
+                                    <div class="spec">163,840 cores</div>
+                                    <div class="spec">32GB VRAM</div>
+                                </div>
+                                <div class="cluster-use">Cálculo Masivo</div>
+                            </div>
+                            
+                            <div class="cluster-node">
+                                <h4>Cloud Bursting</h4>
+                                <div class="cluster-specs">
+                                    <div class="spec">AWS/Azure/GCP</div>
+                                    <div class="spec">Kubernetes</div>
+                                    <div class="spec">Auto-scaling</div>
+                                    <div class="spec">Spot instances</div>
+                                </div>
+                                <div class="cluster-use">Escalado Dinámico</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hpc-layer">
+                        <h3>Capa de Orquestación</h3>
+                        <div class="orchestration-components">
+                            <div class="orch-component">
+                                <h4>SLURM Scheduler</h4>
+                                <div class="component-features">
+                                    <span>Job Queue</span>
+                                    <span>Resource Management</span>
+                                    <span>Priority Handling</span>
+                                </div>
+                            </div>
+                            <div class="orch-component">
+                                <h4>MPI Coordinator</h4>
+                                <div class="component-features">
+                                    <span>Process Sync</span>
+                                    <span>Data Exchange</span>
+                                    <span>Fault Tolerance</span>
+                                </div>
+                            </div>
+                            <div class="orch-component">
+                                <h4>Load Balancer</h4>
+                                <div class="component-features">
+                                    <span>Resource Monitor</span>
+                                    <span>Dynamic Allocation</span>
+                                    <span>Performance Metrics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paralelización por Componente -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Estrategias de Paralelización</h2>
+                
+                <div class="parallelization-strategies">
+                    <div class="strategy-section">
+                        <h3>Social Force Model - GPU CUDA</h3>
+                        <div class="strategy-details">
+                            <div class="strategy-approach">
+                                <div class="approach-item">
+                                    <strong>Thread Mapping:</strong> 1 thread = 1 agente
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Memory Pattern:</strong> Coalesced access
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Shared Memory:</strong> Neighbor cache
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Occupancy Target:</strong> 75%
+                                </div>
+                            </div>
+                            <div class="strategy-performance">
+                                <div class="perf-metric">
+                                    <span class="metric-value">2048</span>
+                                    <span class="metric-label">threads/SM</span>
+                                </div>
+                                <div class="perf-metric">
+                                    <span class="metric-value">900 GB/s</span>
+                                    <span class="metric-label">Ancho banda</span>
+                                </div>
+                                <div class="perf-metric">
+                                    <span class="metric-value">50x-100x</span>
+                                    <span class="metric-label">Speedup</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="strategy-section">
+                        <h3>Pathfinding - CPU Paralelo</h3>
+                        <div class="strategy-details">
+                            <div class="strategy-approach">
+                                <div class="approach-item">
+                                    <strong>Algoritmo:</strong> A* Jerárquico (HPA*)
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Paralelización:</strong> Por agente/cluster
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Optimización:</strong> Cache de rutas
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Balanceo:</strong> Por región geográfica</span>
+                                </div>
+                            </div>
+                            <div class="pathfinding-levels">
+                                <div class="level">
+                                    <span class="level-name">Nivel 0:</span>
+                                    <span class="level-desc">Celdas (1m²) - A* clásico</span>
+                                </div>
+                                <div class="level">
+                                    <span class="level-name">Nivel 1:</span>
+                                    <span class="level-desc">Clusters (100m²) - A* abstracto</span>
+                                </div>
+                                <div class="level">
+                                    <span class="level-name">Nivel 2:</span>
+                                    <span class="level-desc">Sectores (1km²) - Dijkstra</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="strategy-section">
+                        <h3>DES - Actor Model</h3>
+                        <div class="strategy-details">
+                            <div class="strategy-approach">
+                                <div class="approach-item">
+                                    <strong>Event Queue:</strong> Particionado por tiempo
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Sincronización:</strong> Barriers periódicos
+                                </div>
+                                <div class="approach-item">
+                                    <strong>State Updates:</strong> Copy-on-Write
+                                </div>
+                                <div class="approach-item">
+                                    <strong>Consistencia:</strong> MVCC + Eventual
+                                </div>
+                            </div>
+                            <div class="des-performance">
+                                <div class="perf-metric">
+                                    <span class="metric-value">100K</span>
+                                    <span class="metric-label">eventos/sec</span>
+                                </div>
+                                <div class="perf-metric">
+                                    <span class="metric-value">50K</span>
+                                    <span class="metric-label">ops/sec</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Configuraciones Hardware -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Configuraciones de Hardware</h2>
+                
+                <div class="hardware-configs">
+                    <div class="config-card">
+                        <h3>Cluster GPU - Configuración Principal</h3>
+                        <div class="config-specs">
+                            <div class="spec-row">
+                                <span class="spec-component">GPU:</span>
+                                <span class="spec-detail">32x NVIDIA A100 80GB</span>
+                                <span class="spec-performance">312 TFLOPS/GPU</span>
+                                <span class="spec-cost">$320,000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-component">CPU:</span>
+                                <span class="spec-detail">8x AMD EPYC 7742</span>
+                                <span class="spec-performance">64 cores/CPU</span>
+                                <span class="spec-cost">$48,000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-component">RAM:</span>
+                                <span class="spec-detail">4TB DDR4-3200 ECC</span>
+                                <span class="spec-performance">3200 MT/s</span>
+                                <span class="spec-cost">$32,000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-component">Network:</span>
+                                <span class="spec-detail">8x InfiniBand HDR</span>
+                                <span class="spec-performance">200 Gb/s</span>
+                                <span class="spec-cost">$40,000</span>
+                            </div>
+                        </div>
+                        <div class="config-total">
+                            <strong>Total: $514,000</strong>
+                        </div>
+                    </div>
+
+                    <div class="config-card">
+                        <h3>Cluster CPU - Configuración Secundaria</h3>
+                        <div class="config-specs">
+                            <div class="spec-row">
+                                <span class="spec-component">CPU:</span>
+                                <span class="spec-detail">128x Intel Xeon Platinum 8380</span>
+                                <span class="spec-performance">40 cores/CPU</span>
+                                <span class="spec-cost">$384,000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-component">RAM:</span>
+                                <span class="spec-detail">16TB DDR4-3200 ECC</span>
+                                <span class="spec-performance">3200 MT/s</span>
+                                <span class="spec-cost">$128,000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-component">Storage:</span>
+                                <span class="spec-detail">200TB NVMe SSD</span>
+                                <span class="spec-performance">7GB/s</span>
+                                <span class="spec-cost">$100,000</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-component">Network:</span>
+                                <span class="spec-detail">32x InfiniBand HDR</span>
+                                <span class="spec-performance">200 Gb/s</span>
+                                <span class="spec-cost">$160,000</span>
+                            </div>
+                        </div>
+                        <div class="config-total">
+                            <strong>Total: $980,000</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benchmarks de Rendimiento -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Benchmarks de Escalabilidad</h2>
+                
+                <div class="benchmark-results">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Configuración</th>
+                                <th>Agentes</th>
+                                <th>Tiempo Real</th>
+                                <th>Tiempo Simulado</th>
+                                <th>Speedup</th>
+                                <th>Eficiencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CPU 1 core</td>
+                                <td>1,000</td>
+                                <td>60 min</td>
+                                <td>30 min</td>
+                                <td>1.0x</td>
+                                <td><span class="efficiency excellent">100%</span></td>
+                            </tr>
+                            <tr>
+                                <td>CPU 8 cores</td>
+                                <td>8,000</td>
+                                <td>65 min</td>
+                                <td>30 min</td>
+                                <td>7.4x</td>
+                                <td><span class="efficiency excellent">92%</span></td>
+                            </tr>
+                            <tr>
+                                <td>CPU 64 cores</td>
+                                <td>64,000</td>
+                                <td>75 min</td>
+                                <td>30 min</td>
+                                <td>51.2x</td>
+                                <td><span class="efficiency good">80%</span></td>
+                            </tr>
+                            <tr class="highlight">
+                                <td>GPU 1 device</td>
+                                <td>100,000</td>
+                                <td>45 min</td>
+                                <td>30 min</td>
+                                <td>85.3x</td>
+                                <td><span class="efficiency excellent">85%</span></td>
+                            </tr>
+                            <tr>
+                                <td>GPU 8 devices</td>
+                                <td>800,000</td>
+                                <td>55 min</td>
+                                <td>30 min</td>
+                                <td>545.5x</td>
+                                <td><span class="efficiency good">68%</span></td>
+                            </tr>
+                            <tr>
+                                <td>GPU 32 devices</td>
+                                <td>3,200,000</td>
+                                <td>90 min</td>
+                                <td>30 min</td>
+                                <td>1,280.0x</td>
+                                <td><span class="efficiency fair">40%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Profiling por Componente -->
+                <div class="profiling-section">
+                    <h3>Profiling Detallado de Componentes</h3>
+                    <div class="profiling-chart">
+                        <div class="component-profile">
+                            <h4>Social Force Model</h4>
+                            <div class="profile-bars">
+                                <div class="profile-bar">
+                                    <span class="bar-label">CPU</span>
+                                    <div class="bar-fill" style="width: 15%;">15%</div>
+                                </div>
+                                <div class="profile-bar">
+                                    <span class="bar-label">GPU</span>
+                                    <div class="bar-fill" style="width: 75%;">75%</div>
+                                </div>
+                                <div class="profile-bar">
+                                    <span class="bar-label">Memoria</span>
+                                    <div class="bar-fill" style="width: 24%;">24 GB</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="component-profile">
+                            <h4>Pathfinding</h4>
+                            <div class="profile-bars">
+                                <div class="profile-bar">
+                                    <span class="bar-label">CPU</span>
+                                    <div class="bar-fill" style="width: 45%;">45%</div>
+                                </div>
+                                <div class="profile-bar">
+                                    <span class="bar-label">GPU</span>
+                                    <div class="bar-fill" style="width: 5%;">5%</div>
+                                </div>
+                                <div class="profile-bar">
+                                    <span class="bar-label">Memoria</span>
+                                    <div class="bar-fill" style="width: 8%;">8 GB</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="component-profile">
+                            <h4>DES Events</h4>
+                            <div class="profile-bars">
+                                <div class="profile-bar">
+                                    <span class="bar-label">CPU</span>
+                                    <div class="bar-fill" style="width: 25%;">25%</div>
+                                </div>
+                                <div class="profile-bar">
+                                    <span class="bar-label">GPU</span>
+                                    <div class="bar-fill" style="width: 0%;">0%</div>
+                                </div>
+                                <div class="profile-bar">
+                                    <span class="bar-label">Memoria</span>
+                                    <div class="bar-fill" style="width: 4%;">4 GB</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optimizaciones -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Técnicas de Optimización Avanzadas</h2>
+                
+                <div class="optimization-techniques">
+                    <div class="technique-card">
+                        <h3>Spatial Hashing</h3>
+                        <div class="technique-improvement">O(n²) → O(n)</div>
+                        <div class="technique-precision">100% precisión</div>
+                        <div class="technique-desc">Grid uniforme para distribución homogénea</div>
+                    </div>
+
+                    <div class="technique-card">
+                        <h3>Fast Multipole Method</h3>
+                        <div class="technique-improvement">O(n²) → O(n)</div>
+                        <div class="technique-precision">99% precisión</div>
+                        <div class="technique-desc">Expansión multipolar para fuerzas largo alcance</div>
+                    </div>
+
+                    <div class="technique-card">
+                        <h3>Hierarchical Methods</h3>
+                        <div class="technique-improvement">O(n²) → O(n log n)</div>
+                        <div class="technique-precision">95% precisión</div>
+                        <div class="technique-desc">Octree/Quadtree para distribución irregular</div>
+                    </div>
+
+                    <div class="technique-card">
+                        <h3>Approximate NN</h3>
+                        <div class="technique-improvement">O(n log n) → O(n)</div>
+                        <div class="technique-precision">90% precisión</div>
+                        <div class="technique-desc">LSH para búsqueda de vecinos aproximada</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eficiencia Energética -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Métricas de Eficiencia Energética</h2>
+                
+                <div class="energy-metrics">
+                    <div class="energy-card">
+                        <h3>CPU Only</h3>
+                        <div class="energy-stats">
+                            <div class="energy-stat">
+                                <span class="stat-value">25 kW</span>
+                                <span class="stat-label">Potencia</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">2,560</span>
+                                <span class="stat-label">Agentes/Watt</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">$3.50</span>
+                                <span class="stat-label">Costo/hora</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="energy-card">
+                        <h3>GPU Only</h3>
+                        <div class="energy-stats">
+                            <div class="energy-stat">
+                                <span class="stat-value">35 kW</span>
+                                <span class="stat-label">Potencia</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">22,857</span>
+                                <span class="stat-label">Agentes/Watt</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">$4.90</span>
+                                <span class="stat-label">Costo/hora</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="energy-card highlight">
+                        <h3>Híbrido</h3>
+                        <div class="energy-stats">
+                            <div class="energy-stat">
+                                <span class="stat-value">45 kW</span>
+                                <span class="stat-label">Potencia</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">71,111</span>
+                                <span class="stat-label">Agentes/Watt</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">$6.30</span>
+                                <span class="stat-label">Costo/hora</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="energy-card">
+                        <h3>Cloud (AWS)</h3>
+                        <div class="energy-stats">
+                            <div class="energy-stat">
+                                <span class="stat-value">Variable</span>
+                                <span class="stat-label">Potencia</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">15,000</span>
+                                <span class="stat-label">Agentes/Watt</span>
+                            </div>
+                            <div class="energy-stat">
+                                <span class="stat-value">$12.00</span>
+                                <span class="stat-label">Costo/hora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PIGEM</h3>
+                    <p>Plataforma Integral de Gestión de Evacuaciones Multiamenaza</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="problema.html">Problema</a></li>
+                        <li><a href="nuestra-solucion.html">Solución</a></li>
+                        <li><a href="metodologia.html">Metodología</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Universidad</h4>
+                    <p>Universidad de Santiago de Chile<br>
+                    Facultad de Ingeniería<br>
+                    Departamento de Ingeniería Informática</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PIGEM - Todos los derechos reservados</p>
+                <p><strong>Pablo Antonio Jordán González</strong><br>
+                Estudiante Doctorado Ciencias de la Ingeniería Mención Informática<br>
+                Director de I+D HealthPixel Spa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metamodelo Cartográfico Unificado (MCU) - PIGEM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">PIGEM</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="problema.html">Problema</a></li>
+                <li class="dropdown">
+                    <a href="nuestra-solucion.html" class="dropdown-toggle">Solución <i data-lucide="chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="arquitectura.html">Arquitectura del Sistema</a></li>
+                        <li><a href="simulacion-hibrida.html">Simulación Híbrida ABM-DES</a></li>
+                        <li><a href="mcu.html" class="active">Metamodelo Cartográfico (MCU)</a></li>
+                        <li><a href="interfaces.html">Interfaces Adaptativas</a></li>
+                        <li><a href="hpc.html">Computación Alto Rendimiento</a></li>
+                        <li><a href="hospital.html">Simulación Hospitalaria</a></li>
+                        <li><a href="validacion.html">Marco de Validación</a></li>
+                        <li><a href="proyecto.html">Información del Proyecto</a></li>
+                    </ul>
+                </li>
+                <li><a href="metodologia.html">Metodología</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="bibliografia.html">Bibliografía</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Metamodelo Cartográfico Unificado (MCU)</h1>
+                    <p class="hero-subtitle">El "lenguaje común" para datos geoespaciales de desastres: eliminando la fragmentación y habilitando la interoperabilidad automática</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Auto-integración</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Calidad Metadatos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99.5%</span>
+                            <span class="stat-label">Disponibilidad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problema de Heterogeneidad -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">El Problema: Heterogeneidad de Datos Geoespaciales</h2>
+                <p class="section-description">Las "islas tecnológicas" impiden la integración automática de información crítica</p>
+                
+                <div class="heterogeneity-grid">
+                    <div class="hetero-card">
+                        <div class="hetero-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h3>Sintáctica</h3>
+                        <p class="hetero-desc">Diferentes formatos de archivo</p>
+                        <div class="hetero-example">SHOA: Shapefile<br>INE: CSV<br>SERNAGEOMIN: KML</div>
+                        <div class="hetero-impact">Requiere múltiples parsers</div>
+                    </div>
+                    <div class="hetero-card">
+                        <div class="hetero-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3>Esquemática</h3>
+                        <p class="hetero-desc">Diferentes estructuras de datos</p>
+                        <div class="hetero-example">"población" vs<br>"hab_total" vs<br>"num_habitantes"</div>
+                        <div class="hetero-impact">Mapeo manual requerido</div>
+                    </div>
+                    <div class="hetero-card">
+                        <div class="hetero-icon">
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <h3>Semántica</h3>
+                        <p class="hetero-desc">Diferentes significados</p>
+                        <div class="hetero-example">"Zona riesgo alto" vs<br>"Amenaza nivel 3"</div>
+                        <div class="hetero-impact">Interpretación ambigua</div>
+                    </div>
+                    <div class="hetero-card">
+                        <div class="hetero-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3>Temporal</h3>
+                        <p class="hetero-desc">Diferentes frecuencias</p>
+                        <div class="hetero-example">Censo: 10 años<br>Sísmica: tiempo real</div>
+                        <div class="hetero-impact">Inconsistencias temporales</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arquitectura MCU -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Arquitectura Conceptual del MCU</h2>
+                
+                <div class="mcu-architecture">
+                    <div class="arch-layer">
+                        <h3>Fuentes de Datos</h3>
+                        <div class="data-sources">
+                            <div class="source">SHOA<br>(Tsunamis)</div>
+                            <div class="source">SERNAGEOMIN<br>(Sismos)</div>
+                            <div class="source">INE<br>(Censos)</div>
+                            <div class="source">Municipalidades<br>(Locales)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arch-arrow">↓</div>
+                    
+                    <div class="arch-layer">
+                        <h3>Capa de Armonización</h3>
+                        <div class="harmonization-components">
+                            <div class="component">Validación<br>Semántica</div>
+                            <div class="component">Normalización<br>Sintáctica</div>
+                            <div class="component">Enriquecimiento<br>Metadatos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arch-arrow">↓</div>
+                    
+                    <div class="arch-layer">
+                        <h3>MCU - Núcleo</h3>
+                        <div class="core-components">
+                            <div class="component">Base de Datos<br>PostGIS</div>
+                            <div class="component">Servicios OGC<br>WMS/WFS/CSW</div>
+                        </div>
+                    </div>
+                    
+                    <div class="arch-arrow">↓</div>
+                    
+                    <div class="arch-layer">
+                        <h3>Aplicaciones Cliente</h3>
+                        <div class="client-apps">
+                            <div class="app">PIGEM<br>Simulador</div>
+                            <div class="app">QGIS</div>
+                            <div class="app">Visores Web<br>Municipales</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estándares ISO/OGC -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Fundamentos en Estándares Internacionales</h2>
+                
+                <div class="standards-grid">
+                    <div class="standard-card">
+                        <div class="standard-header">
+                            <h3>ISO 19115/19139</h3>
+                            <span class="standard-type">Metadatos</span>
+                        </div>
+                        <p>Norma internacional para metadatos de información geográfica</p>
+                        <div class="standard-elements">
+                            <div class="element">
+                                <strong>Identificación:</strong> Título, resumen, palabras clave
+                            </div>
+                            <div class="element">
+                                <strong>Calidad:</strong> Linaje, precisión, completitud
+                            </div>
+                            <div class="element">
+                                <strong>Espacial:</strong> SRS, extensión geográfica
+                            </div>
+                            <div class="element">
+                                <strong>Temporal:</strong> Fecha creación, validez
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="standard-card">
+                        <div class="standard-header">
+                            <h3>OGC Services</h3>
+                            <span class="standard-type">Servicios Web</span>
+                        </div>
+                        <p>Estándares para servicios web geoespaciales interoperables</p>
+                        <div class="ogc-services">
+                            <div class="service">
+                                <strong>WMS:</strong> Mapas como imágenes
+                            </div>
+                            <div class="service">
+                                <strong>WFS:</strong> Datos vectoriales
+                            </div>
+                            <div class="service">
+                                <strong>WCS:</strong> Datos de cobertura
+                            </div>
+                            <div class="service">
+                                <strong>CSW:</strong> Catálogo metadatos
+                            </div>
+                            <div class="service">
+                                <strong>WPS:</strong> Procesamiento remoto
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flujo de Trabajo -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Flujo de Trabajo MCU</h2>
+                
+                <div class="workflow-diagram">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <h4>Ingesta</h4>
+                        <p>Detección automática y extracción metadatos</p>
+                        <div class="step-tools">GDAL/OGR, Python</div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <h4>Validación</h4>
+                        <p>Verificación esquema y geometría</p>
+                        <div class="step-tools">PostGIS, Shapely</div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <h4>Normalización</h4>
+                        <p>Reproyección y estandarización</p>
+                        <div class="step-tools">PROJ, Pandas</div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <h4>Enriquecimiento</h4>
+                        <p>Índices espaciales y metadatos</p>
+                        <div class="step-tools">PostGIS, UUID</div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <h4>Publicación</h4>
+                        <p>Servicios web y catálogo</p>
+                        <div class="step-tools">GeoServer, PyCSW</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capas de Información -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Taxonomía de Capas de Información</h2>
+                
+                <div class="layers-taxonomy">
+                    <div class="layer-category">
+                        <h3>AMENAZA</h3>
+                        <div class="layer-items">
+                            <div class="layer-item">
+                                <strong>Sísmica:</strong> Fallas activas, zonificación
+                                <span class="source">SERNAGEOMIN</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Tsunami:</strong> Cartas inundación, tiempos
+                                <span class="source">SHOA</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Volcánica:</strong> Peligros, lahares
+                                <span class="source">SERNAGEOMIN</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Incendios:</strong> Índice peligro, combustible
+                                <span class="source">CONAF</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer-category">
+                        <h3>VULNERABILIDAD</h3>
+                        <div class="layer-items">
+                            <div class="layer-item">
+                                <strong>Física:</strong> Tipología, año construcción
+                                <span class="source">INE, Municipios</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Social:</strong> Educación, dependencia
+                                <span class="source">INE, CASEN</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Económica:</strong> Avalúos, actividad
+                                <span class="source">SII, INE</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Ambiental:</strong> Ecosistemas frágiles
+                                <span class="source">MMA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layer-category">
+                        <h3>CAPACIDAD</h3>
+                        <div class="layer-items">
+                            <div class="layer-item">
+                                <strong>Infraestructura:</strong> Hospitales, escuelas
+                                <span class="source">Municipios</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Transporte:</strong> Red vial, puentes
+                                <span class="source">MOP</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Comunicaciones:</strong> Antenas, fibra
+                                <span class="source">SUBTEL</span>
+                            </div>
+                            <div class="layer-item">
+                                <strong>Respuesta:</strong> Albergues, equipos
+                                <span class="source">SENAPRED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Tecnológico -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Stack Tecnológico MCU</h2>
+                
+                <div class="tech-stack-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Componente</th>
+                                <th>Tecnología</th>
+                                <th>Versión</th>
+                                <th>Función</th>
+                                <th>Licencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Base de Datos</strong></td>
+                                <td>PostgreSQL + PostGIS</td>
+                                <td>15.0 + 3.4</td>
+                                <td>Almacenamiento geoespacial</td>
+                                <td>Open Source</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Servidor de Mapas</strong></td>
+                                <td>GeoServer</td>
+                                <td>2.24</td>
+                                <td>Servicios web OGC</td>
+                                <td>Open Source</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Catálogo</strong></td>
+                                <td>PyCSW</td>
+                                <td>2.6</td>
+                                <td>Servicio CSW</td>
+                                <td>Open Source</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Procesamiento</strong></td>
+                                <td>GDAL/OGR</td>
+                                <td>3.7</td>
+                                <td>Conversión formatos</td>
+                                <td>Open Source</td>
+                            </tr>
+                            <tr>
+                                <td><strong>API REST</strong></td>
+                                <td>FastAPI</td>
+                                <td>0.104</td>
+                                <td>Interfaz programación</td>
+                                <td>Open Source</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Variables de Modelado -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Variables para Modelado de Evacuación</h2>
+                
+                <div class="variables-grid">
+                    <div class="variable-category">
+                        <h3>Demográficas</h3>
+                        <div class="variables">
+                            <div class="variable">
+                                <span class="var-name">Edad</span>
+                                <span class="var-dist">Normal (μ=38.7, σ=22.1)</span>
+                                <span class="var-source">Censo 2017</span>
+                            </div>
+                            <div class="variable">
+                                <span class="var-name">Capacidad motriz</span>
+                                <span class="var-dist">12.9% limitada</span>
+                                <span class="var-source">SENADIS 2015</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="variable-category">
+                        <h3>Conductuales</h3>
+                        <div class="variables">
+                            <div class="variable">
+                                <span class="var-name">Tiempo reacción</span>
+                                <span class="var-dist">Log-normal (μ=2.1, σ=0.8) min</span>
+                                <span class="var-source">Simulacros SENAPRED</span>
+                            </div>
+                            <div class="variable">
+                                <span class="var-name">Velocidad peatonal</span>
+                                <span class="var-dist">Normal (μ=1.34, σ=0.31) m/s</span>
+                                <span class="var-source">Mediciones directas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="variable-category">
+                        <h3>Espaciales</h3>
+                        <div class="variables">
+                            <div class="variable">
+                                <span class="var-name">Distancia punto seguro</span>
+                                <span class="var-dist">Exponencial (λ=0.0023) m</span>
+                                <span class="var-source">Análisis GIS</span>
+                            </div>
+                            <div class="variable">
+                                <span class="var-name">Densidad poblacional</span>
+                                <span class="var-dist">Gamma (α=1.2, β=850) hab/km²</span>
+                                <span class="var-source">Censo 2017</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KPIs -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Indicadores de Desempeño MCU</h2>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-value">85%</div>
+                        <div class="kpi-label">Datasets Auto-integrados</div>
+                        <div class="kpi-frequency">Mensual</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value">95%</div>
+                        <div class="kpi-label">Metadatos Completos ISO</div>
+                        <div class="kpi-frequency">Trimestral</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value">99.5%</div>
+                        <div class="kpi-label">Uptime Servicios Web</div>
+                        <div class="kpi-frequency">Continua</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value">20+</div>
+                        <div class="kpi-label">Organizaciones Usuarias</div>
+                        <div class="kpi-frequency">Semestral</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value">&lt;2h</div>
+                        <div class="kpi-label">Tiempo Ingesta</div>
+                        <div class="kpi-frequency">Mensual</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PIGEM</h3>
+                    <p>Plataforma Integral de Gestión de Evacuaciones Multiamenaza</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="problema.html">Problema</a></li>
+                        <li><a href="nuestra-solucion.html">Solución</a></li>
+                        <li><a href="metodologia.html">Metodología</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Universidad</h4>
+                    <p>Universidad de Santiago de Chile<br>
+                    Facultad de Ingeniería<br>
+                    Departamento de Ingeniería Informática</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PIGEM - Todos los derechos reservados</p>
+                <p><strong>Pablo Antonio Jordán González</strong><br>
+                Estudiante Doctorado Ciencias de la Ingeniería Mención Informática<br>
+                Director de I+D HealthPixel Spa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

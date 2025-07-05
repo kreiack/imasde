@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -23,10 +24,23 @@
                 <nav class="main-nav">
                     <ul>
                         <li><a href="problema.html">Problema</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)">Solución ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="nuestra-solucion.html">Visión General</a></li>
+                                <li><a href="arquitectura.html">Arquitectura del Sistema</a></li>
+                                <li><a href="simulacion-hibrida.html">Simulación Híbrida ABM-DES</a></li>
+                                <li><a href="mcu.html">Metamodelo Cartográfico</a></li>
+                                <li><a href="interfaces.html">Interfaces Adaptativas</a></li>
+                                <li><a href="hpc.html">Computación HPC</a></li>
+                                <li><a href="hospital.html">Módulo Hospitalario</a></li>
+                                <li><a href="validacion.html">Marco de Validación</a></li>
+                            </ul>
+                        </li>
                         <li><a href="soluciones-existentes.html">Análisis</a></li>
-                        <li><a href="nuestra-solucion.html">Nuestra Solución</a></li>
                         <li><a href="metodologia.html">Metodología</a></li>
                         <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="bibliografia.html">Referencias</a></li>
                     </ul>
                 </nav>
                 <button class="menu-toggle" aria-label="Abrir menú">
@@ -42,6 +56,20 @@
         <section id="hero" class="hero-section">
             <div class="container">
                 <h2>Un motor computacional de alto rendimiento para la simulación de evacuaciones masivas en escenarios de riesgo complejos y multiamenaza.</h2>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Agentes Simulados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">85-95%</span>
+                        <span class="stat-label">Precisión Predictiva</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><30min</span>
+                        <span class="stat-label">Tiempo de Simulación</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -52,6 +80,36 @@
                     <p class="section-intro">PIGEM no es solo un proyecto de software, es una iniciativa de investigación y desarrollo que busca establecer un <strong>nuevo paradigma en la gestión del riesgo de desastres</strong>. Nuestro objetivo es desarrollar, validar e implementar un ecosistema tecnológico completo para transformar la capacidad nacional de planificación, simulación y ejecución de evacuaciones masivas ante desastres complejos.</p>
                 </div>
                 
+                <div class="innovation-grid">
+                    <div class="innovation-card">
+                        <div class="innovation-icon">🔬</div>
+                        <h3>Innovación Científica</h3>
+                        <p>Primera implementación nacional de simulación híbrida ABM-DES que combina comportamiento individual con restricciones operacionales.</p>
+                        <div class="innovation-metrics">
+                            <span>TRL 6 → TRL 8</span>
+                            <span>Precisión 85-95%</span>
+                        </div>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon">⚡</div>
+                        <h3>Alto Rendimiento</h3>
+                        <p>Arquitectura HPC híbrida CPU-GPU capaz de simular hasta 1 millón de agentes en tiempo real.</p>
+                        <div class="innovation-metrics">
+                            <span>1M agentes</span>
+                            <span>Tiempo real</span>
+                        </div>
+                    </div>
+                    <div class="innovation-card">
+                        <div class="innovation-icon">🌐</div>
+                        <h3>Interoperabilidad</h3>
+                        <p>Metamodelo cartográfico unificado que integra datos heterogéneos de múltiples instituciones.</p>
+                        <div class="innovation-metrics">
+                            <span>Estándares OGC</span>
+                            <span>ISO 19115/19139</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card-grid">
                     <div class="card">
                         <h3>El Problema: Vulnerabilidad Multidimensional</h3>
@@ -72,6 +130,125 @@
             </div>
         </section>
 
+        <section id="technology-overview" class="content-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Arquitectura Tecnológica</h2>
+                    <p class="section-intro">Un ecosistema integrado de componentes especializados que trabajan de manera coordinada</p>
+                </div>
+
+                <div class="tech-diagram">
+                    <div class="tech-layer">
+                        <h4>Capa de Usuarios</h4>
+                        <div class="tech-components">
+                            <span class="tech-component">Autoridades</span>
+                            <span class="tech-component">Técnicos</span>
+                            <span class="tech-component">Ciudadanos</span>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h4>Capa de Interfaces</h4>
+                        <div class="tech-components">
+                            <span class="tech-component">Web Apps</span>
+                            <span class="tech-component">Mobile Apps</span>
+                            <span class="tech-component">APIs</span>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h4>Capa de Servicios</h4>
+                        <div class="tech-components">
+                            <span class="tech-component">Autenticación</span>
+                            <span class="tech-component">Notificaciones</span>
+                            <span class="tech-component">Análisis</span>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h4>Núcleo Funcional</h4>
+                        <div class="tech-components">
+                            <span class="tech-component highlight">Simulación Híbrida</span>
+                            <span class="tech-component highlight">MCU</span>
+                            <span class="tech-component highlight">Módulo Hospitalario</span>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h4>Infraestructura</h4>
+                        <div class="tech-components">
+                            <span class="tech-component">PostgreSQL</span>
+                            <span class="tech-component">Kubernetes</span>
+                            <span class="tech-component">Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-access">
+                    <h3>Explorar Componentes</h3>
+                    <div class="component-links">
+                        <a href="simulacion-hibrida.html" class="component-link">
+                            <div class="component-icon">🔄</div>
+                            <span>Simulación Híbrida</span>
+                        </a>
+                        <a href="mcu.html" class="component-link">
+                            <div class="component-icon">🗺️</div>
+                            <span>MCU</span>
+                        </a>
+                        <a href="interfaces.html" class="component-link">
+                            <div class="component-icon">📱</div>
+                            <span>Interfaces</span>
+                        </a>
+                        <a href="hpc.html" class="component-link">
+                            <div class="component-icon">⚡</div>
+                            <span>HPC</span>
+                        </a>
+                        <a href="hospital.html" class="component-link">
+                            <div class="component-icon">🏥</div>
+                            <span>Hospital</span>
+                        </a>
+                        <a href="validacion.html" class="component-link">
+                            <div class="component-icon">✓</div>
+                            <span>Validación</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact-metrics" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Impacto Esperado</h2>
+                    <p class="section-intro">Métricas clave que demuestran el valor transformacional de PIGEM</p>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">85-95%</div>
+                        <div class="metric-label">Precisión Predictiva</div>
+                        <div class="metric-description">Comparado con 60-75% de herramientas actuales</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Reducción de Tiempo</div>
+                        <div class="metric-description">En análisis de escenarios de riesgo</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">25%</div>
+                        <div class="metric-label">Reducción Mortalidad</div>
+                        <div class="metric-description">Evitable en hospitales durante crisis</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">346</div>
+                        <div class="metric-label">Municipalidades</div>
+                        <div class="metric-description">Potenciales beneficiarias del sistema</div>
+                    </div>
+                </div>
+
+                <div class="impact-chart-container">
+                    <h3>Comparación de Capacidades</h3>
+                    <canvas id="capabilityChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </section>
+
     </main> 
 
     <footer class="main-footer">
@@ -82,5 +259,50 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Capability comparison chart
+        const ctx = document.getElementById('capabilityChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Precisión', 'Velocidad', 'Escalabilidad', 'Usabilidad', 'Interoperabilidad', 'Costo'],
+                datasets: [{
+                    label: 'PIGEM',
+                    data: [95, 90, 95, 85, 95, 95],
+                    backgroundColor: 'rgba(13, 42, 71, 0.2)',
+                    borderColor: 'rgba(13, 42, 71, 1)',
+                    pointBackgroundColor: 'rgba(245, 166, 35, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(245, 166, 35, 1)'
+                }, {
+                    label: 'Soluciones Actuales',
+                    data: [70, 60, 50, 60, 40, 30],
+                    backgroundColor: 'rgba(74, 122, 140, 0.2)',
+                    borderColor: 'rgba(74, 122, 140, 1)',
+                    pointBackgroundColor: 'rgba(74, 122, 140, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(74, 122, 140, 1)'
+                }]
+            },
+            options: {
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                },
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html> 

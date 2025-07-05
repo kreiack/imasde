@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaces de Visualización Adaptativas - PIGEM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">PIGEM</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="problema.html">Problema</a></li>
+                <li class="dropdown">
+                    <a href="nuestra-solucion.html" class="dropdown-toggle">Solución <i data-lucide="chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="arquitectura.html">Arquitectura del Sistema</a></li>
+                        <li><a href="simulacion-hibrida.html">Simulación Híbrida ABM-DES</a></li>
+                        <li><a href="mcu.html">Metamodelo Cartográfico (MCU)</a></li>
+                        <li><a href="interfaces.html" class="active">Interfaces Adaptativas</a></li>
+                        <li><a href="hpc.html">Computación Alto Rendimiento</a></li>
+                        <li><a href="hospital.html">Simulación Hospitalaria</a></li>
+                        <li><a href="validacion.html">Marco de Validación</a></li>
+                        <li><a href="proyecto.html">Información del Proyecto</a></li>
+                    </ul>
+                </li>
+                <li><a href="metodologia.html">Metodología</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="bibliografia.html">Bibliografía</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Interfaces de Visualización Adaptativas</h1>
+                    <p class="hero-subtitle">De datos complejos a decisiones claras: visualización inteligente que se adapta al usuario, contexto y urgencia</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">80+</span>
+                            <span class="stat-label">SUS Score</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Perfiles de Usuario</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">&lt;3s</span>
+                            <span class="stat-label">Tiempo Interpretación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complejidad de Datos -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Dimensiones de la Complejidad de Datos</h2>
+                
+                <div class="complexity-grid">
+                    <div class="complexity-card">
+                        <h3>Trayectorias de Agentes</h3>
+                        <div class="complexity-metrics">
+                            <span class="metric">100K-1M registros</span>
+                            <span class="frequency">Cada segundo</span>
+                        </div>
+                        <p>Espacial + Temporal</p>
+                        <div class="audience">Analistas técnicos</div>
+                    </div>
+                    <div class="complexity-card">
+                        <h3>Mapas de Congestión</h3>
+                        <div class="complexity-metrics">
+                            <span class="metric">10K-50K celdas</span>
+                            <span class="frequency">Cada minuto</span>
+                        </div>
+                        <p>Espacial + Temporal</p>
+                        <div class="audience">Planificadores urbanos</div>
+                    </div>
+                    <div class="complexity-card">
+                        <h3>Métricas de Rendimiento</h3>
+                        <div class="complexity-metrics">
+                            <span class="metric">50-100 indicadores</span>
+                            <span class="frequency">Cada 5 minutos</span>
+                        </div>
+                        <p>Temporal</p>
+                        <div class="audience">Autoridades ejecutivas</div>
+                    </div>
+                    <div class="complexity-card">
+                        <h3>Estados de Recursos</h3>
+                        <div class="complexity-metrics">
+                            <span class="metric">500-2K recursos</span>
+                            <span class="frequency">Tiempo real</span>
+                        </div>
+                        <p>Espacial + Estado</p>
+                        <div class="audience">Coordinadores operacionales</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfiles de Usuario -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Matriz de Perfiles de Usuario</h2>
+                
+                <div class="user-profiles">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Analista Técnico</h3>
+                            <div class="profile-badges">
+                                <span class="badge tech-high">Alto</span>
+                                <span class="badge time-long">30-60 min</span>
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-info">Datos detallados, parámetros</div>
+                            <div class="profile-format">Tablas, gráficos técnicos</div>
+                            <div class="profile-config">
+                                <strong>Vista:</strong> Workspace completo<br>
+                                <strong>Detalle:</strong> Máximo (datos brutos)<br>
+                                <strong>Interactividad:</strong> Total
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Planificador Urbano</h3>
+                            <div class="profile-badges">
+                                <span class="badge tech-medium">Medio</span>
+                                <span class="badge time-medium">10-15 min</span>
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-info">Patrones espaciales, cuellos de botella</div>
+                            <div class="profile-format">Mapas temáticos, dashboards</div>
+                            <div class="profile-config">
+                                <strong>Vista:</strong> Dashboard espacial<br>
+                                <strong>Detalle:</strong> Alto (agregaciones)<br>
+                                <strong>Interactividad:</strong> Media
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Autoridad Municipal</h3>
+                            <div class="profile-badges">
+                                <span class="badge tech-low">Bajo</span>
+                                <span class="badge time-short">2-5 min</span>
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-info">Decisiones clave, estado general</div>
+                            <div class="profile-format">Semáforos, indicadores KPI</div>
+                            <div class="profile-config">
+                                <strong>Vista:</strong> Vista ejecutiva<br>
+                                <strong>Detalle:</strong> Bajo (indicadores)<br>
+                                <strong>Interactividad:</strong> Mínima
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Coordinador Emergencia</h3>
+                            <div class="profile-badges">
+                                <span class="badge tech-medium">Medio</span>
+                                <span class="badge time-urgent">1-2 min</span>
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-info">Alertas, recursos disponibles</div>
+                            <div class="profile-format">Notificaciones, mapas simples</div>
+                            <div class="profile-config">
+                                <strong>Vista:</strong> Centro de control<br>
+                                <strong>Detalle:</strong> Medio (operacional)<br>
+                                <strong>Interactividad:</strong> Media
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <h3>Ciudadano</h3>
+                            <div class="profile-badges">
+                                <span class="badge tech-low">Bajo</span>
+                                <span class="badge time-very-short">30 seg</span>
+                            </div>
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-info">Rutas personales, albergues</div>
+                            <div class="profile-format">Mapas móviles, instrucciones</div>
+                            <div class="profile-config">
+                                <strong>Vista:</strong> Vista pública<br>
+                                <strong>Detalle:</strong> Básico (personal)<br>
+                                <strong>Interactividad:</strong> Mínima
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principios de Diseño -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Principios de Diseño Centrado en el Usuario</h2>
+                
+                <div class="design-principles">
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i data-lucide="eye"></i>
+                        </div>
+                        <h3>Visibilidad</h3>
+                        <p>Información crítica siempre visible</p>
+                        <div class="principle-implementation">Paneles fijos, alertas persistentes</div>
+                        <div class="principle-metric">Tiempo localización &lt;3s</div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i data-lucide="minimize-2"></i>
+                        </div>
+                        <h3>Simplicidad</h3>
+                        <p>Interfaz mínima, sin distracciones</p>
+                        <div class="principle-implementation">Máximo 7±2 elementos por pantalla</div>
+                        <div class="principle-metric">Tasa error &lt;2%</div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i data-lucide="layers"></i>
+                        </div>
+                        <h3>Consistencia</h3>
+                        <p>Patrones uniformes en toda la aplicación</p>
+                        <div class="principle-implementation">Guía estilos, componentes reutilizables</div>
+                        <div class="principle-metric">Tiempo aprendizaje &lt;10min</div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Retroalimentación</h3>
+                        <p>Respuesta inmediata a acciones</p>
+                        <div class="principle-implementation">Indicadores carga, confirmaciones</div>
+                        <div class="principle-metric">Tiempo respuesta &lt;200ms</div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>Tolerancia a Errores</h3>
+                        <p>Prevención y recuperación</p>
+                        <div class="principle-implementation">Validación tiempo real, deshacer</div>
+                        <div class="principle-metric">Tasa recuperación &gt;95%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Tecnológico -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Stack Tecnológico Frontend</h2>
+                
+                <div class="tech-stack-layers">
+                    <div class="tech-layer">
+                        <h3>Framework UI</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">React 18.2+</div>
+                            <div class="tech-item">Redux Toolkit</div>
+                            <div class="tech-item">Tailwind CSS</div>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>Visualización</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Mapbox GL JS</div>
+                            <div class="tech-item">D3.js</div>
+                            <div class="tech-item">Deck.gl</div>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>Comunicación</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Socket.io</div>
+                            <div class="tech-item">Axios</div>
+                            <div class="tech-item">WebRTC</div>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>Desarrollo</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Vite</div>
+                            <div class="tech-item">Vitest</div>
+                            <div class="tech-item">Playwright</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adaptabilidad -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Características de Adaptabilidad</h2>
+                
+                <div class="adaptability-types">
+                    <div class="adapt-type">
+                        <h3>Por Contexto de Emergencia</h3>
+                        <div class="context-modes">
+                            <div class="mode-card">
+                                <h4>Planificación</h4>
+                                <div class="mode-trigger">Uso normal</div>
+                                <div class="mode-changes">Colores estándar, información completa</div>
+                                <div class="mode-priority">Análisis detallado</div>
+                            </div>
+                            <div class="mode-card">
+                                <h4>Alerta Temprana</h4>
+                                <div class="mode-trigger">Amenaza detectada</div>
+                                <div class="mode-changes">Colores advertencia, notificaciones</div>
+                                <div class="mode-priority">Acciones preventivas</div>
+                            </div>
+                            <div class="mode-card">
+                                <h4>Emergencia Activa</h4>
+                                <div class="mode-trigger">Evacuación iniciada</div>
+                                <div class="mode-changes">Alto contraste, información crítica</div>
+                                <div class="mode-priority">Coordinación operacional</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="adapt-type">
+                        <h3>Por Dispositivo</h3>
+                        <div class="device-adaptations">
+                            <div class="device-card">
+                                <h4>Desktop (1920x1080+)</h4>
+                                <div class="device-interaction">Mouse, teclado</div>
+                                <div class="device-adaptation">Interfaz completa</div>
+                                <div class="device-functions">Todas las funciones</div>
+                            </div>
+                            <div class="device-card">
+                                <h4>Tablet (1024x768+)</h4>
+                                <div class="device-interaction">Touch</div>
+                                <div class="device-adaptation">Controles táctiles</div>
+                                <div class="device-functions">90% funciones</div>
+                            </div>
+                            <div class="device-card">
+                                <h4>Smartphone (375x667+)</h4>
+                                <div class="device-interaction">Touch</div>
+                                <div class="device-adaptation">Navegación simplificada</div>
+                                <div class="device-functions">Funciones esenciales</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estándares de Simbología -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Estándares de Simbología</h2>
+                
+                <div class="standards-symbology">
+                    <div class="standard-impl">
+                        <h3>ISO 22324 - Niveles de Alerta</h3>
+                        <div class="alert-levels">
+                            <div class="alert-level green">
+                                <div class="level-color"></div>
+                                <span>Verde - Normal</span>
+                            </div>
+                            <div class="alert-level yellow">
+                                <div class="level-color"></div>
+                                <span>Amarillo - Precaución</span>
+                            </div>
+                            <div class="alert-level orange">
+                                <div class="level-color"></div>
+                                <span>Naranja - Alerta</span>
+                            </div>
+                            <div class="alert-level red">
+                                <div class="level-color"></div>
+                                <span>Rojo - Emergencia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="standard-impl">
+                        <h3>W3C WCAG 2.1 - Accesibilidad</h3>
+                        <div class="accessibility-features">
+                            <div class="feature">Contraste mínimo 4.5:1</div>
+                            <div class="feature">Texto escalable hasta 200%</div>
+                            <div class="feature">Navegación por teclado</div>
+                            <div class="feature">Lectores de pantalla</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodología de Validación -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Metodología de Validación de Usabilidad</h2>
+                
+                <div class="validation-methods">
+                    <div class="method-card">
+                        <h3>Pruebas de Usabilidad</h3>
+                        <div class="method-details">
+                            <div class="detail-item">
+                                <strong>Participantes:</strong> 5-8 por perfil
+                            </div>
+                            <div class="detail-item">
+                                <strong>Duración:</strong> 60 minutos
+                            </div>
+                            <div class="detail-item">
+                                <strong>Métricas:</strong> Tiempo, errores, satisfacción
+                            </div>
+                            <div class="detail-item">
+                                <strong>Criterio:</strong> Tiempo &lt;objetivo, errores &lt;2%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="method-card">
+                        <h3>System Usability Scale</h3>
+                        <div class="method-details">
+                            <div class="detail-item">
+                                <strong>Participantes:</strong> 20+ por perfil
+                            </div>
+                            <div class="detail-item">
+                                <strong>Duración:</strong> 10 minutos
+                            </div>
+                            <div class="detail-item">
+                                <strong>Métricas:</strong> Puntaje SUS (0-100)
+                            </div>
+                            <div class="detail-item">
+                                <strong>Criterio:</strong> Puntaje &gt;80 (excelente)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="method-card">
+                        <h3>A/B Testing</h3>
+                        <div class="method-details">
+                            <div class="detail-item">
+                                <strong>Participantes:</strong> 50+ usuarios
+                            </div>
+                            <div class="detail-item">
+                                <strong>Duración:</strong> Variable
+                            </div>
+                            <div class="detail-item">
+                                <strong>Métricas:</strong> Conversión, engagement
+                            </div>
+                            <div class="detail-item">
+                                <strong>Criterio:</strong> Mejora significativa (p&lt;0.05)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPIs de Usabilidad -->
+                <div class="usability-kpis">
+                    <h3>KPIs de Usabilidad</h3>
+                    <div class="kpi-grid">
+                        <div class="kpi-item">
+                            <div class="kpi-metric">Eficiencia</div>
+                            <div class="kpi-definition">Tiempo interpretación escenarios</div>
+                            <div class="kpi-target">&lt;5 minutos</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-metric">Eficacia</div>
+                            <div class="kpi-definition">Tasa completitud tareas</div>
+                            <div class="kpi-target">&gt;95%</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-metric">Satisfacción</div>
+                            <div class="kpi-definition">Puntaje SUS</div>
+                            <div class="kpi-target">&gt;80 puntos</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-metric">Aprendizaje</div>
+                            <div class="kpi-definition">Tiempo capacitación</div>
+                            <div class="kpi-target">&lt;30 minutos</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-metric">Errores</div>
+                            <div class="kpi-definition">Tasa errores usuario</div>
+                            <div class="kpi-target">&lt;2%</div>
+                        </div>
+                        <div class="kpi-item">
+                            <div class="kpi-metric">Accesibilidad</div>
+                            <div class="kpi-definition">Cumplimiento WCAG 2.1</div>
+                            <div class="kpi-target">Nivel AA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PIGEM</h3>
+                    <p>Plataforma Integral de Gestión de Evacuaciones Multiamenaza</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="problema.html">Problema</a></li>
+                        <li><a href="nuestra-solucion.html">Solución</a></li>
+                        <li><a href="metodologia.html">Metodología</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Universidad</h4>
+                    <p>Universidad de Santiago de Chile<br>
+                    Facultad de Ingeniería<br>
+                    Departamento de Ingeniería Informática</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PIGEM - Todos los derechos reservados</p>
+                <p><strong>Pablo Antonio Jordán González</strong><br>
+                Estudiante Doctorado Ciencias de la Ingeniería Mención Informática<br>
+                Director de I+D HealthPixel Spa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

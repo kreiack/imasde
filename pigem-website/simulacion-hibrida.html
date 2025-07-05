@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Híbrida ABM-DES - PIGEM</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html">PIGEM</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="problema.html">Problema</a></li>
+                <li class="dropdown">
+                    <a href="nuestra-solucion.html" class="dropdown-toggle">Solución <i data-lucide="chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="arquitectura.html">Arquitectura del Sistema</a></li>
+                        <li><a href="simulacion-hibrida.html" class="active">Simulación Híbrida ABM-DES</a></li>
+                        <li><a href="mcu.html">Metamodelo Cartográfico (MCU)</a></li>
+                        <li><a href="interfaces.html">Interfaces Adaptativas</a></li>
+                        <li><a href="hpc.html">Computación Alto Rendimiento</a></li>
+                        <li><a href="hospital.html">Simulación Hospitalaria</a></li>
+                        <li><a href="validacion.html">Marco de Validación</a></li>
+                        <li><a href="proyecto.html">Información del Proyecto</a></li>
+                    </ul>
+                </li>
+                <li><a href="metodologia.html">Metodología</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="bibliografia.html">Bibliografía</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Modelo de Simulación Híbrida ABM-DES</h1>
+                    <p class="hero-subtitle">Superando las limitaciones de los enfoques unifocales mediante la combinación innovadora de Modelos Basados en Agentes y Simulación de Eventos Discretos</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">85-95%</span>
+                            <span class="stat-label">Precisión Predictiva</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1M+</span>
+                            <span class="stat-label">Agentes Simultáneos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">O(n log n)</span>
+                            <span class="stat-label">Complejidad Optimizada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparativa Enfoques -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Superioridad del Enfoque Híbrido</h2>
+                <p class="section-description">Análisis comparativo que demuestra las ventajas del modelo híbrido frente a enfoques tradicionales</p>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Enfoque</th>
+                                <th>Fortalezas</th>
+                                <th>Limitaciones Críticas</th>
+                                <th>Precisión</th>
+                                <th>Tiempo Computacional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Flujo de Redes</strong></td>
+                                <td>Optimización matemática, escalabilidad</td>
+                                <td>Ignora comportamiento humano</td>
+                                <td><span class="precision low">60-70%</span></td>
+                                <td><span class="time fast">Minutos</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Autómatas Celulares</strong></td>
+                                <td>Simplicidad, patrones emergentes</td>
+                                <td>Reglas rígidas, limitada heterogeneidad</td>
+                                <td><span class="precision low">65-75%</span></td>
+                                <td><span class="time slow">Horas</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>ABM Puro</strong></td>
+                                <td>Comportamiento realista</td>
+                                <td>Ignora restricciones físicas</td>
+                                <td><span class="precision medium">70-80%</span></td>
+                                <td><span class="time very-slow">Días</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modelos Analíticos</strong></td>
+                                <td>Rapidez, fundamento teórico</td>
+                                <td>Asunciones simplificadoras</td>
+                                <td><span class="precision low">50-65%</span></td>
+                                <td><span class="time very-fast">Segundos</span></td>
+                            </tr>
+                            <tr class="highlight">
+                                <td><strong>ABM-DES Híbrido</strong></td>
+                                <td>Comportamiento + restricciones</td>
+                                <td>Complejidad de implementación</td>
+                                <td><span class="precision high">85-95%</span></td>
+                                <td><span class="time fast">Minutos</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marco Conceptual -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Marco Conceptual del Modelo Híbrido</h2>
+                
+                <div class="conceptual-framework">
+                    <div class="framework-section">
+                        <h3>Componente ABM (Comportamiento)</h3>
+                        <div class="framework-content">
+                            <div class="framework-features">
+                                <div class="feature-item">
+                                    <i data-lucide="users"></i>
+                                    <span>Agentes heterogéneos</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i data-lucide="brain"></i>
+                                    <span>Decisiones autónomas</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i data-lucide="network"></i>
+                                    <span>Interacciones sociales</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i data-lucide="zap"></i>
+                                    <span>Modelo de fuerza social</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coupling-section">
+                        <h3>Acoplamiento Dinámico</h3>
+                        <div class="coupling-flow">
+                            <div class="coupling-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Intención (ABM)</h4>
+                                    <p>Movimiento deseado, Decisiones</p>
+                                </div>
+                            </div>
+                            <div class="coupling-arrow">→</div>
+                            <div class="coupling-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Validación (DES)</h4>
+                                    <p>Capacidad disponible, Restricciones</p>
+                                </div>
+                            </div>
+                            <div class="coupling-arrow">→</div>
+                            <div class="coupling-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Acción (Sistema)</h4>
+                                    <p>Ejecución, Actualización, Feedback</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="framework-section">
+                        <h3>Componente DES (Infraestructura)</h3>
+                        <div class="framework-content">
+                            <div class="framework-features">
+                                <div class="feature-item">
+                                    <i data-lucide="server"></i>
+                                    <span>Recursos limitados</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i data-lucide="clock"></i>
+                                    <span>Colas y servidores</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i data-lucide="database"></i>
+                                    <span>Capacidades físicas</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i data-lucide="activity"></i>
+                                    <span>Tiempos de servicio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Componente ABM -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Componente Social: Modelo Basado en Agentes (ABM)</h2>
+                
+                <div class="abm-section">
+                    <h3>Taxonomía de Atributos de Agentes</h3>
+                    <div class="attributes-grid">
+                        <div class="attribute-category">
+                            <h4>Demográfico</h4>
+                            <div class="attributes">
+                                <div class="attribute">
+                                    <span class="attr-name">Edad</span>
+                                    <span class="attr-type">0-100 años</span>
+                                    <span class="attr-impact">Velocidad movimiento</span>
+                                </div>
+                                <div class="attribute">
+                                    <span class="attr-name">Género</span>
+                                    <span class="attr-type">M, F, O</span>
+                                    <span class="attr-impact">Patrones liderazgo</span>
+                                </div>
+                                <div class="attribute">
+                                    <span class="attr-name">Tamaño familiar</span>
+                                    <span class="attr-type">1-10 personas</span>
+                                    <span class="attr-impact">Tiempo preparación</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attribute-category">
+                            <h4>Físico</h4>
+                            <div class="attributes">
+                                <div class="attribute">
+                                    <span class="attr-name">Movilidad</span>
+                                    <span class="attr-type">Normal, Reducida, Asistida</span>
+                                    <span class="attr-impact">Velocidad, rutas</span>
+                                </div>
+                                <div class="attribute">
+                                    <span class="attr-name">Estado salud</span>
+                                    <span class="attr-type">Bueno, Regular, Malo</span>
+                                    <span class="attr-impact">Resistencia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attribute-category">
+                            <h4>Psicológico</h4>
+                            <div class="attributes">
+                                <div class="attribute">
+                                    <span class="attr-name">Personalidad</span>
+                                    <span class="attr-type">Proactivo, Seguidor</span>
+                                    <span class="attr-impact">Tiempo reacción</span>
+                                </div>
+                                <div class="attribute">
+                                    <span class="attr-name">Experiencia</span>
+                                    <span class="attr-type">Sí/No</span>
+                                    <span class="attr-impact">Confianza autoridades</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attribute-category">
+                            <h4>Socioeconómico</h4>
+                            <div class="attributes">
+                                <div class="attribute">
+                                    <span class="attr-name">Educación</span>
+                                    <span class="attr-type">Básico, Medio, Superior</span>
+                                    <span class="attr-impact">Comprensión alertas</span>
+                                </div>
+                                <div class="attribute">
+                                    <span class="attr-name">Ingresos</span>
+                                    <span class="attr-type">0-5M CLP</span>
+                                    <span class="attr-impact">Acceso transporte</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arquetipos de Comportamiento -->
+                <div class="behavior-section">
+                    <h3>Arquetipos de Comportamiento en Evacuación</h3>
+                    <div class="archetypes-grid">
+                        <div class="archetype-card">
+                            <div class="archetype-header">
+                                <h4>Proactivo</h4>
+                                <span class="percentage">25-30%</span>
+                            </div>
+                            <p>Evacúa inmediatamente al recibir alerta</p>
+                            <div class="archetype-details">
+                                <div class="detail">
+                                    <span class="label">Tiempo reacción:</span>
+                                    <span class="value">0-5 minutos</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Patrón:</span>
+                                    <span class="value">Ruta directa óptima</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Influencia:</span>
+                                    <span class="value">Líder de grupo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="archetype-card">
+                            <div class="archetype-header">
+                                <h4>Seguidor</h4>
+                                <span class="percentage">40-45%</span>
+                            </div>
+                            <p>Espera a ver qué hacen vecinos/autoridades</p>
+                            <div class="archetype-details">
+                                <div class="detail">
+                                    <span class="label">Tiempo reacción:</span>
+                                    <span class="value">10-20 minutos</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Patrón:</span>
+                                    <span class="value">Sigue a grupos</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Influencia:</span>
+                                    <span class="value">Influenciado por otros</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="archetype-card">
+                            <div class="archetype-header">
+                                <h4>Escéptico</h4>
+                                <span class="percentage">15-20%</span>
+                            </div>
+                            <p>Requiere confirmación múltiple</p>
+                            <div class="archetype-details">
+                                <div class="detail">
+                                    <span class="label">Tiempo reacción:</span>
+                                    <span class="value">20-45 minutos</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Patrón:</span>
+                                    <span class="value">Ruta conservadora</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Influencia:</span>
+                                    <span class="value">Resistente a cambios</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="archetype-card">
+                            <div class="archetype-header">
+                                <h4>Vulnerable</h4>
+                                <span class="percentage">10-15%</span>
+                            </div>
+                            <p>Necesita asistencia para evacuar</p>
+                            <div class="archetype-details">
+                                <div class="detail">
+                                    <span class="label">Tiempo reacción:</span>
+                                    <span class="value">Variable</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Patrón:</span>
+                                    <span class="value">Rutas accesibles</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="label">Influencia:</span>
+                                    <span class="value">Dependiente de ayuda</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Force Model -->
+                <div class="sfm-section">
+                    <h3>Modelo de Fuerza Social (SFM)</h3>
+                    <p class="sfm-description">El movimiento de cada agente se calcula usando principios físicos de fuerzas atractivas y repulsivas</p>
+                    
+                    <div class="formula-container">
+                        <div class="formula-title">Ecuación Fundamental del SFM</div>
+                        <div class="formula">
+                            d²r<sub>i</sub>/dt² = (v<sub>i</sub>⁰(t)e<sub>i</sub>⁰(t) - v<sub>i</sub>(t))/τ<sub>i</sub> + Σf<sub>ij</sub> + Σf<sub>iW</sub> + ξ<sub>i</sub>(t)
+                        </div>
+                    </div>
+
+                    <div class="forces-grid">
+                        <div class="force-component">
+                            <h4>Fuerza Motriz</h4>
+                            <p>Deseo de alcanzar destino</p>
+                            <div class="force-params">
+                                <span>v₀ = 1.34 m/s</span>
+                                <span>τ = 0.5s</span>
+                            </div>
+                        </div>
+                        <div class="force-component">
+                            <h4>Fuerza Repulsiva (Agentes)</h4>
+                            <p>Evitar colisiones con otros</p>
+                            <div class="force-params">
+                                <span>A_i = 2000N</span>
+                                <span>B_i = 0.08m</span>
+                            </div>
+                        </div>
+                        <div class="force-component">
+                            <h4>Fuerza Repulsiva (Muros)</h4>
+                            <p>Evitar colisiones con obstáculos</p>
+                            <div class="force-params">
+                                <span>A_iW = 2000N</span>
+                                <span>B_iW = 0.08m</span>
+                            </div>
+                        </div>
+                        <div class="force-component">
+                            <h4>Ruido Aleatorio</h4>
+                            <p>Variabilidad comportamental</p>
+                            <div class="force-params">
+                                <span>σ = 0.1</span>
+                                <span>Proceso estocástico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Componente DES -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Componente Operacional: Simulación de Eventos Discretos (DES)</h2>
+                
+                <div class="des-overview">
+                    <p class="section-description">El DES modela la infraestructura urbana como un sistema con recursos finitos, gestionando la logística de evacuación</p>
+                    
+                    <div class="des-elements">
+                        <div class="des-element">
+                            <div class="element-icon">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <h4>Entidades</h4>
+                            <p>Agentes/Grupos que fluyen por el sistema</p>
+                            <div class="element-example">Familia de 4 personas</div>
+                        </div>
+                        <div class="des-element">
+                            <div class="element-icon">
+                                <i data-lucide="server"></i>
+                            </div>
+                            <h4>Recursos</h4>
+                            <p>Infraestructura con capacidad limitada</p>
+                            <div class="element-example">Calle (200 pers/min)</div>
+                        </div>
+                        <div class="des-element">
+                            <div class="element-icon">
+                                <i data-lucide="layers"></i>
+                            </div>
+                            <h4>Colas</h4>
+                            <p>Almacenamiento temporal de entidades</p>
+                            <div class="element-example">FIFO, 50 personas</div>
+                        </div>
+                        <div class="des-element">
+                            <div class="element-icon">
+                                <i data-lucide="cpu"></i>
+                            </div>
+                            <h4>Servidores</h4>
+                            <p>Procesan entidades con tiempo de servicio</p>
+                            <div class="element-example">Intersección (30s)</div>
+                        </div>
+                        <div class="des-element">
+                            <div class="element-icon">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <h4>Eventos</h4>
+                            <p>Cambios de estado en el tiempo</p>
+                            <div class="element-example">Llegada_a_albergue</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recursos de Infraestructura -->
+                <div class="infrastructure-section">
+                    <h3>Caracterización de Recursos de Evacuación</h3>
+                    <div class="resources-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Recurso</th>
+                                    <th>Capacidad Típica</th>
+                                    <th>Tiempo de Servicio</th>
+                                    <th>Factores Limitantes</th>
+                                    <th>Modelado DES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Segmento de Calle</strong></td>
+                                    <td>200-500 pers/min</td>
+                                    <td>Instantáneo</td>
+                                    <td>Ancho, pendiente, superficie</td>
+                                    <td>Servidor con capacidad</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Intersección</strong></td>
+                                    <td>100-300 pers/min</td>
+                                    <td>15-45 segundos</td>
+                                    <td>Semáforos, señalización</td>
+                                    <td>Servidor con demora</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Puente/Paso Elevado</strong></td>
+                                    <td>150-400 pers/min</td>
+                                    <td>Variable</td>
+                                    <td>Ancho, estado estructural</td>
+                                    <td>Recurso con restricciones</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Escalera/Rampa</strong></td>
+                                    <td>50-150 pers/min</td>
+                                    <td>Según pendiente</td>
+                                    <td>Accesibilidad, congestión</td>
+                                    <td>Servidor especializado</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Albergue</strong></td>
+                                    <td>50-500 personas</td>
+                                    <td>2-5 minutos</td>
+                                    <td>Aforo, servicios básicos</td>
+                                    <td>Recurso con capacidad finita</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vehículo Evacuación</strong></td>
+                                    <td>20-50 personas</td>
+                                    <td>30-60 minutos</td>
+                                    <td>Disponibilidad, combustible</td>
+                                    <td>Recurso móvil</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Eventos Críticos -->
+                <div class="events-section">
+                    <h3>Eventos Críticos del Sistema DES</h3>
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-type">llegada_a_calle</div>
+                            <div class="event-trigger">Agente entra en segmento</div>
+                            <div class="event-effect">Reduce capacidad disponible</div>
+                            <div class="event-metrics">Utilización, tiempo_espera</div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-type">salida_de_calle</div>
+                            <div class="event-trigger">Agente sale de segmento</div>
+                            <div class="event-effect">Libera capacidad</div>
+                            <div class="event-metrics">Utilización, throughput</div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-type">llegada_a_interseccion</div>
+                            <div class="event-trigger">Agente llega a cruce</div>
+                            <div class="event-effect">Inicia proceso de cruce</div>
+                            <div class="event-metrics">Cola_longitud, tiempo_servicio</div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-type">espera_en_congestion</div>
+                            <div class="event-trigger">Capacidad saturada</div>
+                            <div class="event-effect">Agente entra en cola</div>
+                            <div class="event-metrics">Tiempo_cola, satisfacción</div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-type">llegada_a_albergue</div>
+                            <div class="event-trigger">Agente alcanza destino</div>
+                            <div class="event-effect">Completa evacuación</div>
+                            <div class="event-metrics">Ocupación, tiempo_total</div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-type">recurso_saturado</div>
+                            <div class="event-trigger">Capacidad = 100%</div>
+                            <div class="event-effect">Bloquea nuevas llegadas</div>
+                            <div class="event-metrics">Tasa_rechazo, cuellos_botella</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acoplamiento ABM-DES -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Acoplamiento ABM-DES: La Arquitectura Híbrida</h2>
+                
+                <div class="coupling-protocol">
+                    <h3>Protocolo de Acoplamiento por Paso de Tiempo</h3>
+                    <div class="protocol-steps">
+                        <div class="protocol-step">
+                            <div class="step-number">1</div>
+                            <div class="step-info">
+                                <h4>ABM - Calcular Intención</h4>
+                                <p>Vector movimiento deseado basado en fuerzas sociales</p>
+                                <div class="step-complexity">O(n)</div>
+                            </div>
+                        </div>
+                        <div class="protocol-arrow">↓</div>
+                        <div class="protocol-step">
+                            <div class="step-number">2</div>
+                            <div class="step-info">
+                                <h4>DES - Verificar Disponibilidad</h4>
+                                <p>Comprobar capacidad de recursos solicitados</p>
+                                <div class="step-complexity">O(1)</div>
+                            </div>
+                        </div>
+                        <div class="protocol-arrow">↓</div>
+                        <div class="protocol-step">
+                            <div class="step-number">3</div>
+                            <div class="step-info">
+                                <h4>Sistema - Resolver Conflictos</h4>
+                                <p>Asignación de recursos ante múltiples solicitudes</p>
+                                <div class="step-complexity">O(k)</div>
+                            </div>
+                        </div>
+                        <div class="protocol-arrow">↓</div>
+                        <div class="protocol-step">
+                            <div class="step-number">4</div>
+                            <div class="step-info">
+                                <h4>ABM - Actualizar Posición</h4>
+                                <p>Mover agentes según permisos otorgados</p>
+                                <div class="step-complexity">O(n)</div>
+                            </div>
+                        </div>
+                        <div class="protocol-arrow">↓</div>
+                        <div class="protocol-step">
+                            <div class="step-number">5</div>
+                            <div class="step-info">
+                                <h4>DES - Actualizar Estado</h4>
+                                <p>Modificar ocupación de recursos</p>
+                                <div class="step-complexity">O(m)</div>
+                            </div>
+                        </div>
+                        <div class="protocol-arrow">↓</div>
+                        <div class="protocol-step">
+                            <div class="step-number">6</div>
+                            <div class="step-info">
+                                <h4>Sistema - Generar Eventos</h4>
+                                <p>Programar eventos futuros</p>
+                                <div class="step-complexity">O(log e)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Algoritmo de Resolución -->
+                <div class="conflict-resolution">
+                    <h3>Algoritmo de Resolución de Conflictos</h3>
+                    <div class="algorithm-container">
+                        <div class="algorithm-header">
+                            <h4>Criterios de Priorización</h4>
+                        </div>
+                        <div class="algorithm-steps">
+                            <div class="priority-criterion">
+                                <span class="priority-weight">1°</span>
+                                <span class="priority-desc">Puntuación de vulnerabilidad del agente</span>
+                            </div>
+                            <div class="priority-criterion">
+                                <span class="priority-weight">2°</span>
+                                <span class="priority-desc">Tiempo de espera acumulado</span>
+                            </div>
+                            <div class="priority-criterion">
+                                <span class="priority-weight">3°</span>
+                                <span class="priority-desc">Tamaño del grupo familiar</span>
+                            </div>
+                            <div class="priority-criterion">
+                                <span class="priority-weight">4°</span>
+                                <span class="priority-desc">Desempate aleatorio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validación -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Validación y Calibración del Modelo</h2>
+                
+                <div class="validation-grid">
+                    <div class="validation-level">
+                        <h3>Microscópico</h3>
+                        <p>Comportamiento individual</p>
+                        <div class="validation-details">
+                            <div class="validation-method">Comparación trayectorias</div>
+                            <div class="validation-data">Videos simulacros</div>
+                            <div class="validation-metric">Error posicional &lt;5m</div>
+                        </div>
+                    </div>
+                    <div class="validation-level">
+                        <h3>Mesoscópico</h3>
+                        <p>Flujos locales</p>
+                        <div class="validation-details">
+                            <div class="validation-method">Análisis de densidad</div>
+                            <div class="validation-data">Conteos peatonales</div>
+                            <div class="validation-metric">Correlación &gt;0.85</div>
+                        </div>
+                    </div>
+                    <div class="validation-level">
+                        <h3>Macroscópico</h3>
+                        <p>Evacuación completa</p>
+                        <div class="validation-details">
+                            <div class="validation-method">Tiempos totales</div>
+                            <div class="validation-data">Registros históricos</div>
+                            <div class="validation-metric">Error temporal &lt;15%</div>
+                        </div>
+                    </div>
+                    <div class="validation-level">
+                        <h3>Estadístico</h3>
+                        <p>Distribuciones</p>
+                        <div class="validation-details">
+                            <div class="validation-method">Análisis de varianza</div>
+                            <div class="validation-data">Múltiples ejecuciones</div>
+                            <div class="validation-metric">p-value &lt;0.05</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Casos de Validación -->
+                <div class="validation-cases">
+                    <h3>Casos de Estudio para Validación</h3>
+                    <div class="cases-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Caso</th>
+                                    <th>Ubicación</th>
+                                    <th>Tipo de Evento</th>
+                                    <th>Población</th>
+                                    <th>Datos Disponibles</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Simulacro Valparaíso 2023</strong></td>
+                                    <td>Puerto de Valparaíso</td>
+                                    <td>Tsunami</td>
+                                    <td>15,000 personas</td>
+                                    <td>Videos, tiempos parciales</td>
+                                    <td><span class="status-badge validated">Validado</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Simulacro Iquique 2022</strong></td>
+                                    <td>Centro histórico</td>
+                                    <td>Tsunami</td>
+                                    <td>8,500 personas</td>
+                                    <td>GPS tracking, encuestas</td>
+                                    <td><span class="status-badge in-progress">En proceso</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Evacuación Talcahuano 2010</strong></td>
+                                    <td>Área portuaria</td>
+                                    <td>Tsunami real</td>
+                                    <td>25,000 personas</td>
+                                    <td>Testimonios, registros</td>
+                                    <td><span class="status-badge planned">Planificado</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Simulacro SHOA 2024</strong></td>
+                                    <td>Múltiples ciudades</td>
+                                    <td>Tsunami</td>
+                                    <td>100,000 personas</td>
+                                    <td>Datos oficiales</td>
+                                    <td><span class="status-badge future">Futuro</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementación Computacional -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Implementación Computacional</h2>
+                
+                <div class="implementation-overview">
+                    <div class="tech-stack">
+                        <h3>Stack Tecnológico del Modelo Híbrido</h3>
+                        <div class="stack-components">
+                            <div class="stack-component">
+                                <h4>ABM Engine</h4>
+                                <div class="component-tech">C++ + OpenMP</div>
+                                <div class="component-complexity">O(n²) → O(n log n)</div>
+                                <div class="component-parallel">Sí (espacial)</div>
+                            </div>
+                            <div class="stack-component">
+                                <h4>DES Engine</h4>
+                                <div class="component-tech">Python + SimPy</div>
+                                <div class="component-complexity">O(log e)</div>
+                                <div class="component-parallel">Limitada</div>
+                            </div>
+                            <div class="stack-component">
+                                <h4>Spatial Index</h4>
+                                <div class="component-tech">R-tree + CUDA</div>
+                                <div class="component-complexity">O(log n)</div>
+                                <div class="component-parallel">Sí (GPU)</div>
+                            </div>
+                            <div class="stack-component">
+                                <h4>Visualization</h4>
+                                <div class="component-tech">WebGL + D3.js</div>
+                                <div class="component-complexity">O(n)</div>
+                                <div class="component-parallel">Sí (GPU)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optimizaciones -->
+                    <div class="optimizations">
+                        <h3>Estrategias de Optimización</h3>
+                        <div class="optimization-cards">
+                            <div class="optimization-card">
+                                <h4>Particionamiento Espacial</h4>
+                                <div class="optimization-impact">10x-50x mejora</div>
+                                <div class="optimization-complexity">Media</div>
+                                <p>División del espacio para reducir cálculos SFM</p>
+                            </div>
+                            <div class="optimization-card">
+                                <h4>Predicción de Movimiento</h4>
+                                <div class="optimization-impact">2x-5x mejora</div>
+                                <div class="optimization-complexity">Baja</div>
+                                <p>Reducción de verificaciones innecesarias</p>
+                            </div>
+                            <div class="optimization-card">
+                                <h4>Cache de Rutas</h4>
+                                <div class="optimization-impact">5x-20x mejora</div>
+                                <div class="optimization-complexity">Media</div>
+                                <p>Almacenamiento de pathfinding repetitivo</p>
+                            </div>
+                            <div class="optimization-card">
+                                <h4>Paralelización GPU</h4>
+                                <div class="optimization-impact">50x-100x mejora</div>
+                                <div class="optimization-complexity">Alta</div>
+                                <p>Cálculos SFM masivos en paralelo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PIGEM</h3>
+                    <p>Plataforma Integral de Gestión de Evacuaciones Multiamenaza</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="problema.html">Problema</a></li>
+                        <li><a href="nuestra-solucion.html">Solución</a></li>
+                        <li><a href="metodologia.html">Metodología</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Universidad</h4>
+                    <p>Universidad de Santiago de Chile<br>
+                    Facultad de Ingeniería<br>
+                    Departamento de Ingeniería Informática</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PIGEM - Todos los derechos reservados</p>
+                <p><strong>Pablo Antonio Jordán González</strong><br>
+                Estudiante Doctorado Ciencias de la Ingeniería Mención Informática<br>
+                Director de I+D HealthPixel Spa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize icons
+        lucide.createIcons();
+    </script>
+</body>
+</html> 
