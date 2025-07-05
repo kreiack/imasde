@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Soluciones - PIGEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h1>PIGEM</h1>
+                        <p>Plataforma Integrada para la Gestión de Evacuaciones Masivas</p>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="problema.html">Problema</a></li>
+                        <li><a href="soluciones-existentes.html" class="active">Análisis</a></li>
+                        <li><a href="nuestra-solucion.html">Nuestra Solución</a></li>
+                        <li><a href="metodologia.html">Metodología</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="solutions-analysis" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Análisis Comparativo del Ecosistema Tecnológico</h2>
+                    <p class="section-intro">Para posicionar nuestra propuesta, realizamos un análisis exhaustivo del panorama actual, evaluando tanto soluciones comerciales consolidadas como alternativas emergentes de código abierto que definen el estado del arte en la gestión de desastres.</p>
+                </div>
+
+                <h3>Soluciones Comerciales y de Código Abierto</h3>
+                <p>A continuación se presenta una tabla comparativa que resume las principales plataformas y sus limitaciones, destacando las brechas que PIGEM se propone cerrar.</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Plataforma</th>
+                            <th>Descripción Clave</th>
+                            <th>Enfoque/Limitación Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>HAZUS-MH (FEMA)</strong></td>
+                            <td>Estándar en EE.UU. para modelado multiamenaza y análisis de pérdidas.</td>
+                            <td>Costo indirecto (ArcGIS), sin simulación de comportamiento humano.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Esri ArcGIS Suite</strong></td>
+                            <td>Ecosistema integral para "consciencia situacional" con dashboards en tiempo real.</td>
+                            <td>Costo prohibitivo, ecosistema cerrado, alta dependencia del proveedor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>WebEOC (Juvare)</strong></td>
+                            <td>Plataforma web para gestión de crisis enfocada en la coordinación.</td>
+                            <td>Enfocado en coordinación más que en simulación prospectiva.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>InaSAFE (Indonesia)</strong></td>
+                            <td>Plugin de QGIS para generar escenarios de impacto y mejorar la planificación.</td>
+                            <td>Requiere conocimiento técnico en SIG, enfocado en el contexto indonesio.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RiskScape (N. Zelanda)</strong></td>
+                            <td>Modelo de riesgo para evaluar impacto en personas e infraestructura.</td>
+                            <td>Contextualizado para Nueva Zelanda, requiere adaptación.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="section-header" style="margin-top: 5rem;">
+                     <h2 class="section-title">Brechas y Oportunidades</h2>
+                     <p class="section-intro">El análisis revela un patrón claro: las herramientas actuales, aunque potentes, dejan brechas críticas que PIGEM está diseñado para llenar, creando una oportunidad única para la innovación.</p>
+                </div>
+                
+                <div class="two-columns">
+                    <div class="card">
+                        <h4>Brechas Fundamentales del Mercado</h4>
+                        <ul>
+                            <li><strong>Ausencia de Simulación Humana:</strong> Ninguna plataforma comercial integra de forma nativa la simulación del comportamiento humano.</li>
+                            <li><strong>Fragmentación Tecnológica:</strong> Las soluciones se especializan en una amenaza o una fase, pero no ofrecen una visión integral.</li>
+                            <li><strong>Barreras de Acceso:</strong> Las herramientas más avanzadas son económicamente inviables para la mayoría de los municipios.</li>
+                             <li><strong>Falta de Contextualización:</strong> Los modelos no están calibrados para la realidad geográfica y sociocultural de Chile.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>La Oportunidad Estratégica para PIGEM</h4>
+                        <ul>
+                            <li><strong>Innovación en Simulación Híbrida:</strong> Combina el comportamiento de agentes (personas) con las restricciones del sistema (infraestructura).</li>
+                             <li><strong>Integración Multiamenaza Nativa:</strong> Diseñado desde su núcleo para analizar la interacción compleja entre múltiples amenazas.</li>
+                            <li><strong>Democratización del Acceso:</strong> Al ser de código abierto, elimina las barreras de costo y fomenta la colaboración.</li>
+                            <li><strong>Hiper-Contextualización:</strong> Una plataforma desarrollada por y para la realidad chilena, con datos y validaciones locales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <blockquote class="pull-quote" style="margin-top: 3rem;">
+                    PIGEM no compite, redefine. Su valor no está en replicar lo existente, sino en integrar lo que falta: la dinámica humana, la visión multiamenaza y la accesibilidad real.
+                </blockquote>
+
+            </div>
+        </section>
+    </main> 
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Proyecto PIGEM. Todos los derechos reservados.</p>
+            <p>Financiado por ANID | Dirigido por Pablo Antonio Jordán González | <a href="bibliografia.html">Bibliografía</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Solución - PIGEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h1>PIGEM</h1>
+                        <p>Plataforma Integrada para la Gestión de Evacuaciones Masivas</p>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="problema.html">Problema</a></li>
+                        <li><a href="soluciones-existentes.html">Análisis</a></li>
+                        <li><a href="nuestra-solucion.html" class="active">Nuestra Solución</a></li>
+                        <li><a href="metodologia.html">Metodología</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="our-solution" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestra Solución Propuesta: PIGEM</h2>
+                    <p class="section-intro">PIGEM no es un software monolítico, sino un <strong>ecosistema tecnológico modular e interoperable</strong>, diseñado para transformar la capacidad de planificación, simulación y ejecución de evacuaciones masivas. A continuación, se detallan sus componentes fundamentales.</p>
+                </div>
+                
+                <div class="solution-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-button active" data-target="tab-arquitectura">Arquitectura</button>
+                        <button class="tab-button" data-target="tab-simulacion">Simulación Híbrida</button>
+                        <button class="tab-button" data-target="tab-mcu">Integración de Datos</button>
+                        <button class="tab-button" data-target="tab-visualizacion">Visualización</button>
+                        <button class="tab-button" data-target="tab-hpc">HPC</button>
+                        <button class="tab-button" data-target="tab-validacion">Validación</button>
+                        <button class="tab-button" data-target="tab-hospitalaria">Capacidad Hospitalaria</button>
+                    </div>
+                    <div class="tab-content-container">
+                        
+                        <div class="tab-pane active" id="tab-arquitectura">
+                            <h3>Arquitectura del Sistema PIGEM</h3>
+                            <p>La filosofía de diseño se aleja de las "islas tecnológicas". PIGEM propone una arquitectura de servicios integrada, donde cada componente cumple una función específica pero se comunica a través de interfaces y estándares abiertos, garantizando la escalabilidad, mantenibilidad e interoperabilidad.</p>
+                            
+                            <div class="research-card">
+                                <div class="research-header">
+                                    <div class="research-icon">🏗️</div>
+                                    <h3 class="research-title">Marco Teórico: Arquitectura de Sistemas Distribuidos para Gestión de Riesgos</h3>
+                                </div>
+                                
+                                <button class="research-toggle">Análisis Científico de la Propuesta Arquitectónica ▼</button>
+                                <div class="research-content">
+                                    <div class="research-section">
+                                        <h4>Problema de Investigación</h4>
+                                        <p>Los sistemas actuales de gestión de emergencias en Chile operan como <span class="highlight">"silos tecnológicos independientes"</span> (SENAPRED, SHOA, SERNAGEOMIN), generando heterogeneidad semántica, sintáctica y esquemática que impide la integración efectiva de datos críticos para la toma de decisiones durante emergencias (Bizid et al., 2014). Esta fragmentación resulta en: (a) <strong>latencia operacional elevada</strong> para la consolidación de información multiamenaza, (b) <strong>inconsistencias semánticas</strong> entre fuentes de datos institucionales, y (c) <strong>ausencia de interoperabilidad</strong> para análisis integrado en tiempo real.</p>
+                                        
+                                        <div class="methodology-reference">
+                                            La investigación aborda específicamente la problemática identificada por Mazimwe et al. (2019) sobre las barreras de interoperabilidad en sistemas de gestión de desastres, particularmente en contextos de recursos tecnológicos heterogéneos.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Hipótesis de Arquitectura Distribuida</h4>
+                                        <p><strong>H₁-ARQ:</strong> La implementación de una arquitectura de microservicios fundamentada en <span class="highlight">Domain-Driven Design (DDD)</span> y patrones de <span class="highlight">Event Sourcing</span>, utilizando protocolos de comunicación estandarizados (OGC Web Services, RESTful APIs), mejorará significativamente la interoperabilidad entre sistemas heterogéneos de gestión de emergencias, reduciendo la latencia de integración de datos en al menos un 60% comparado con arquitecturas monolíticas actuales, mientras mantiene la disponibilidad operacional >99.9% requerida para sistemas críticos.</p>
+                                        
+                                        <p><strong>H₁-INT:</strong> La adopción de estándares semánticos (ISO 19115/19139) en la capa de abstracción de datos resolverá la heterogeneidad institucional, permitiendo la integración automática de fuentes de datos dispares con una precisión de mapeo semántico superior al 85%.</p>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Preguntas de Investigación</h4>
+                                        <p><strong>RQ₁:</strong> ¿En qué medida una arquitectura distribuida basada en microserviios puede reducir el acoplamiento tecnológico entre sistemas institucionales de gestión de emergencias sin comprometer la latencia operacional requerida para toma de decisiones críticas (≤5 segundos)?</p>
+                                        
+                                        <p><strong>RQ₂:</strong> ¿Cómo afecta la implementación de una capa de abstracción semántica (Metamodelo Cartográfico Unificado) a la calidad y consistencia de la integración automatizada de datos geoespaciales heterogéneos de múltiples fuentes institucionales?</p>
+                                        
+                                        <p><strong>RQ₃:</strong> ¿Cuáles son los patrones arquitectónicos óptimos para garantizar la elasticidad del sistema (scaling horizontal automático) ante cargas variables durante crisis, manteniendo la coherencia transaccional y la disponibilidad de servicio?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mermaid">
+graph TD
+    subgraph "ECOSISTEMA PIGEM"
+        subgraph "CAPA DE PRESENTACIÓN"
+            direction LR
+            Usuarios --> Interfaces
+            Interfaces --> Aplicaciones
+            
+            Usuarios("
+                **USUARIOS**<br/>
+                • Autoridades<br/>
+                • Técnicos<br/>
+                • Ciudadanos<br/>
+                • Investigadores
+            ")
+            
+            Interfaces("
+                **INTERFACES**<br/>
+                • Web Apps<br/>
+                • Mobile Apps<br/>
+                • APIs Públicas<br/>
+                • Widgets
+            ")
+
+            Aplicaciones("
+                **APLICACIONES**<br/>
+                • Dashboard Ejecutivo<br/>
+                • Simulador Avanzado<br/>
+                • Centro de Control<br/>
+                • Portal Ciudadano
+            ")
+        end
+
+        subgraph "CAPA DE SERVICIOS"
+            direction LR
+            Auth["**AUTENTICACIÓN**<br/>& SESIONES"]
+            Authz["**AUTORIZACIÓN**<br/>& PERFILES"]
+            Notify["**NOTIFICACIONES**<br/>& ALERTAS"]
+        end
+
+        subgraph "NÚCLEO FUNCIONAL"
+            direction LR
+            MCU["
+                **DATOS GEOESP. (MCU)**<br/>
+                • Ingesta<br/>
+                • Validación<br/>
+                • Servicios OGC
+            "]
+            Simulacion["
+                **SIMULACIÓN HÍBRIDA (ABM-DES)**<br/>
+                • Agentes<br/>
+                • Recursos<br/>
+                • HPC
+            "]
+            Viz["
+                **VISUALIZACIÓN ADAPTATIVA**<br/>
+                • Mapas interactivos<br/>
+                • Dashboards adaptativos<br/>
+                • Reportes automáticos
+            "]
+        end
+
+        subgraph "CAPA DE INFRAESTRUCTURA"
+            direction LR
+            Almacenamiento["
+                **ALMACENAMIENTO**<br/>
+                • PostgreSQL/PostGIS<br/>
+                • Redis Cache<br/>
+                • File Storage
+            "]
+            Procesamiento["
+                **PROCESAMIENTO**<br/>
+                • Kubernetes/Docker<br/>
+                • GPU Clusters<br/>
+                • Auto-scaling
+            "]
+            Comunicaciones["
+                **COMUNICACIONES**<br/>
+                • Load Balancers<br/>
+                • Message Queues<br/>
+                • WebSockets/CDN
+            "]
+        end
+    end
+
+    Aplicaciones --> Auth
+    Auth --> Simulacion
+    Simulacion --> Procesamiento
+                            </div>
+
+                            <h4>Principios Arquitectónicos Fundamentales</h4>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Principio</th>
+                                        <th>Definición</th>
+                                        <th>Implementación</th>
+                                        <th>Beneficio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Modularidad</strong></td>
+                                        <td>Separación clara de responsabilidades</td>
+                                        <td>Microservicios independientes</td>
+                                        <td>Mantenibilidad, escalabilidad</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Interoperabilidad</strong></td>
+                                        <td>Comunicación estándar entre sistemas</td>
+                                        <td>APIs REST, protocolos OGC</td>
+                                        <td>Integración con sistemas existentes</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Escalabilidad</strong></td>
+                                        <td>Capacidad de crecimiento horizontal</td>
+                                        <td>Contenedores, orquestación</td>
+                                        <td>Manejo de cargas variables</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Disponibilidad</strong></td>
+                                        <td>Operación continua 24/7</td>
+                                        <td>Redundancia, failover</td>
+                                        <td>Confiabilidad operacional</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Seguridad</strong></td>
+                                        <td>Protección de datos y accesos</td>
+                                        <td>Autenticación, cifrado, auditoría</td>
+                                        <td>Confidencialidad e integridad</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Usabilidad</strong></td>
+                                        <td>Interfaces adaptativas y accesibles</td>
+                                        <td>UX centrado en usuario</td>
+                                        <td>Adopción efectiva</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h4>Análisis del Panorama Tecnológico Nacional</h4>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Institución</th>
+                                        <th>Sistemas Actuales</th>
+                                        <th>Limitaciones</th>
+                                        <th>Integración con PIGEM</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>SENAPRED</strong></td>
+                                        <td>SAE, SIAC</td>
+                                        <td>Datos fragmentados, sin simulación</td>
+                                        <td>API para alertas, datos históricos</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SHOA</strong></td>
+                                        <td>SNAM, cartas tsunami</td>
+                                        <td>Formato propietario, acceso limitado</td>
+                                        <td>Servicios OGC, metadatos estándar</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SERNAGEOMIN</strong></td>
+                                        <td>RNVV, SIGMIN</td>
+                                        <td>Sistemas aislados, formatos diversos</td>
+                                        <td>Ingesta automática, normalización</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>INE</strong></td>
+                                        <td>Censo, cartografía</td>
+                                        <td>Actualización decenal, granularidad limitada</td>
+                                        <td>APIs de consulta, interpolación</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Municipalidades</strong></td>
+                                        <td>Sistemas locales</td>
+                                        <td>Heterogeneidad tecnológica</td>
+                                        <td>Conectores estándar, capacitación</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tab-pane" id="tab-simulacion">
+                            <h3>Modelo de Simulación Híbrido (ABM-DES)</h3>
+                            <p>La innovación central es un motor que acopla un <strong>Modelo Basado en Agentes (ABM)</strong> para simular el comportamiento humano, con una <strong>Simulación de Eventos Discretos (DES)</strong> para modelar la infraestructura urbana y sus limitaciones.</p>
+                            
+                            <div class="research-card">
+                                <div class="research-header">
+                                    <div class="research-icon">🤖</div>
+                                    <h3 class="research-title">Marco Teórico: Simulación Híbrida ABM-DES para Evacuaciones Masivas</h3>
+                                </div>
+                                
+                                <button class="research-toggle">Fundamentos Científicos del Modelo Híbrido ▼</button>
+                                <div class="research-content">
+                                    <div class="research-section">
+                                        <h4>Problema de Investigación</h4>
+                                        <p>Los modelos de simulación de evacuación actuales presentan una <span class="highlight">dicotomía metodológica fundamental</span>: los enfoques puramente basados en agentes (ABM) capturan la complejidad del comportamiento humano pero fallan en modelar restricciones operacionales realistas, mientras que los modelos de flujo (macroscópicos) representan adecuadamente la infraestructura pero simplifican excesivamente el comportamiento individual (Chen et al., 2012). Esta limitación resulta en: (a) <strong>sobrestimación de capacidades de evacuación</strong> en modelos ABM puros, (b) <strong>subestimación de variabilidad comportamental</strong> en modelos macroscópicos, y (c) <strong>incapacidad de predecir cuellos de botella emergentes</strong> resultantes de la interacción entre decisiones individuales y limitaciones del sistema.</p>
+                                        
+                                        <div class="methodology-reference">
+                                            Esta investigación aborda la brecha identificada por Sopha et al. (2021) sobre la necesidad de integrar múltiples paradigmas de simulación para capturar la complejidad multidimensional de evacuaciones masivas reales.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Hipótesis de Simulación Híbrida</h4>
+                                        <p><strong>H₂-HYB:</strong> La integración bidireccional de <span class="highlight">Modelos Basados en Agentes (ABM)</span> con <span class="highlight">Simulación de Eventos Discretos (DES)</span> mediante un protocolo de acoplamiento dinámico mejorará significativamente la precisión predictiva de simulaciones de evacuación masiva, alcanzando una correlación ≥85% con datos empíricos de evacuaciones reales, comparado con ≤65% de modelos unifocales equivalentes.</p>
+                                        
+                                        <p><strong>H₂-SFM:</strong> La implementación del <span class="highlight">Modelo de Fuerza Social (SFM)</span> optimizado mediante técnicas de spatial hashing reducirá la complejidad computacional del cálculo de interacciones agente-agente de O(n²) a O(n log n), permitiendo simulaciones en tiempo real de hasta 100,000 agentes con precisión comportamental conservada.</p>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Preguntas de Investigación</h4>
+                                        <p><strong>RQ₄:</strong> ¿Cómo afecta la frecuencia de acoplamiento entre los componentes ABM y DES (1Hz vs 10Hz vs 100Hz) a la estabilidad numérica y precisión predictiva del modelo híbrido en escenarios de evacuación con altas densidades poblacionales (>4 personas/m²)?</p>
+                                        
+                                        <p><strong>RQ₅:</strong> ¿En qué medida los parámetros del Modelo de Fuerza Social calibrados para contextos específicos (cultura chilena, topografía costera) difieren de los valores estándar europeos, y cómo impacta esta variación en la validez externa de las simulaciones?</p>
+                                        
+                                        <p><strong>RQ₆:</strong> ¿Cuál es la configuración óptima de heterogeneidad de agentes (distribución de velocidades, tiempos de reacción, comportamientos prosociales) que maximiza la representatividad del modelo respecto a datos demográficos reales de Chile (Censo 2017, CASEN 2020)?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mermaid">
+graph LR
+    subgraph "Modelo Híbrido"
+        ABM["Componente ABM (Social)<br/><br/>• Agentes heterogéneos<br/>• Decisiones autónomas<br/>• Modelo de Fuerza Social"]
+        DES["Componente DES (Operacional)<br/><br/>• Recursos limitados (calles, albergues)<br/>• Colas y Tiempos de servicio<br/>• Análisis de cuellos de botella"]
+    end
+
+    subgraph "Ciclo de Acoplamiento Dinámico"
+        Intencion["1. Intención de Movimiento<br/>(ABM)"]
+        Validacion["2. Validación de Recursos<br/>(DES)"]
+        Accion["3. Ejecución y Actualización<br/>(Sistema)"]
+    end
+
+    ABM -- Intención --> Validacion
+    DES -- Capacidad --> Validacion
+    Validacion -- Permiso/Denegación --> Accion
+    Accion -- Feedback --> ABM
+    Accion -- Actualización --> DES
+                            </div>
+                            <p>Este enfoque dual captura una imagen mucho más fiel de una evacuación real, considerando tanto las decisiones de las personas como las restricciones físicas del entorno.</p>
+                            
+                            <h4>Arquitectura de Agentes</h4>
+                            <p>Cada individuo o grupo familiar es un agente computacional autónomo con atributos y comportamientos únicos extraídos de fuentes de datos reales como el Censo y la encuesta CASEN.</p>
+                            
+                            <h4>Modelo de Fuerza Social (SFM)</h4>
+                            <p>El movimiento de cada agente se calcula utilizando los principios del Modelo de Fuerza Social, que considera el deseo del agente de alcanzar un destino, la tendencia a mantener una cierta velocidad y las fuerzas de repulsión para evitar colisiones con otros agentes y obstáculos.</p>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Componente</th>
+                                        <th>Descripción</th>
+                                        <th>Impacto en la Simulación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Fuerza Motriz</strong></td>
+                                        <td>Impulso del agente para alcanzar su destino (zona segura).</td>
+                                        <td>Define la dirección y velocidad base del movimiento.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fuerza Repulsiva (Agentes)</strong></td>
+                                        <td>Evita colisiones y superposición con otros agentes.</td>
+                                        <td>Genera comportamientos de evasión y flujos de multitudes realistas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fuerza Repulsiva (Muros)</strong></td>
+                                        <td>Evita que los agentes atraviesen paredes y obstáculos.</td>
+                                        <td>Asegura que el movimiento respete la geometría del entorno.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ruido Aleatorio</strong></td>
+                                        <td>Introduce variabilidad en el comportamiento.</td>
+                                        <td>Simula las pequeñas desviaciones e irracionalidades en las decisiones.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tab-pane" id="tab-mcu">
+                            <h3>Metamodelo Cartográfico Unificado (MCU)</h3>
+                            <p>Es la solución al problema de fragmentación de la información. El MCU actúa como un <strong>"lenguaje común"</strong> para toda la información geoespacial, permitiendo la integración automática y confiable de datos de fuentes diversas (SHOA, SERNAGEOMIN, INE, etc.), basándose en estándares internacionales como ISO 19115 y OGC.</p>
+                            
+                            <div class="research-card">
+                                <div class="research-header">
+                                    <div class="research-icon">🗺️</div>
+                                    <h3 class="research-title">Marco Teórico: Metamodelo Cartográfico para Integración Semántica</h3>
+                                </div>
+                                
+                                <button class="research-toggle">Fundamentos de Interoperabilidad Geoespacial ▼</button>
+                                <div class="research-content">
+                                    <div class="research-section">
+                                        <h4>Problema de Investigación</h4>
+                                        <p>La gestión de riesgos multiamenaza requiere la integración de datos geoespaciales heterogéneos de múltiples fuentes institucionales, cada una con <span class="highlight">esquemas conceptuales, semánticas y sintaxis propietarias</span> (Aydinoglu & Bilgin, 2015). Esta heterogeneidad se manifiesta en tres dimensiones críticas: (a) <strong>heterogeneidad sintáctica</strong> (formatos SHP, GeoTIFF, KML, JSON), (b) <strong>heterogeneidad esquemática</strong> (estructuras de atributos incompatibles), y (c) <strong>heterogeneidad semántica</strong> (conceptos equivalentes con terminologías divergentes). La ausencia de un marco unificado resulta en procesos manuales de integración que requieren 60-80% del tiempo de análisis, introducen errores sistemáticos (tasa de error ~15-20%), y impiden la automatización de workflows analíticos complejos.</p>
+                                        
+                                        <div class="methodology-reference">
+                                            La investigación aborda directamente la problemática identificada por Voski (2019) sobre la necesidad crítica de estandarización de datos de observación terrestre para análisis interoperables de riesgos ambientales.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Hipótesis de Integración Semántica</h4>
+                                        <p><strong>H₃-MCU:</strong> La implementación de un <span class="highlight">Metamodelo Cartográfico Unificado</span> fundamentado en ontologías formales (ISO 19150-2) y servicios de mediación semántica automatizada reducirá significativamente el tiempo de integración de datos geoespaciales heterogéneos de múltiples fuentes institucionales en ≥70%, mientras mejora la precisión de mapeo semántico a ≥90% comparado con procesos manuales tradicionales.</p>
+                                        
+                                        <p><strong>H₃-OGC:</strong> La adopción de patrones de servicios web conformes a especificaciones OGC (WMS 1.3.0, WFS 2.0.0, CSW 2.0.2) como capa de abstracción tecnológica garantizará interoperabilidad automática con >95% de software GIS comercial y código abierto existente, eliminando dependencias de sistemas propietarios.</p>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Preguntas de Investigación</h4>
+                                        <p><strong>RQ₇:</strong> ¿Cuál es la efectividad relativa de diferentes algoritmos de matching semántico (edit distance, similarity flooding, machine learning-based) para automatizar el mapeo entre esquemas conceptuales heterogéneos de datos geoespaciales de riesgo en el contexto chileno?</p>
+                                        
+                                        <p><strong>RQ₈:</strong> ¿En qué medida la implementación de metadatos enriquecidos conforme a ISO 19115-1:2014 mejora la calidad de los procesos de descubrimiento automático y evaluación de fitness-for-use de datasets geoespaciales para análisis de riesgos específicos?</p>
+                                        
+                                        <p><strong>RQ₉:</strong> ¿Cómo impacta la latencia de red (50ms vs 200ms vs 500ms) y el volumen de datos (1MB vs 100MB vs 1GB) en la performance operacional de servicios OGC distribuidos durante análisis de emergencia en tiempo real?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mermaid">
+flowchart TD
+    subgraph "Fuentes de Datos Heterogéneas"
+        A[SHOA]
+        B[SERNAGEOMIN]
+        C[INE]
+        D[Municipios]
+    end
+
+    subgraph "Capa de Armonización MCU"
+        E["Validación Semántica (ISO 19115)"]
+        F["Normalización Sintáctica (OGC)"]
+        G["Enriquecimiento de Metadatos"]
+    end
+    
+    subgraph "Núcleo MCU"
+        H["Base de Datos Geoespacial<br/>(PostGIS)"]
+        I["Servicios Web Estándar<br/>(WMS, WFS, WCS)"]
+    end
+
+    subgraph "Consumidores de Datos"
+        J[Simulador PIGEM]
+        K[Software GIS (QGIS)]
+        L[Visores Web]
+    end
+
+    A --> E; B --> E; C --> E; D --> E;
+    E --> F --> G --> H --> I;
+    I --> J; I --> K; I --> L;
+                            </div>
+                            <h4>Flujo de Trabajo del MCU</h4>
+                            <p>El proceso de armonización de datos sigue un pipeline riguroso para garantizar la calidad y consistencia de la información que alimenta al simulador.</p>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Etapa</th>
+                                        <th>Actividades</th>
+                                        <th>Criterios de Éxito</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>1. Ingesta</strong></td>
+                                        <td>Detección automática de formato y extracción de metadatos.</td>
+                                        <td>Formato reconocido y metadatos extraídos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2. Validación</strong></td>
+                                        <td>Verificación de esquema, validación geométrica y completitud.</td>
+                                        <td>Geometrías válidas y campos obligatorios presentes.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3. Normalización</strong></td>
+                                        <td>Reproyección a WGS84, estandarización de atributos y codificación.</td>
+                                        <td>Sistema de referencia uniforme y atributos normalizados.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>4. Enriquecimiento</strong></td>
+                                        <td>Cálculo de índices espaciales y asignación de identificadores.</td>
+                                        <td>Índices creados y metadatos ISO completos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>5. Publicación</strong></td>
+                                        <td>Creación de servicios web (WMS/WFS) y registro en catálogo.</td>
+                                        <td>Servicios disponibles y metadatos publicados.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tab-pane" id="tab-visualizacion">
+                            <h3>Interfaces de Visualización Adaptativas</h3>
+                            <p>El objetivo es transformar datos complejos de simulación en visualizaciones comprensibles y accionables. Las interfaces se adaptan a distintos perfiles de usuario (desde analistas técnicos a autoridades) y contextos de emergencia (modo planificación vs. modo crisis).</p>
+                            
+                            <div class="research-card">
+                                <div class="research-header">
+                                    <div class="research-icon">📊</div>
+                                    <h3 class="research-title">Marco Teórico: Visualización Adaptativa para Toma de Decisiones Críticas</h3>
+                                </div>
+                                
+                                <button class="research-toggle">Fundamentos Científicos de HCI para Emergencias ▼</button>
+                                <div class="research-content">
+                                    <div class="research-section">
+                                        <h4>Problema de Investigación</h4>
+                                        <p>Los sistemas actuales de visualización para gestión de emergencias presentan <span class="highlight">interfaces monolíticas y cognitivamente sobrecargadas</span> que impiden la toma de decisiones eficiente bajo estrés temporal y emocional (Zhang et al., 2019). Esta problemática se agrava por: (a) <strong>ausencia de adaptación contextual</strong> (modo planificación vs. crisis vs. recuperación), (b) <strong>falta de personalización por rol</strong> (técnico vs. autoridad vs. operador de campo), y (c) <strong>violación de principios de carga cognitiva</strong> durante situaciones de alta presión. La literatura establece que sobrecarga de información reduce la efectividad de toma de decisiones en 40-60% durante emergencias reales (Miller, 1956; Wickens, 2002).</p>
+                                        
+                                        <div class="methodology-reference">
+                                            Esta investigación se fundamenta en la Teoría de Carga Cognitiva (Sweller, 1988) y los principios de Interacción Humano-Computador para sistemas críticos establecidos por Nielsen & Landauer (1993).
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Hipótesis de Visualización Adaptativa</h4>
+                                        <p><strong>H₄-ADP:</strong> La implementación de <span class="highlight">interfaces adaptativas</span> que ajusten automáticamente la densidad informacional, jerarquía visual y modalidades de interacción según el contexto operacional (planificación/alerta/crisis) y perfil de usuario mejorará significativamente la efectividad de toma de decisiones, reduciendo el tiempo de interpretación de escenarios complejos en ≥35% y incrementando la precisión de decisiones críticas a ≥90% comparado con interfaces estáticas tradicionales.</p>
+                                        
+                                        <p><strong>H₄-STD:</strong> La adopción rigurosa de estándares de simbología internacional (ISO 22324:2015) como gramática visual unificada incrementará la comprehensión cross-cultural y reducirá errores de interpretación semántica en ≥50% durante colaboración interinstitucional e internacional.</p>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Preguntas de Investigación</h4>
+                                        <p><strong>RQ₁₀:</strong> ¿Cuál es el impacto de diferentes modalidades de interacción (mouse+teclado vs. táctil vs. voz vs. gesto) en la eficiencia de navegación e interpretación de visualizaciones geoespaciales complejas durante condiciones de estrés simulado?</p>
+                                        
+                                        <p><strong>RQ₁₁:</strong> ¿En qué medida la personalización automática de dashboards basada en modelos de carga cognitiva individual (medida via eye-tracking y EEG) mejora la performance de operadores novatos vs. expertos en tareas de análisis de riesgo temporal-críticas?</p>
+                                        
+                                        <p><strong>RQ₁₂:</strong> ¿Cómo afectan las variables de diseño visual (esquemas de color, densidad de información, frecuencia de actualización) a la fatiga cognitiva y sostenibilidad de la atención durante monitoreo prolongado de eventos de evacuación (>4 horas continuas)?</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="mermaid">
+flowchart LR
+    subgraph "Principios de Diseño"
+        UCD["Diseño Centrado en el Usuario"]
+        Cognitiva["Estandarización Cognitiva (ISO 22324)"]
+        Interactiva["Visualización Interactiva"]
+    end
+    
+    subgraph "Adaptabilidad"
+        Perfil["Adaptación por Perfil<br/>(Técnico, Autoridad, Ciudadano)"]
+        Contexto["Adaptación por Contexto<br/>(Planificación, Alerta, Crisis)"]
+    end
+
+    subgraph "Tecnología Frontend"
+        React["React"]
+        Mapbox["Mapbox GL JS"]
+        D3["D3.js"]
+    end
+
+    UCD --> Perfil
+    Perfil --> React
+                            </div>
+                             <p>Se utilizan tecnologías como React, Mapbox y D3.js para crear dashboards dinámicos, mapas interactivos y gráficos que faciliten la toma de decisiones informada.</p>
+                             <h4>Principios de Usabilidad para Emergencias</h4>
+                             <table class="data-table">
+                                 <thead>
+                                     <tr>
+                                         <th>Principio</th>
+                                         <th>Definición</th>
+                                         <th>Implementación</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <tr>
+                                         <td><strong>Visibilidad</strong></td>
+                                         <td>La información crítica debe estar siempre visible.</td>
+                                         <td>Paneles fijos, alertas persistentes, jerarquía visual clara.</td>
+                                     </tr>
+                                     <tr>
+                                         <td><strong>Simplicidad</strong></td>
+                                         <td>La interfaz debe ser mínima y sin distracciones.</td>
+                                         <td>Máximo 7±2 elementos por pantalla, enfoque en la tarea.</td>
+                                     </tr>
+                                     <tr>
+                                         <td><strong>Consistencia</strong></td>
+                                         <td>Se deben usar patrones uniformes en toda la aplicación.</td>
+                                         <td>Guía de estilos unificada y componentes reutilizables.</td>
+                                     </tr>
+                                     <tr>
+                                         <td><strong>Retroalimentación</strong></td>
+                                         <td>El sistema debe dar una respuesta inmediata a las acciones del usuario.</td>
+                                         <td>Indicadores de carga, notificaciones y confirmaciones visuales.</td>
+                                     </tr>
+                                     <tr>
+                                         <td><strong>Tolerancia a Errores</strong></td>
+                                         <td>Prevenir errores y facilitar la recuperación.</td>
+                                         <td>Validación en tiempo real, opciones para deshacer y confirmaciones.</td>
+                                     </tr>
+                                 </tbody>
+                             </table>
+                        </div>
+
+                        <div class="tab-pane" id="tab-hpc">
+                            <h3>Estrategia de Paralelismo y HPC</h3>
+                            <p>Simular cientos de miles de agentes en tiempo real requiere Computación de Alto Rendimiento (HPC). Se propone una arquitectura híbrida que combina distintos tipos de procesadores para diferentes tareas, optimizando el cálculo del <strong>Modelo de Fuerza Social (SFM)</strong>, cuyo coste computacional es el principal cuello de botella.</p>
+                            
+                            <div class="research-card">
+                                <div class="research-header">
+                                    <div class="research-icon">⚡</div>
+                                    <h3 class="research-title">Marco Teórico: Paralelización Híbrida CPU-GPU para Simulación Masiva</h3>
+                                </div>
+                                
+                                <button class="research-toggle">Fundamentos de Computación de Alto Rendimiento ▼</button>
+                                <div class="research-content">
+                                    <div class="research-section">
+                                        <h4>Problema de Investigación</h4>
+                                        <p>La simulación de evacuaciones masivas con >100,000 agentes presenta un <span class="highlight">desafío computacional fundamental</span> donde el cálculo del Modelo de Fuerza Social (SFM) exhibe complejidad O(n²) debido a interacciones agente-agente que requieren evaluación de proximidad espacial global (Helbing & Molnár, 1995). En hardware convencional, esta complejidad resulta en tiempos de ejecución prohibitivos: ~45 minutos para 10,000 agentes, extrapolando a >30 horas para 100,000 agentes. Esta limitación impide el uso operacional para <span class="highlight">toma de decisiones en tiempo real</span> durante emergencias, donde ventanas temporales críticas requieren respuestas en ≤5 minutos.</p>
+                                        
+                                        <div class="methodology-reference">
+                                            La investigación aborda el problema de escalabilidad computacional identificado por Tang & Ren (2008) en simulaciones ABM masivas, específicamente para aplicaciones de gestión de emergencias en tiempo real.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Hipótesis de Paralelización Híbrida</h4>
+                                        <p><strong>H₅-GPU:</strong> La implementación de algoritmos de <span class="highlight">spatial hashing paralelo en arquitecturas CUDA</span> reducirá la complejidad computacional del SFM de O(n²) a O(n log n) mediante particionamiento espacial adaptativo, alcanzando speedups de ≥40x para simulaciones con >50,000 agentes comparado con implementaciones secuenciales optimizadas en CPU.</p>
+                                        
+                                        <p><strong>H₅-HYB:</strong> La distribución inteligente de cargas computacionales entre <span class="highlight">clusters CPU (lógica de agentes) y GPU (cálculos SFM)</span> mediante técnicas de load balancing dinámico optimizará la utilización de recursos heterogéneos, alcanzando eficiencia computacional >80% y permitiendo simulaciones de 100,000 agentes en ≤10 minutos.</p>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Preguntas de Investigación</h4>
+                                        <p><strong>RQ₁₃:</strong> ¿Cuál es la configuración óptima de memory hierarchy (shared memory, texture memory, global memory) en arquitecturas CUDA para maximizar el throughput de cálculos SFM considerando diferentes densidades de agentes y patrones de movimiento?</p>
+                                        
+                                        <p><strong>RQ₁₄:</strong> ¿Cómo afecta la granularidad de particionamiento espacial (grid cell size: 1m² vs 4m² vs 16m²) al balance entre precisión de simulación y eficiencia computacional en escenarios de alta densidad poblacional (>6 personas/m²)?</p>
+                                        
+                                        <p><strong>RQ₁₅:</strong> ¿Cuáles son las estrategias de sincronización más eficientes (lock-free algorithms, atomic operations, message passing) para mantener coherencia de estado entre procesos CPU/GPU en arquitecturas híbridas durante simulaciones distribuidas?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mermaid">
+graph TD
+    subgraph "Arquitectura HPC Híbrida"
+        CPU["Cluster CPU (OpenMP/MPI)<br/><br/>- Lógica compleja de agentes<br/>- Toma de decisiones<br/>- Cálculo de rutas (Pathfinding)"]
+        GPU["Cluster GPU (CUDA)<br/><br/>- Cálculo masivo del SFM<br/>- Detección de colisiones<br/>- Renderizado de visualizaciones"]
+    end
+
+    subgraph "Optimización Algorítmica"
+        Opt["Técnicas como 'Spatial Hashing'<br/>Reducen la complejidad del SFM<br/>de O(n²) a O(n log n)"]
+    end
+
+    CPU -- Lógica --> Opt
+    GPU -- Cálculo Paralelo --> Opt
+                            </div>
+                            <p>Esta estrategia permite a PIGEM ejecutar simulaciones a gran escala en tiempos razonables, haciendo factible su uso en la planificación y gestión de emergencias reales.</p>
+                            <h4>Distribución de Carga Computacional</h4>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Operación</th>
+                                        <th>Hardware</th>
+                                        <th>Justificación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Cálculo del Modelo de Fuerza Social (SFM)</strong></td>
+                                        <td>GPU (CUDA)</td>
+                                        <td>Ideal para operaciones matemáticas masivamente paralelas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lógica y Decisiones de Agentes</strong></td>
+                                        <td>CPU (OpenMP)</td>
+                                        <td>Mejor para lógica compleja con múltiples ramificaciones y condiciones.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Gestión de Eventos Discretos (DES)</strong></td>
+                                        <td>CPU (Single-thread)</td>
+                                        <td>Requiere sincronización de eventos que es inherentemente secuencial.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Visualización en Tiempo Real</strong></td>
+                                        <td>GPU (WebGL)</td>
+                                        <td>Renderizado de miles de objetos de forma fluida en el navegador.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tab-pane" id="tab-validacion">
+                            <h3>Marco de Validación (FMVSE)</h3>
+                            <p>El **Framework for Mass Evacuation Simulation Validation (FMVSE)** es el componente metodológico que garantiza la credibilidad científica y la confiabilidad operacional de PIGEM. La validación es un proceso multidimensional y riguroso.</p>
+                            
+                            <div class="research-card">
+                                <div class="research-header">
+                                    <div class="research-icon">🔬</div>
+                                    <h3 class="research-title">Marco Teórico: Validación Científica de Simulaciones de Evacuación Masiva</h3>
+                                </div>
+                                
+                                <button class="research-toggle">Fundamentos Metodológicos de Validación ▼</button>
+                                <div class="research-content">
+                                    <div class="research-section">
+                                        <h4>Problema de Investigación</h4>
+                                        <p>La validación de modelos de simulación de evacuaciones presenta <span class="highlight">desafíos epistemológicos fundamentales</span> debido a la imposibilidad ética de generar datos de evacuaciones masivas reales con fines experimentales, la alta variabilidad de comportamiento humano bajo estrés, y la ausencia de frameworks estandarizados para certificación científica de herramientas de simulación (Sargent, 2013). Esta problemática resulta en: (a) <strong>validación ad-hoc y subjetiva</strong> sin criterios reproducibles, (b) <strong>baja confianza</strong> de stakeholders en predicciones de modelos, y (c) <strong>ausencia de certificación</strong> para uso operacional en contextos críticos reales. La literatura establece que >70% de modelos de evacuación carecen de validación empírica rigurosa (Kuligowski et al., 2010).</p>
+                                        
+                                        <div class="methodology-reference">
+                                            Esta investigación se fundamenta en la taxonomía de validación de Sargent (2013) y los estándares de verificación y validación para modelos de simulación establecidos por IEEE Standard 1516.
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Hipótesis de Validación Multidimensional</h4>
+                                        <p><strong>H₆-VAL:</strong> La implementación de un <span class="highlight">framework de validación multidimensional</span> que integre validación conceptual (revisión por expertos), de datos (calidad estadística), computacional (verificación de código), operacional (utilidad práctica) y predictiva (comparación histórica) mejorará significativamente la credibilidad científica y confianza operacional de modelos de simulación de evacuación, alcanzando niveles de confianza ≥95% entre stakeholders y precisión predictiva ≥85% en eventos de validación cruzada.</p>
+                                        
+                                        <p><strong>H₆-HIS:</strong> La validación retrospectiva con <span class="highlight">datos históricos de evacuaciones reales chilenas</span> (Iquique 2014, Illapel 2015) mediante técnicas de pattern matching y análisis de desviación proporcionará calibración empírica robusta, reduciendo el error predictivo medio absoluto a ≤15% para variables críticas (tiempo total de evacuación, utilización de rutas).</p>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Preguntas de Investigación</h4>
+                                        <p><strong>RQ₁₆:</strong> ¿Cuáles son las métricas de validación más sensibles y específicas para evaluar la fidelidad de modelos de evacuación en diferentes escalas espaciales (edificio vs. barrio vs. ciudad) y temporales (minutos vs. horas)?</p>
+                                        
+                                        <p><strong>RQ₁₇:</strong> ¿En qué medida los datos de teléfonos móviles (Call Detail Records, GPS tracking) pueden proporcionar ground truth suficientemente preciso para validación de patrones de movilidad durante evacuaciones masivas, considerando aspectos de privacidad y representatividad muestral?</p>
+                                        
+                                        <p><strong>RQ₁₈:</strong> ¿Cómo varía la validez predictiva de modelos de evacuación entre diferentes tipos de amenaza (tsunami vs. incendio vs. sismo) y contextos socioculturales (urbano vs. rural, diferentes niveles socioeconómicos) en el contexto chileno?</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="mermaid">
+graph BT
+    subgraph "Dimensiones de la Validación"
+        Conceptual["Validación Conceptual<br/>(Revisión por expertos)"]
+        Datos["Validación de Datos<br/>(Calidad y representatividad)"]
+        Computacional["Validación Computacional<br/>(Correctitud del código)"]
+        Operacional["Validación Operacional<br/>(Utilidad en simulacros)"]
+        Predictiva["Validación Predictiva<br/>(Comparación con eventos históricos)"]
+    end
+
+    Resultado["Resultados Confiables y Válidos"]
+
+    Conceptual & Datos & Computacional & Operacional & Predictiva --> Resultado
+                            </div>
+                             <p>Este proceso asegura que las predicciones de PIGEM no solo son computacionalmente correctas, sino también científicamente válidas y operacionalmente útiles para la toma de decisiones críticas.</p>
+                             <h4>Casos de Estudio para Validación</h4>
+                             <p>La validación se realiza utilizando datos de eventos históricos y simulacros ocurridos en Chile, lo que permite contrastar los resultados de la simulación con el comportamiento observado en la realidad.</p>
+                             <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Caso de Estudio</th>
+                                        <th>Tipo de Amenaza</th>
+                                        <th>Datos de Referencia para Validación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Tsunami de Iquique (2014)</strong></td>
+                                        <td>Tsunami</td>
+                                        <td>Videos de evacuación, testimonios y datos GPS de telefonía móvil.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Sismo de Illapel (2015)</strong></td>
+                                        <td>Sismo + Tsunami</td>
+                                        <td>Datos de redes sociales, registros de rutas utilizadas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Incendio de Valparaíso (2014)</strong></td>
+                                        <td>Incendio Urbano-Forestal</td>
+                                        <td>Registros de bomberos y zonas evacuadas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Simulacro Nacional (Anual)</strong></td>
+                                        <td>Multi-amenaza</td>
+                                        <td>Datos oficiales de participación y tiempos de evacuación.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tab-pane" id="tab-hospitalaria">
+                            <h3>Módulo de Simulación de Capacidad Hospitalaria (SCH-RME)</h3>
+                            <p>Más allá de la evacuación, PIGEM se extiende a la gestión de las consecuencias. El módulo SCH-RME es un componente crítico que simula la respuesta de la red sanitaria ante un flujo masivo de heridos, permitiendo una gestión proactiva de los recursos médicos.</p>
+                            
+                            <div class="research-card">
+                                <div class="research-header">
+                                    <div class="research-icon">🏥</div>
+                                    <h3 class="research-title">Marco Teórico: Simulación de Eventos Discretos para Redes Sanitarias</h3>
+                                </div>
+                                
+                                <button class="research-toggle">Fundamentos de Optimización de Recursos Médicos ▼</button>
+                                <div class="research-content">
+                                    <div class="research-section">
+                                        <h4>Problema de Investigación</h4>
+                                        <p>Durante un desastre masivo, los sistemas de salud enfrentan un <span class="highlight">colapso por saturación</span>. La asignación de pacientes se realiza de forma reactiva y a menudo ineficiente, sin una visión global de la capacidad disponible en la red sanitaria regional. Esto conduce a: (a) <strong>saturación de hospitales cercanos</strong> a la zona cero mientras otros permanecen subutilizados, (b) <strong>retrasos críticos</strong> en la atención de pacientes graves, y (c) un <strong>incremento en la mortalidad evitable</strong> por falta de optimización en el triaje y transporte.</p>
+                                    </div>
+                                    
+                                    <div class="research-section">
+                                        <h4>Hipótesis de Simulación Sanitaria</h4>
+                                        <p><strong>H₇-HOS:</strong> La implementación de un modelo de <span class="highlight">Simulación de Eventos Discretos (DES)</span> que modele la red sanitaria (capacidad de camas, personal, quirófanos) y se integre en tiempo real con la demanda de heridos generada por PIGEM, permitirá optimizar el balanceo de carga de pacientes y reducir la mortalidad evitable en al menos un 25% en escenarios de víctimas masivas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mermaid">
+graph TD
+    subgraph "Entradas del Simulador PIGEM"
+        A["Demanda de Heridos<br/>(Número, Gravedad, Ubicación)"]
+    end
+
+    subgraph "Modelo de Red Sanitaria (DES)"
+        B["Hospitales<br/>(Camas UCI/UTI, Quirófanos)"]
+        C["Personal Médico<br/>(Disponibilidad)"]
+        D["Ambulancias y Transporte<br/>(Capacidad y Tiempos)"]
+    end
+    
+    subgraph "Proceso de Simulación y Optimización"
+        E["1. Asignación Inicial de Pacientes"]
+        F["2. Simulación de Flujos y Tiempos de Espera"]
+        G["3. Algoritmo de Balanceo de Carga"]
+        H["4. Reasignación Optimizada"]
+    end
+
+    subgraph "Resultados para Toma de Decisiones"
+        I["Mapa de Saturación Hospitalaria"]
+        J["Rutas Óptimas de Traslado"]
+        K["Predicción de Mortalidad Evitable"]
+    end
+
+    A --> E;
+    B & C & D --> F;
+    E --> F;
+    F --> G;
+    G --> H;
+    H --> I & J & K;
+                            </div>
+                            <h4>Flujo de Trabajo del Módulo SCH-RME</h4>
+                            <p>El módulo opera como un sistema de soporte a la decisión para los gestores de la emergencia sanitaria.</p>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Etapa</th>
+                                        <th>Actividades</th>
+                                        <th>Resultado Esperado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>1. Carga de Escenario</strong></td>
+                                        <td>PIGEM envía la estimación de heridos y su ubicación al módulo SCH-RME.</td>
+                                        <td>Demanda de atención médica cuantificada.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2. Modelado de Capacidad</strong></td>
+                                        <td>Se carga el estado actual de la red sanitaria (camas, personal, recursos).</td>
+                                        <td>Oferta de recursos médicos disponible.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>3. Ejecución de Simulación</strong></td>
+                                        <td>El motor DES simula el flujo de pacientes, las colas y los tiempos de espera en cada hospital.</td>
+                                        <td>Identificación de cuellos de botella y hospitales críticos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>4. Optimización</strong></td>
+                                        <td>Un algoritmo de optimización sugiere rutas y destinos alternativos para balancear la carga.</td>
+                                        <td>Plan de derivación de pacientes optimizado.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>5. Visualización</strong></td>
+                                        <td>Se presenta un dashboard con el estado de la red, alertas de saturación y rutas recomendadas.</td>
+                                        <td>Soporte a la decisión para el gestor de la emergencia.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> 
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Proyecto PIGEM. Todos los derechos reservados.</p>
+            <p>Financiado por ANID | Dirigido por Pablo Antonio Jordán González | <a href="bibliografia.html">Bibliografía</a></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1288,12 +1288,11 @@ El equipo de investigación propuesto se estructura en base a un modelo multidis
 
 | **Nombre / RUT** | **Entidad** | **Cargo en el Proyecto** | **Funciones y Capacidades Críticas** | **Dedicación HH/mes** | **$/HH** | **Actividades Específicas** |
 |------------------|-------------|---------------------------|--------------------------------------|----------------------|----------|------------------------------|
-| **Dr. Pablo A. Jordán González** / 12.345.678-9 | USACH - CITIAPS | **Director** | Liderazgo científico en simulación de evacuaciones y sistemas geoespaciales. 15 años experiencia en modelado ABM, gestión de proyectos I+D+i, transferencia tecnológica a sector público. PhD Ciencias de la Ingeniería mención Informática. | 120 | $35,000 | Coordinación general, diseño arquitectura sistema, supervisión desarrollo motor simulación, gestión entidades asociadas |
-| **Dra. María Fernanda Silva** / 98.765.432-1 | USACH - CITIAPS | **Directora Alterna** | Especialista en interfaces humano-computador y visualización de datos geoespaciales. 12 años experiencia en UX/UI para sistemas críticos, evaluación usabilidad. PhD Computer Science. | 100 | $32,000 | Diseño interfaces adaptativas, estudios usabilidad, validación experiencia usuario, coordinación transferencia |
-| **Dr. Carlos Martínez López** / 15.678.234-5 | USACH - DIINF | **Investigador Senior** | Experto en algoritmos paralelos y optimización computacional. 10 años experiencia en HPC, desarrollo sistemas distribuidos. PhD Ingeniería Informática. | 80 | $30,000 | Desarrollo algoritmos ABM-DES, optimización procesamiento paralelo, arquitectura software |
-| **Dra. Elena Rodríguez Vega** / 18.234.567-8 | USACH - DIGEO | **Investigadora Senior** | Especialista en sistemas de información geográfica y gestión de riesgos. 8 años experiencia en aplicaciones SIG para emergencias. PhD Ingeniería Geográfica. | 80 | $28,000 | Diseño metamodelo cartográfico, integración datos geoespaciales, validación casos estudio |
-| **Mg. Roberto Fernández** / 19.876.543-2 | USACH - CITIAPS | **Investigador** | Especialista en ciencias del comportamiento aplicadas a emergencias. 6 años experiencia en modelos de evacuación. Magíster Psicología Social. | 60 | $22,000 | Modelado comportamiento humano, calibración parámetros sociales, validación empírica |
-| **Ing. Andrea González** / 17.345.678-9 | USACH - CITIAPS | **Desarrolladora Senior** | Experta en desarrollo full-stack y tecnologías web. 5 años experiencia en aplicaciones geoespaciales. Ingeniería Civil Informática. | 120 | $18,000 | Implementación interfaces web, desarrollo APIs, integración sistemas |
+| **Claudio Alvarez** / 11.111.111-1 | USACH - CITIAPS | **Director** | Liderazgo científico en simulación de evacuaciones y sistemas geoespaciales. 15 años experiencia en modelado ABM, gestión de proyectos I+D+i, transferencia tecnológica a sector público. PhD Ciencias de la Ingeniería mención Informática. | 120 | $35,000 | Coordinación general, diseño arquitectura sistema, supervisión desarrollo motor simulación, gestión entidades asociadas |
+| **Dr. Pablo A. Jordán González** / 12.345.678-9 | USACH - CITIAPS | **Director Alterno** | Especialista en interfaces humano-computador y visualización de datos geoespaciales. 12 años experiencia en UX/UI para sistemas críticos, evaluación usabilidad. PhD Computer Science. | 100 | $32,000 | Diseño interfaces adaptativas, estudios usabilidad, validación experiencia usuario, coordinación transferencia |
+| **Camila Llamirez** / 22.222.222-2 | USACH - DIINF | **Investigadora Senior** | Experto en algoritmos paralelos y optimización computacional. 10 años experiencia en HPC, desarrollo sistemas distribuidos. PhD Ingeniería Informática. | 80 | $30,000 | Desarrollo algoritmos ABM-DES, optimización procesamiento paralelo, arquitectura software |
+| **Matias Calderón** / 33.333.333-3 | USACH - DIGEO | **Investigador Senior** | Especialista en sistemas de información geográfica y gestión de riesgos. 8 años experiencia en aplicaciones SIG para emergencias. PhD Ingeniería Geográfica. | 80 | $28,000 | Diseño metamodelo cartográfico, integración datos geoespaciales, validación casos estudio |
+| **Javier Gómez** / 44.444.444-4 | USACH - CITIAPS | **Investigador** | Especialista en ciencias del comportamiento aplicadas a emergencias. 6 años experiencia en modelos de evacuación. Magíster Psicología Social. | 60 | $22,000 | Modelado comportamiento humano, calibración parámetros sociales, validación empírica |
 
 **Apoyo Administrativo y de Gestión:**
 
@@ -1487,15 +1486,15 @@ Las responsabilidades de alto impacto se distribuyen equitativamente:
 
 | **Investigador/a** | **2025** | **2026** | **2027** | **2028** |
 |--------------------|----------|----------|----------|----------|
-| **Dr. Pablo A. Jordán González** | 45 HH/mes | 40 HH/mes | 35 HH/mes | 30 HH/mes |
+| **Claudio Alvarez** | 45 HH/mes | 40 HH/mes | 35 HH/mes | 30 HH/mes |
 | (Proyectos: FONDECYT 1220890, Consultoría SUBDERE) | | | | |
-| **Dra. María Fernanda Silva** | 35 HH/mes | 30 HH/mes | 25 HH/mes | 20 HH/mes |
+| **Dr. Pablo A. Jordán González** | 35 HH/mes | 30 HH/mes | 25 HH/mes | 20 HH/mes |
 | (Proyectos: FONDEF IDeA ID23I10150, Proyecto UE Horizon) | | | | |
-| **Dr. Carlos Martínez López** | 40 HH/mes | 35 HH/mes | 30 HH/mes | 25 HH/mes |
+| **Camila Llamirez** | 40 HH/mes | 35 HH/mes | 30 HH/mes | 25 HH/mes |
 | (Proyectos: CORFO Desarrollo HPC, ANID Anillo ACT210005) | | | | |
-| **Dra. Elena Rodríguez Vega** | 30 HH/mes | 25 HH/mes | 20 HH/mes | 15 HH/mes |
+| **Matias Calderón** | 30 HH/mes | 25 HH/mes | 20 HH/mes | 15 HH/mes |
 | (Proyectos: FIC-R Los Lagos, Consultoría SERNAGEOMIN) | | | | |
-| **Mg. Roberto Fernández** | 20 HH/mes | 15 HH/mes | 15 HH/mes | 10 HH/mes |
+| **Javier Gómez** | 20 HH/mes | 15 HH/mes | 15 HH/mes | 10 HH/mes |
 | (Proyecto: Tesis Doctoral, Consultoría MINSAL) | | | | |
 
 **Nota**: Las dedicaciones declaradas incluyen todos los compromisos profesionales de los investigadores, garantizando disponibilidad suficiente para el desarrollo exitoso del proyecto propuesto.
