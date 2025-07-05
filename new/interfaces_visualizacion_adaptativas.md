@@ -30,6 +30,62 @@ El resultado de una simulación de evacuación masiva es un conjunto de datos mu
 
 Las visualizaciones estáticas o de "talla única" son insuficientes. Un analista técnico necesita explorar los datos en profundidad, mientras que una autoridad municipal necesita una conclusión clara e inmediata. Las Interfaces de Visualización Adaptativas de PIGEM están diseñadas para cerrar esta brecha.
 
+## 1.3 Fundamentación Científica de las Interfaces Adaptativas
+
+### 1.3.1 Descripción del Problema de Visualización
+
+El diseño de interfaces de usuario para sistemas de gestión de emergencias enfrenta un desafío científico multidisciplinario que radica en la tensión fundamental entre la complejidad informacional inherente a los sistemas de evacuación masiva y las limitaciones cognitivas de los usuarios humanos operando bajo condiciones de estrés temporal y emocional extremo. Esta problemática se manifiesta en múltiples dimensiones que requieren aproximaciones teóricas y metodológicas específicas.
+
+**Dimensión Cognitiva:** Los procesos de toma de decisiones durante emergencias operan bajo restricciones cognitivas severas descritas por la teoría de carga cognitiva (Sweller, 1988). La capacidad de procesamiento de información humana se ve reducida significativamente bajo estrés, limitando la memoria de trabajo a 3-4 elementos simultáneos en lugar de los 7±2 típicos. Esta reducción compromete la capacidad de interpretar visualizaciones complejas cuando más se necesita claridad informacional.
+
+**Dimensión Temporal:** Las decisiones en gestión de emergencias operan bajo presión temporal extrema, donde la latencia entre presentación de información y comprensión puede determinar la efectividad de la respuesta. Los modelos clásicos de interacción humano-computadora (Card et al., 1983) no consideran adecuadamente estos contextos de alta urgencia temporal, donde la usabilidad tradicional resulta insuficiente.
+
+**Dimensión Heterogeneidad de Usuarios:** Los sistemas de gestión de emergencias deben servir simultáneamente a usuarios con niveles de expertise, objetivos operacionales y contextos de uso radicalmente diferentes. La teoría clásica de diseño centrado en el usuario asume homogeneidad relativa de perfiles, una suposición que se invalida en contextos multiactor como la gestión de desastres.
+
+**Dimensión Multimodalidad Informacional:** Los datos de evacuación masiva exhiben características multidimensionales (espaciales, temporales, categoriales, cuantitativas) que requieren representaciones visuales heterogéneas coordinadas. Las teorías tradicionales de visualización de información (Bertin, 1983; Tufte, 2001) no proporcionan frameworks sistemáticos para la integración coherente de múltiples modalidades bajo restricciones cognitivas y temporales extremas.
+
+### 1.3.2 Hipótesis de Investigación en Interfaces Adaptativas
+
+**Hipótesis Principal:** La implementación de interfaces de visualización adaptativas que se ajusten dinámicamente al perfil de usuario, contexto operacional y nivel de urgencia de la emergencia, basándose en principios de teoría de carga cognitiva y diseño centrado en tareas críticas, mejorará significativamente la eficiencia de toma de decisiones (reducción >40% en tiempo de interpretación), precisión de decisiones (incremento >25% en decisiones correctas) y satisfacción de usuarios (SUS >80) comparado con interfaces estáticas tradicionales.
+
+**Hipótesis Secundarias:**
+
+1. **Hipótesis de Adaptación Contextual:** La personalización automática de la interfaz basada en perfil de usuario y contexto operacional reducirá la carga cognitiva intrínseca (medida por tiempo de búsqueda visual y errores de interpretación) en >50% comparado con interfaces genéricas.
+
+2. **Hipótesis de Urgencia Temporal:** La adaptación de la interfaz al nivel de urgencia de la emergencia (modo planificación vs. modo crisis) optimizará el balance entre cantidad de información presentada y velocidad de procesamiento, mejorando el tiempo de respuesta en >30% en contextos de alta urgencia.
+
+3. **Hipótesis de Estándares Cognitivos:** La aplicación sistemática de estándares de simbología internacional (ISO 22324, ISO 3864) y principios de consistencia visual reducirá el tiempo de aprendizaje de la interfaz en >60% y mejorará la transferencia de conocimiento entre contextos operacionales.
+
+4. **Hipótesis de Retroalimentación Adaptativa:** Los mecanismos de retroalimentación inteligente que se ajusten al nivel de expertise del usuario proporcionarán orientación contextual que mejore la efectividad de tareas complejas en >35% sin incrementar la carga cognitiva.
+
+### 1.3.3 Pregunta de Investigación en Interfaces Adaptativas
+
+**Pregunta Principal:** ¿Cómo deben diseñarse las interfaces de visualización adaptativas que optimicen la presentación de información compleja de evacuaciones masivas para diferentes perfiles de usuario operando bajo restricciones temporales y cognitivas variables, garantizando máxima eficiencia de toma de decisiones mientras mantienen la integridad informacional?
+
+**Preguntas Secundarias:**
+
+1. **Adaptación de Complejidad:** ¿Qué algoritmos de simplificación y agregación de información son más efectivos para adaptar la complejidad visual a las capacidades cognitivas disponibles bajo diferentes niveles de estrés operacional?
+
+2. **Personalización Dinámica:** ¿Cuáles son los parámetros óptimos de personalización (nivel de detalle, modalidades de presentación, densidad informacional) que maximizan la efectividad para cada perfil de usuario sin comprometer la comprensión global del sistema?
+
+3. **Consistencia vs. Adaptabilidad:** ¿Cómo puede balancearse la necesidad de consistencia visual (para reducir carga cognitiva de aprendizaje) con la adaptabilidad requerida para contextos operacionales heterogéneos?
+
+4. **Validación Empírica:** ¿Qué metodologías de evaluación son más apropiadas para validar la efectividad de interfaces adaptativas en contextos que simulen fielmente las condiciones cognitivas y temporales de emergencias reales?
+
+### 1.3.4 Metodología de Investigación en Interfaces Adaptativas
+
+La investigación en interfaces adaptativas seguirá una metodología mixta que integre:
+
+**Investigación Experimental Controlada:** Experimentos de laboratorio utilizando paradigmas de psicología cognitiva para evaluar efectos de diferentes estrategias de adaptación sobre carga cognitiva, tiempo de procesamiento y precisión de decisiones bajo condiciones controladas de estrés temporal.
+
+**Investigación Cuasi-experimental:** Estudios de campo con usuarios reales en contextos de simulacros y ejercicios de emergencia para evaluar efectividad ecológica de las interfaces adaptativas en condiciones operacionales auténticas.
+
+**Investigación de Métodos Mixtos:** Combinación de métricas cuantitativas (tiempo de tarea, precisión, satisfacción) con análisis cualitativos (entrevistas cognitivas, análisis de protocolo verbal) para comprender mecanismos subyacentes de efectividad.
+
+**Investigación Iterativa:** Desarrollo de prototipos evolutivos evaluados mediante metodologías de diseño centrado en el usuario, con ciclos iterativos de prototipado-evaluación-refinamiento basados en feedback empírico continuo.
+
+**Validación Ecológica:** Evaluación de implementaciones piloto en contextos operacionales reales con organismos de gestión de emergencias para validar transferencia de hallazgos de laboratorio a contextos de aplicación auténticos.
+
 ## 2. Principios de Diseño
 
 La construcción de las interfaces se rige por principios fundamentales del diseño centrado en el usuario y la psicología cognitiva aplicada a situaciones de emergencia:

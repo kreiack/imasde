@@ -501,29 +501,41 @@ La robustez metodológica garantizará que los resultados sean estadísticamente
 
 #### 1.6.1 Objetivo General
 
-Desarrollar y validar un sistema integrado de simulación y visualización de escenarios de riesgo multiamenaza que, mediante la combinación de modelos basados en agentes y simulación de eventos discretos, mejore significativamente la capacidad predictiva y la eficiencia en la toma de decisiones para la gestión de evacuaciones masivas en contextos urbanos costeros de Chile.
+Desarrollar, validar e implementar la **Plataforma Integral de Gestión de Evacuaciones Multiamenaza (PIGEM)** como un ecosistema tecnológico completo que integre simulación híbrida avanzada, gestión inteligente de datos geoespaciales, interfaces adaptativas y computación de alto rendimiento, para transformar la capacidad nacional de planificación, simulación y ejecución de evacuaciones masivas ante desastres naturales complejos, estableciendo un nuevo paradigma en la gestión del riesgo de desastres en Chile y la región.
 
 #### 1.6.2 Objetivos Específicos
 
-**OE1: Desarrollar un motor de simulación híbrido de alto rendimiento**
+**OE1: Desarrollar una arquitectura de sistema distribuida e interoperable**
 
-Implementar un motor computacional que integre Modelos Basados en Agentes (ABM) con Simulación de Eventos Discretos (DES), optimizado para procesamiento paralelo, capaz de simular evacuaciones masivas con más de 100,000 agentes manteniendo precisión superior al 85% comparado con datos reales de simulacros y eventos históricos.
+Diseñar e implementar una arquitectura de microservicios basada en Domain-Driven Design que integre todos los componentes de PIGEM, garantizando interoperabilidad con sistemas existentes (SENAPRED, SHOA, SERNAGEOMIN), escalabilidad horizontal para manejo de cargas variables (0-100K usuarios concurrentes), y disponibilidad operacional superior al 99.9% mediante patrones de redundancia y failover automático.
 
-**OE2: Diseñar e implementar interfaces de visualización adaptativas**
+**OE2: Implementar un Metamodelo Cartográfico Unificado (MCU) y sistema de integración de datos**
 
-Crear un sistema de visualización ágil que permita la generación automática de mapas de riesgo y escenarios de evacuación, adaptable a diferentes perfiles de usuario (técnicos, autoridades, comunidad), fundamentado en estándares internacionales de simbología (ISO 22324) y principios de diseño centrado en el usuario.
+Crear un marco semántico estandarizado conforme a ISO 19115/19139 y servicios OGC que permita la ingesta, normalización y distribución automática de datos geoespaciales heterogéneos de múltiples fuentes institucionales, incluyendo variables demográficas, de vulnerabilidad, amenazas y recursos, con capacidad de procesamiento en tiempo real y validación semántica automática.
 
-**OE3: Validar el sistema mediante estudios empíricos en contextos operacionales**
+**OE3: Desarrollar un motor de simulación híbrida ABM-DES con capacidades HPC**
 
-Realizar validaciones comprehensivas del sistema integrado en al menos dos ciudades costeras chilenas, midiendo indicadores de precisión predictiva, eficiencia computacional, usabilidad y confianza en la toma de decisiones, comparando resultados con herramientas existentes y métodos tradicionales.
+Implementar algoritmos de simulación que combinen Modelos Basados en Agentes con Simulación de Eventos Discretos, optimizados para arquitecturas híbridas CPU-GPU mediante estrategias de paralelización avanzadas, capaces de simular evacuaciones masivas de hasta 1 millón de agentes manteniendo precisión superior al 85% y tiempos de ejecución inferiores a 30 minutos para escenarios de 100,000 agentes.
 
-**OE4: Transferir y escalar la solución tecnológica a instituciones públicas**
+**OE4: Crear interfaces de visualización adaptativas y sistemas de comunicación multicanal**
 
-Diseñar e implementar una estrategia de transferencia tecnológica que permita la adopción sostenible del sistema por parte de municipalidades y SENAPRED, incluyendo capacitación, documentación técnica y protocolos de mantenimiento, asegurando la replicabilidad y escalabilidad nacional.
+Diseñar e implementar dashboards interactivos que se adapten automáticamente a diferentes perfiles de usuario (técnicos, autoridades, ciudadanos) mediante principios de teoría de carga cognitiva, integrados con sistemas de alerta temprana y comunicación multicanal (web, móvil, SMS, redes sociales) que cumplan estándares ISO 22324 y garanticen usabilidad superior a 80 puntos SUS.
 
-**OE5: Contribuir al avance del conocimiento científico-tecnológico**
+**OE5: Establecer el Marco de Validación FMVSE y protocolos de certificación**
 
-Generar conocimiento científico transferible mediante la formalización de metodologías, algoritmos y marcos conceptuales que contribuyan al estado del arte en simulación de evacuaciones multiamenaza, documentado a través de publicaciones científicas y productos de innovación tecnológica.
+Desarrollar un protocolo estandarizado para calibración, validación y certificación de sistemas de simulación de evacuación, incluyendo métricas cuantitativas reproducibles, base de datos de referencia con casos validados, y procedimientos de benchmarking que permitan certificar herramientas como "aptas para uso operacional" en contextos de emergencia real.
+
+**OE6: Validar el sistema integral mediante estudios empíricos y casos piloto**
+
+Realizar validaciones comprehensivas del ecosistema PIGEM completo en al menos dos ciudades costeras chilenas (Valparaíso y Talcahuano), midiendo indicadores de precisión predictiva (>85%), eficiencia computacional (>40% mejora vs métodos tradicionales), usabilidad (>80 puntos SUS) y confianza en toma de decisiones (>4.0/5.0), mediante comparación controlada con herramientas de referencia internacional.
+
+**OE7: Implementar estrategia de transferencia tecnológica y sostenibilidad**
+
+Diseñar y ejecutar un modelo de transferencia tecnológica escalable que incluya capacitación diferenciada por perfil de usuario, documentación técnica completa, licenciamiento open source (GPL v3.0), y establecimiento de centros regionales de soporte técnico que garanticen la adopción sostenible en al menos 50 municipalidades de alto riesgo y la expansión regional a 3 países andinos.
+
+**OE8: Generar conocimiento científico-tecnológico transferible**
+
+Contribuir al avance del estado del arte mediante la formalización de metodologías innovadoras en simulación híbrida multiamenaza, publicación de al menos 4 artículos en revistas indexadas de alto impacto, desarrollo de 2 tesis de postgrado, y establecimiento de estándares técnicos nacionales que posicionen a Chile como referente regional en tecnologías de gestión de riesgos.
 
 ### 1.7 Metodologías de Investigación y Desarrollo
 

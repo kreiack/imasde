@@ -77,6 +77,62 @@ El análisis revela que el **Social Force Model** representa el cuello de botell
 
 *Figura 1: Arquitectura HPC híbrida para PIGEM*
 
+## 1.4 Fundamentación Científica de la Estrategia HPC
+
+### 1.4.1 Descripción del Problema Computacional
+
+La simulación de evacuaciones masivas en tiempo real presenta un desafío computacional multidimensional que trasciende los límites de las arquitecturas de cómputo tradicionales. Este problema se caracteriza por la necesidad de procesar interacciones complejas entre millones de entidades heterogéneas (agentes) en espacios geográficos extensos, manteniendo coherencia temporal y precisión física, mientras se satisfacen restricciones temporales estrictas para la toma de decisiones operacionales.
+
+**Dimensión de Escalabilidad:** La complejidad computacional inherente del Social Force Model O(n²) para n agentes genera un crecimiento exponencial de la carga computacional. Para simulaciones de evacuación metropolitana (n > 1M agentes), esto resulta en >10¹² operaciones de punto flotante por segundo de simulación, excediendo la capacidad de procesadores convencionales por varios órdenes de magnitud.
+
+**Dimensión de Memoria:** El almacenamiento y acceso eficiente a estados de agentes heterogéneos requiere patrones de memoria complejos que generan problemas de localidad espacial y temporal. Con 1M agentes requiriendo ~1KB de estado cada uno, el footprint de memoria alcanza 1GB, excediendo capacidades de cache típicas y generando latencias de acceso prohibitivas para simulación en tiempo real.
+
+**Dimensión de Comunicación:** Los algoritmos de simulación híbrida ABM-DES requieren sincronización frecuente entre componentes distribuidos, generando overhead de comunicación que puede dominar el tiempo total de ejecución. La coordinación de eventos temporales distribuidos introduce dependencias causales que limitan el paralelismo efectivo.
+
+**Dimensión de Heterogeneidad:** La naturaleza híbrida CPU-GPU del sistema requiere estrategias de particionamiento de carga que consideren las características específicas de cada arquitectura. La transferencia de datos entre espacios de memoria CPU-GPU introduce latencias adicionales que pueden negar los beneficios del paralelismo masivo.
+
+### 1.4.2 Hipótesis de Investigación en HPC
+
+**Hipótesis Principal:** La implementación de una arquitectura híbrida CPU-GPU con estrategias de paralelización específicas por componente (Social Force Model en GPU con complejidad reducida O(n log n), pathfinding distribuido en CPU, coordinación DES mediante actor model) permitirá la simulación en tiempo real de evacuaciones masivas (>1M agentes) manteniendo precisión científica (error <5%) y cumpliendo restricciones temporales operacionales (latencia <30 minutos).
+
+**Hipótesis Secundarias:**
+
+1. **Hipótesis de Optimización Algorítmica:** La aplicación de técnicas de reducción de complejidad (spatial hashing, Fast Multipole Method, hierarchical pathfinding) reducirá la complejidad computacional del Social Force Model de O(n²) a O(n log n) manteniendo precisión >95% comparado con implementaciones exactas.
+
+2. **Hipótesis de Escalabilidad Paralela:** La paralelización masiva en arquitecturas GPU modernas (>10,000 cores) proporcionará speedups >100x comparado con implementaciones CPU secuenciales, manteniendo eficiencia paralela >70% hasta 32 dispositivos GPU.
+
+3. **Hipótesis de Memoria Jerárquica:** La implementación de estrategias de gestión de memoria jerárquica (cache coherente, prefetching predictivo, memory pooling) mejorará la utilización de ancho de banda de memoria en >300% comparado con accesos naive.
+
+4. **Hipótesis de Tolerancia a Fallos:** Los mecanismos de checkpoint distribuido y recuperación automática garantizarán continuidad operacional con overhead <10% y tiempo de recuperación <5 minutos ante fallos de hasta 25% de nodos de cómputo.
+
+### 1.4.3 Pregunta de Investigación en HPC
+
+**Pregunta Principal:** ¿Cómo debe diseñarse una arquitectura de computación híbrida CPU-GPU que optimice la distribución de carga computacional entre diferentes tipos de procesadores para maximizar el rendimiento de simulaciones de evacuación masiva, considerando las características específicas de cada componente algorítmico y las restricciones de memoria, comunicación y sincronización inherentes al problema?
+
+**Preguntas Secundarias:**
+
+1. **Particionamiento de Carga:** ¿Cuáles son las estrategias óptimas de particionamiento entre CPU y GPU que minimizan overhead de comunicación mientras maximizan utilización de recursos computacionales heterogéneos?
+
+2. **Optimización de Memoria:** ¿Qué técnicas de gestión de memoria jerárquica son más efectivas para mantener localidad temporal y espacial en algoritmos de simulación con patrones de acceso irregulares y dependientes de datos?
+
+3. **Sincronización Distribuida:** ¿Cómo pueden implementarse protocolos de sincronización temporal para sistemas híbridos ABM-DES que preserven corrección causal minimizando overhead de coordinación entre procesadores distribuidos?
+
+4. **Escalabilidad Arquitectónica:** ¿Cuáles son los límites fundamentales de escalabilidad de arquitecturas híbridas para simulación de evacuaciones, y qué factores (ancho de banda de memoria, latencia de red, overhead de sincronización) constituyen los cuellos de botella principales?
+
+### 1.4.4 Metodología de Investigación en HPC
+
+La investigación en computación de alto rendimiento seguirá una metodología experimental sistemática:
+
+**Análisis Teórico:** Modelado formal de complejidad computacional y comunicacional para diferentes estrategias de paralelización, incluyendo análisis de escalabilidad asintótica y caracterización de cuellos de botella fundamentales.
+
+**Implementación Experimental:** Desarrollo de prototipos de alta fidelidad que implementen diferentes estrategias de paralelización, utilizando frameworks de desarrollo GPU (CUDA, OpenCL) y bibliotecas de comunicación de alto rendimiento (MPI, NCCL).
+
+**Benchmarking Sistemático:** Evaluación empírica de rendimiento utilizando métricas estándar de HPC (speedup, eficiencia, escalabilidad) en configuraciones de hardware representativas, incluyendo análisis de sensibilidad a parámetros arquitectónicos.
+
+**Optimización Iterativa:** Aplicación de técnicas de profiling de rendimiento (NVIDIA Nsight, Intel VTune) para identificar cuellos de botella específicos y optimización dirigida mediante técnicas algorítmicas y de bajo nivel.
+
+**Validación de Escalabilidad:** Evaluación experimental de escalabilidad en configuraciones de hasta 1000 nodos de cómputo utilizando infraestructura de centros de supercómputo nacionales e internacionales.
+
 ## 2. Estrategias de Paralelización por Componente
 
 ### 2.1 Paralelización del Social Force Model

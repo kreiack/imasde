@@ -86,6 +86,56 @@ El objetivo de esta arquitectura es proporcionar una herramienta que soporte el 
 
 *Figura 1: Arquitectura de referencia del ecosistema PIGEM*
 
+## 1.4 Fundamentación Científica y Componente de Investigación
+
+### 1.4.1 Descripción del Problema Arquitectónico
+
+La gestión de desastres en Chile enfrenta una paradoja tecnológica fundamental: mientras que las instituciones nacionales poseen capacidades técnicas avanzadas individualmente, la fragmentación arquitectónica de sus sistemas impide una respuesta coordinada y eficiente ante emergencias multiamenaza. Esta problemática se manifiesta en tres dimensiones críticas:
+
+**Dimensión Técnica:** La heterogeneidad de arquitecturas de software (monolíticas vs. distribuidas), lenguajes de programación (Java, Python, C#, PHP) y paradigmas de datos (relacionales, NoSQL, archivos planos) genera una complejidad integrativa que requiere soluciones ad-hoc costosas y frágiles. La ausencia de estándares arquitectónicos comunes resulta en interfaces propietarias que impiden la interoperabilidad automática.
+
+**Dimensión Operacional:** Los sistemas actuales operan en silos funcionales, donde cada institución optimiza localmente sus procesos sin considerar las dependencias sistémicas. Esta fragmentación operacional genera latencias críticas durante emergencias, donde la coordinación entre SENAPRED, SHOA, SERNAGEOMIN y municipalidades requiere comunicación manual y propensa a errores.
+
+**Dimensión Escalabilidad:** Las arquitecturas monolíticas predominantes carecen de capacidades de escalamiento horizontal, limitando severamente la capacidad de respuesta durante eventos de alta demanda. La falta de patrones de diseño para alta disponibilidad y tolerancia a fallos compromete la continuidad operacional en momentos críticos.
+
+### 1.4.2 Hipótesis de Investigación Arquitectónica
+
+**Hipótesis Principal:** La implementación de una arquitectura de microservicios basada en principios de Domain-Driven Design (DDD), que integre estándares de interoperabilidad (OGC, ISO) con patrones de comunicación asíncronos y estrategias de escalamiento horizontal, mejorará significativamente la capacidad de respuesta, escalabilidad y mantenibilidad del sistema de gestión de evacuaciones multiamenaza, comparado con arquitecturas monolíticas tradicionales.
+
+**Hipótesis Secundarias:**
+
+1. **Hipótesis de Interoperabilidad:** La adopción de estándares abiertos (OGC, ISO 19115) en la capa de servicios reducirá en >60% el tiempo de integración con sistemas externos existentes.
+
+2. **Hipótesis de Escalabilidad:** La arquitectura de microservicios con orquestación basada en contenedores permitirá escalamiento automático que mantenga latencias <100ms bajo cargas de hasta 10,000 usuarios concurrentes.
+
+3. **Hipótesis de Mantenibilidad:** La modularización basada en dominios de negocio reducirá en >40% el tiempo de desarrollo y despliegue de nuevas funcionalidades.
+
+### 1.4.3 Pregunta de Investigación Arquitectónica
+
+**Pregunta Principal:** ¿Cómo debe diseñarse una arquitectura de software distribuida que integre efectivamente sistemas heterogéneos de gestión de desastres, garantizando interoperabilidad, escalabilidad y alta disponibilidad, mientras mantiene la complejidad operacional en niveles manejables para organizaciones con recursos técnicos limitados?
+
+**Preguntas Secundarias:**
+
+1. **Interoperabilidad:** ¿Qué patrones arquitectónicos y estándares técnicos son más efectivos para garantizar la comunicación fluida entre sistemas legacy y nuevos componentes?
+
+2. **Escalabilidad:** ¿Cuáles son las estrategias óptimas de particionamiento de datos y distribución de carga que permiten mantener performance consistente durante picos de demanda?
+
+3. **Usabilidad:** ¿Cómo puede la arquitectura del sistema facilitar interfaces adaptativas que se ajusten automáticamente a diferentes perfiles de usuario y contextos operacionales?
+
+4. **Mantenibilidad:** ¿Qué estrategias de modularización y versionado permiten la evolución continua del sistema sin interrumpir servicios críticos?
+
+### 1.4.4 Metodología de Validación Arquitectónica
+
+La validación de las hipótesis arquitectónicas se realizará mediante:
+
+**Prototipado Incremental:** Desarrollo de prototipos funcionales que implementen progresivamente cada patrón arquitectónico propuesto, permitiendo validación empírica de métricas de rendimiento, escalabilidad y mantenibilidad.
+
+**Benchmarking Comparativo:** Evaluación sistemática de la arquitectura propuesta versus arquitecturas monolíticas tradicionales, utilizando métricas objetivas como latencia, throughput, tiempo de desarrollo y costos operacionales.
+
+**Casos de Estudio Reales:** Implementación piloto en escenarios reales con municipalidades seleccionadas, permitiendo validación de usabilidad, adopción y efectividad operacional.
+
+**Análisis de Complejidad:** Evaluación de métricas de complejidad arquitectónica (coupling, cohesión, complejidad ciclomática) para validar la hipótesis de mantenibilidad.
+
 ## 2. Arquitectura Modular por Componentes
 
 PIGEM se estructura en cuatro componentes principales que funcionan de manera coordinada, cada uno implementando patrones de diseño específicos para maximizar la cohesión interna y minimizar el acoplamiento externo.

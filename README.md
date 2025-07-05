@@ -1,112 +1,210 @@
-# IMASDE - Investigación y Desarrollo en Sistemas de Evacuación
+# PIGEM - Plataforma Integral de Gestión de Evacuaciones Multiamenaza
 
-## Plataforma Integral de Gestión de Evacuaciones Multiamenaza (PIGEM)
+## 🎯 ¿Qué es este proyecto?
 
-### 📋 Descripción del Proyecto
+Este es el repositorio del proyecto PIGEM, una plataforma que estamos desarrollando para simular evacuaciones masivas en Chile. La idea es crear un sistema que combine simulación de comportamiento humano (ABM) con simulación de recursos limitados (DES) para ayudar a planificar evacuaciones reales.
 
-PIGEM es una plataforma tecnológica avanzada diseñada para la simulación, planificación y gestión de evacuaciones masivas en Chile. Utiliza técnicas de **modelado híbrido (ABM-DES)**, **computación de alto rendimiento (HPC)** y **visualización adaptativa** para proporcionar herramientas de apoyo a la toma de decisiones en situaciones de emergencia.
+### 🚨 Problema que resolvemos
 
-### 🎯 Objetivos Principales
+Los sistemas actuales de gestión de evacuaciones tienen problemas serios:
+- **Cada institución tiene su propio sistema** → No se comunican entre sí
+- **Los planes son estáticos** → No se adaptan a condiciones cambiantes
+- **Las simulaciones son muy básicas** → No manejan más de 10,000 personas
+- **Las herramientas comerciales son carísimas** → Los municipios no pueden pagarlas
 
-- **Simulación Realista**: Modelado híbrido que combina Agentes (ABM) y Eventos Discretos (DES)
-- **Tiempo Real**: Reducir tiempos de simulación de horas a minutos mediante HPC
-- **Interoperabilidad**: Integración con sistemas nacionales (SENAPRED, SHOA, INE)
-- **Validación Científica**: Marco metodológico robusto (FMVSE) para certificación
+### 💡 Nuestra solución
 
-### 📁 Estructura del Repositorio
+Estamos creando una plataforma que:
+- **Simula hasta 1 millón de personas** evacuando al mismo tiempo
+- **Combina comportamiento humano + recursos limitados** (híbrido ABM-DES)
+- **Se conecta con sistemas existentes** (SENAPRED, SHOA, etc.)
+- **Es código abierto** → Gratis para todos los municipios
+- **Funciona en tiempo real** → Resultados en menos de 30 minutos
+
+## 🔧 Qué estamos construyendo
+
+### Componentes principales:
+
+1. **Motor de simulación híbrido ABM-DES**
+   - Modela personas como agentes con comportamiento real
+   - Simula recursos limitados (buses, rutas, albergues)
+   - Optimizado para GPU/CPU paralelo
+
+2. **Sistema de integración de datos**
+   - Unifica datos de múltiples fuentes
+   - Formato estándar ISO 19115/19139
+   - APIs para conectar con sistemas existentes
+
+3. **Interfaces adaptativas**
+   - Diferentes vistas para cada tipo de usuario
+   - Mapas interactivos en tiempo real
+   - Dashboards personalizados
+
+4. **Marco de validación**
+   - Protocolo para validar que las simulaciones son correctas
+   - Comparación con datos reales
+   - Métricas de confiabilidad
+
+## 📁 Estructura del proyecto
 
 ```
 investigacionydesarrollo/
 ├── README.md                           # Este archivo
-├── Formulacion-ID25_v3.docx.md        # Formulación original del proyecto
-├── new/                               # Documentos técnicos mejorados
-│   ├── *.md                          # Versiones Markdown
-│   ├── *.docx                        # Versiones Word (generadas con pandoc)
-│   └── docx/                         # Documentos adicionales
-└── .git/                             # Control de versiones
+├── new/                               # Documentos actualizados
+│   ├── formulario2.md                 # Documento principal del proyecto
+│   ├── formulario2_descripcion.md     # Resumen ejecutivo
+│   ├── arquitectura_sistema_pigem.md  # Diseño técnico del sistema
+│   ├── modelo_simulacion_hibrida.md   # Cómo funciona el motor ABM-DES
+│   ├── integracion_datos_mcu.md       # Sistema de datos unificado
+│   ├── interfaces_visualizacion_adaptativas.md  # Diseño de interfaces
+│   ├── estrategia_paralelismo_hpc.md  # Optimización computacional
+│   ├── marco_validacion_fmvse.md      # Protocolo de validación
+│   └── docx/                          # Versiones en Word
+└── Formulacion-ID25_v3.docx.md       # Versión original (legacy)
 ```
 
-### 📚 Documentos Técnicos
+## 🛠️ Stack tecnológico
 
-| **Documento** | **Descripción** | **Contenido Clave** |
-|---------------|-----------------|---------------------|
-| **[MCU - Integración de Datos](new/integracion_datos_mcu.md)** | Metamodelo Cartográfico Unificado | Armonización datos geoespaciales, servicios OGC |
-| **[Interfaces Visualización](new/interfaces_visualizacion_adaptativas.md)** | Interfaces Adaptativas | UX/UI para emergencias, dashboards contextuales |
-| **[Simulación Híbrida](new/modelo_simulacion_hibrida.md)** | Modelo ABM-DES | Social Force Model, eventos discretos |
-| **[Arquitectura Sistema](new/arquitectura_sistema_pigem.md)** | Arquitectura PIGEM | Microservicios, patrones, seguridad |
-| **[Paralelismo HPC](new/estrategia_paralelismo_hpc.md)** | Computación Alto Rendimiento | GPU/CPU, CUDA, escalabilidad |
-| **[Marco Validación](new/marco_validacion_fmvse.md)** | Framework FMVSE | Validación científica, certificación |
+### Backend (simulación y datos)
+- **C++ + CUDA** → Simulación masiva en GPU
+- **Python + FastAPI** → APIs y servicios web
+- **PostgreSQL + PostGIS** → Base de datos geoespacial
+- **Redis** → Cache y datos en tiempo real
 
-### 🛠️ Tecnologías Principales
+### Frontend (interfaces)
+- **React 18 + TypeScript** → Interfaz web moderna
+- **Mapbox GL JS** → Mapas interactivos
+- **D3.js** → Visualizaciones de datos
+- **Material-UI** → Componentes de interfaz
 
-#### **Backend**
-- **Simulación**: C++ + CUDA (GPU), Python + SimPy (DES)
-- **Datos**: PostgreSQL + PostGIS, Redis, MongoDB
-- **APIs**: Python FastAPI, Node.js Express
-- **HPC**: OpenMP, MPI, SLURM
+### Infraestructura
+- **Docker + Kubernetes** → Contenedores y orquestación
+- **AWS/Azure** → Cloud híbrido
+- **GitHub Actions** → CI/CD automatizado
 
-#### **Frontend**
-- **Framework**: React 18+ + TypeScript
-- **Mapas**: Mapbox GL JS, Deck.gl
-- **Visualización**: D3.js, Recharts
-- **Estado**: Redux Toolkit
+## 📊 Objetivos técnicos
 
-#### **Infraestructura**
-- **Contenedores**: Docker + Kubernetes
-- **Cloud**: AWS/Azure/GCP (híbrido)
-- **Monitoreo**: Prometheus + Grafana
-- **CI/CD**: GitHub Actions
+| **Métrica** | **Objetivo** | **Estado actual** |
+|-------------|--------------|-------------------|
+| Agentes simulados | 1,000,000 | En desarrollo |
+| Tiempo de simulación | < 30 minutos | En desarrollo |
+| Precisión vs datos reales | > 85% | En validación |
+| Municipios usando | 50+ | Piloto planificado |
+| Puntaje de usabilidad | > 80/100 | En testing |
 
-### 🔬 Metodología Científica
+## 🏗️ Estado actual del proyecto
 
-#### **Validación FMVSE**
-- **Validación Conceptual**: Panel de expertos multidisciplinario
-- **Validación de Datos**: Métricas de calidad ISO 19115
-- **Validación Computacional**: Testing automatizado (>95% cobertura)
-- **Validación Operacional**: Casos de estudio chilenos reales
-- **Validación Predictiva**: Análisis de sensibilidad, incertidumbre
+### ✅ Completado
+- [x] Documentación técnica completa
+- [x] Diseño de arquitectura del sistema
+- [x] Metodología de validación (FMVSE)
+- [x] Casos de estudio identificados
+- [x] Equipo multidisciplinario formado
 
-#### **Casos de Estudio**
-- Tsunami Iquique 2014
-- Sismo Illapel 2015
-- Incendio Valparaíso 2014
-- Erupción Calbuco 2015
-- Simulacros nacionales SENAPRED
+### 🔄 En desarrollo
+- [ ] Prototipo del motor ABM-DES
+- [ ] Sistema de integración de datos
+- [ ] Interfaces de usuario básicas
+- [ ] Pruebas de rendimiento
 
-### 📊 Métricas y KPIs
+### 📋 Por hacer
+- [ ] Implementación completa del motor
+- [ ] Validación con datos reales
+- [ ] Pruebas con usuarios finales
+- [ ] Despliegue en municipalidades piloto
 
-| **Categoría** | **Métrica** | **Objetivo** |
-|---------------|-------------|--------------|
-| **Rendimiento** | Agentes simulados | >1M agentes |
-| **Velocidad** | Tiempo simulación | <30 min (ciudad 200K hab) |
-| **Precisión** | Error predicción | <15% vs datos reales |
-| **Escalabilidad** | Eficiencia paralela | >75% en cluster GPU |
-| **Usabilidad** | Score SUS | >80 puntos |
+## 🧪 Casos de estudio
 
-### 🏛️ Instituciones Colaboradoras
+Estamos validando con estos casos reales:
+- **Tsunami Iquique 2014** → Validación de modelos de tsunami
+- **Sismo Illapel 2015** → Comportamiento en sismos grandes
+- **Incendio Valparaíso 2014** → Evacuación por incendios
+- **Simulacros SENAPRED** → Datos de evacuaciones controladas
 
-- **Universidad de Santiago de Chile (USACH)** - Investigación principal
-- **SENAPRED** - Validación operacional
-- **SHOA** - Datos marítimos y tsunami
-- **INE** - Datos demográficos
-- **HealthPixel Spa** - Desarrollo tecnológico
+## 👥 Equipo
 
-### 👨‍🔬 Equipo de Investigación
+### Investigadores principales
+- **Pablo Jordán** → Director, especialista en simulación
+- **María Silva** → Interfaces y experiencia de usuario
+- **Carlos Martínez** → Algoritmos paralelos y HPC
+- **Elena Rodríguez** → Sistemas de información geográfica
 
-**Director de Proyecto:**  
-Pablo Antonio Jordán González  
-*Estudiante Doctorado Ciencias de la Ingeniería Mención Informática*  
-*Universidad de Santiago de Chile*  
-*Director de I+D HealthPixel Spa*
+### Colaboradores
+- **SENAPRED** → Validación operacional
+- **Municipalidades** → Casos de uso reales
+- **SHOA** → Datos de tsunami
+- **SERNAGEOMIN** → Datos geológicos
 
-### 📄 Licencia
+## 📈 Próximos pasos
 
-Este proyecto está bajo desarrollo académico en el marco del Doctorado en Ciencias de la Ingeniería de la Universidad de Santiago de Chile.
+### Corto plazo (3 meses)
+1. Terminar el prototipo del motor ABM-DES
+2. Implementar la integración básica de datos
+3. Crear interfaces de usuario mínimas
+4. Hacer pruebas de rendimiento iniciales
 
-### 🚀 Estado del Proyecto
+### Mediano plazo (6 meses)
+1. Validar con datos reales de Valparaíso
+2. Optimizar para procesamiento paralelo
+3. Integrar con sistemas de SENAPRED
+4. Hacer pruebas con usuarios finales
 
-- [x] **Fase 1**: Formulación y diseño conceptual
-- [x] **Fase 2**: Documentación técnica detallada
-- [ ] **Fase 3**: Implementación del prototipo
-- [ ] **Fase 4**: Validación experimental
-- [ ] **Fase 5**: Despliegue piloto
+### Largo plazo (12 meses)
+1. Desplegar en municipalidades piloto
+2. Capacitar usuarios finales
+3. Expandir a más ciudades
+4. Preparar para transferencia tecnológica
+
+## 🔗 Documentos importantes
+
+### Para entender el proyecto
+- **[Formulario2](new/formulario2.md)** → Documento completo del proyecto
+- **[Descripción](new/formulario2_descripcion.md)** → Resumen ejecutivo
+
+### Para desarrollo técnico
+- **[Arquitectura](new/arquitectura_sistema_pigem.md)** → Diseño del sistema
+- **[Simulación](new/modelo_simulacion_hibrida.md)** → Cómo funciona el motor
+- **[Paralelismo](new/estrategia_paralelismo_hpc.md)** → Optimización computacional
+
+### Para validación
+- **[Marco FMVSE](new/marco_validacion_fmvse.md)** → Protocolo de validación
+- **[Integración datos](new/integracion_datos_mcu.md)** → Sistema de datos
+
+## 🤝 Cómo colaborar
+
+### Si eres programador
+1. Revisa la [arquitectura del sistema](new/arquitectura_sistema_pigem.md)
+2. Checa el [modelo de simulación](new/modelo_simulacion_hibrida.md)
+3. Mira los issues en GitHub
+4. Haz fork y contribuye
+
+### Si eres investigador
+1. Lee el [marco de validación](new/marco_validacion_fmvse.md)
+2. Revisa los casos de estudio
+3. Propón mejoras metodológicas
+4. Ayuda con la validación empírica
+
+### Si eres usuario final
+1. Participa en las pruebas de usabilidad
+2. Da feedback sobre las interfaces
+3. Comparte casos de uso reales
+4. Ayuda con la capacitación
+
+## 📞 Contacto
+
+**Pablo Antonio Jordán González**  
+📧 pablo.jordan@usach.cl  
+🏢 Universidad de Santiago de Chile - CITIAPS  
+💼 Director de I+D HealthPixel Spa
+
+---
+
+## 💡 Resumen para nuevos colaboradores
+
+**En una frase:** Estamos creando un simulador de evacuaciones masivas que puede manejar un millón de personas y ayudar a los municipios a planificar mejor sus emergencias.
+
+**¿Por qué importa?** Chile tiene muchos desastres naturales y los sistemas actuales no sirven para planificar evacuaciones masivas reales.
+
+**¿Qué necesitamos?** Desarrolladores, investigadores, y usuarios finales que nos ayuden a construir, validar y mejorar el sistema.
+
+**¿Dónde empezar?** Lee el [documento principal](new/formulario2.md) y luego los documentos técnicos según tu área de expertise.

@@ -58,6 +58,62 @@ Como lo describen Sopha et al. (2021), la combinación de estos dos paradigmas p
 
 *Figura 1: Arquitectura conceptual del modelo híbrido ABM-DES*
 
+## 1.4 Fundamentación Científica del Modelo Híbrido
+
+### 1.4.1 Descripción del Problema de Modelado
+
+La simulación computacional de evacuaciones masivas enfrenta un desafío científico fundamental que reside en la naturaleza inherentemente multidisciplinaria y multiescala del fenómeno. Esta problemática se manifiesta en la brecha existente entre los paradigmas de modelado tradicionales, que abordan dimensiones aisladas del problema, y la necesidad de capturar la complejidad emergente resultante de la interacción dinámica entre comportamiento humano y restricciones físicas del entorno urbano.
+
+**Dimensión Conceptual:** Los modelos existentes operan bajo paradigmas incompatibles: los modelos de flujo macroscópicos asumen homogeneidad y racionalidad perfecta, mientras que los modelos microscópicos de comportamiento individual carecen de mecanismos para incorporar restricciones sistémicas. Esta dicotomía genera una brecha metodológica donde no existe un framework unificado que capture simultáneamente la autonomía individual y las limitaciones colectivas.
+
+**Dimensión Computacional:** La simulación de evacuaciones masivas (>100,000 agentes) con fidelidad comportamental requiere algoritmos que escalen computacionalmente manteniendo corrección temporal y espacial. Los enfoques tradicionales ABM puros presentan complejidad O(n²) para interacciones sociales, mientras que los modelos DES estándar no incorporan heterogeneidad individual, generando una tensión entre realismo y eficiencia computacional.
+
+**Dimensión Temporal:** Los procesos de evacuación exhiben dinámicas multiescala temporales: decisiones individuales en escalas de segundos, formación de congestiones en escalas de minutos, y evacuación completa en escalas de horas. Los paradigmas de simulación tradicionales no proporcionan mecanismos naturales para el acoplamiento coherente de estas escalas temporales heterogéneas.
+
+**Dimensión Empírica:** La validación de modelos híbridos requiere datos que capturen simultáneamente comportamiento individual (trayectorias, decisiones) y fenómenos sistémicos (congestiones, tiempos globales). Los datasets disponibles típicamente proporcionan solo una de estas perspectivas, generando un problema de validación incompleta que compromete la credibilidad científica de los modelos.
+
+### 1.4.2 Hipótesis de Investigación del Modelo Híbrido
+
+**Hipótesis Principal:** La integración formal de un Modelo Basado en Agentes (ABM) con una Simulación de Eventos Discretos (DES) mediante protocolos de acoplamiento temporal sincronizado mejorará significativamente la precisión predictiva de simulaciones de evacuación masiva (>15% comparado con enfoques unifocales), manteniendo eficiencia computacional escalable (complejidad O(n log n)), y proporcionando capacidades de análisis tanto microscópicas como macroscópicas del sistema.
+
+**Hipótesis Secundarias:**
+
+1. **Hipótesis de Fidelidad Comportamental:** La modelación explícita de heterogeneidad individual mediante agentes autónomos en el componente ABM capturará variabilidad comportamental observada en evacuaciones reales con precisión estadísticamente significativa (correlación >0.8 con datos empíricos).
+
+2. **Hipótesis de Realismo Operacional:** La incorporación de restricciones físicas y logísticas mediante el componente DES identificará cuellos de botella y limitaciones de capacidad que no son detectables por modelos de comportamiento puro, mejorando la predicción de tiempos de evacuación en >20%.
+
+3. **Hipótesis de Emergencia Sistémica:** El acoplamiento dinámico entre ABM y DES generará comportamientos emergentes a nivel sistémico (formación espontánea de colas, rutas alternativas, patrones de congestión) que corresponden a fenómenos observados en evacuaciones reales pero no reproducibles por modelos unifocales.
+
+4. **Hipótesis de Escalabilidad Computacional:** Los algoritmos de acoplamiento híbrido mantendrán complejidad computacional sublineal respecto al número de agentes mediante técnicas de particionamiento espacial y optimización de eventos discretos.
+
+### 1.4.3 Pregunta de Investigación del Modelo Híbrido
+
+**Pregunta Principal:** ¿Cómo debe estructurarse el acoplamiento formal entre un Modelo Basado en Agentes y una Simulación de Eventos Discretos para capturar simultáneamente la autonomía comportamental individual y las restricciones sistémicas colectivas en simulaciones de evacuación masiva, garantizando corrección temporal, escalabilidad computacional y validez empírica?
+
+**Preguntas Secundarias:**
+
+1. **Acoplamiento Temporal:** ¿Qué protocolos de sincronización temporal entre ABM y DES preservan la causalidad del sistema mientras mantienen eficiencia computacional en simulaciones de gran escala?
+
+2. **Resolución de Conflictos:** ¿Cuáles son los algoritmos más efectivos para resolver conflictos entre intenciones de movimiento de agentes ABM y restricciones de capacidad del sistema DES sin introducir artefactos computacionales?
+
+3. **Validación Empírica:** ¿Qué metodologías de validación son apropiadas para evaluar modelos híbridos que generan outputs tanto a nivel individual (trayectorias de agentes) como sistémico (métricas de flujo agregadas)?
+
+4. **Optimización Computacional:** ¿Cómo pueden aprovecharse las arquitecturas de computación paralela (CPU multinúcleo, GPU) para acelerar el cómputo de modelos híbridos manteniendo determinismo y reproducibilidad de resultados?
+
+### 1.4.4 Metodología de Investigación del Modelo Híbrido
+
+La investigación del modelo híbrido seguirá una aproximación experimental computacional que combine:
+
+**Desarrollo Algorítmico:** Diseño e implementación de algoritmos de acoplamiento ABM-DES con análisis formal de propiedades de corrección, convergencia y escalabilidad computacional.
+
+**Experimentación Controlada:** Evaluación sistemática de diferentes estrategias de acoplamiento mediante experimentos computacionales controlados, utilizando métricas de precisión, eficiencia y robustez.
+
+**Validación Empírica:** Comparación con datos de evacuaciones reales y simulacros utilizando métricas tanto microscópicas (errores de trayectoria individual) como macroscópicas (tiempos de evacuación agregados).
+
+**Análisis de Sensibilidad:** Evaluación sistemática de la sensibilidad del modelo a variaciones en parámetros de acoplamiento, frecuencia de sincronización, y resolución temporal/espacial.
+
+**Benchmarking Computacional:** Evaluación comparativa de rendimiento computacional versus modelos de referencia, incluyendo análisis de escalabilidad y eficiencia en arquitecturas de cómputo paralelo.
+
 ## 2. El Componente Social: Modelo Basado en Agentes (ABM)
 
 El ABM se encarga de simular la dimensión humana de la evacuación. Aquí, cada individuo o grupo familiar es representado como un **agente computacional autónomo** con características y comportamientos únicos.
