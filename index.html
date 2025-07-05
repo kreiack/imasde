@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIGEM - Plataforma Integrada para la Gestión de Evacuaciones Masivas</title>
+    <meta http-equiv="refresh" content="0; url=pigem-website/index.html">
+    <link rel="canonical" href="pigem-website/index.html">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #0D2A47, #4A7A8C);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid #F5A623;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .link {
+            display: inline-block;
+            background: #F5A623;
+            color: #0D2A47;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏛️ PIGEM</h1>
+        <p>Plataforma Integrada para la Gestión de Evacuaciones Masivas</p>
+        <div class="spinner"></div>
+        <p>Redirigiendo al sitio web...</p>
+        <a href="pigem-website/index.html" class="link">Ir al sitio web</a>
+        
+        <script>
+            // Redirección automática después de 2 segundos
+            setTimeout(function() {
+                window.location.href = 'pigem-website/index.html';
+            }, 2000);
+        </script>
+    </div>
+</body>
+</html> 
