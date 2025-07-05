@@ -900,7 +900,7 @@ La PIGEM operará mediante un flujo de trabajo integrado que combina procesamien
 
 1. **Ingesta Continua de Datos**: Recolección automática de información desde sensores ambientales, datos demográficos, condiciones meteorológicas y amenazas geológicas.
 
-2. **Análisis Predictivo**: Algoritmos de inteligencia artificial evalúan patrones y predicen escenarios de riesgo emergentes.
+2. **Análisis Predictivo**: Algoritmos de inteligencia artificial evalúan patrones y predicen escenarios de riesgo emergentes. Este enfoque se fundamenta en avances recientes en machine learning y procesamiento de lenguaje natural aplicados a contextos de emergencia, como el demostrado por Chang et al. (2024) en su investigación sobre el uso de ML y NLP para predicción de disposición clínica en departamentos de emergencia, donde lograron mejoras significativas en la precisión de triaje mediante el análisis automatizado de datos clínicos y narrativas médicas.
 
 3. **Simulación Dinámica**: Ejecución automática de simulaciones de evacuación adaptadas a condiciones actualizadas en tiempo real.
 
@@ -1250,6 +1250,7 @@ Esta estrategia integral garantiza no solo la viabilidad técnica y económica d
 
 **Bibliografía (Sección 2)**
 
+*   Chang, Y.-H., Shih, H.-M., Wu, J.-E., Huang, F.-W., Chen, W.-K., Chen, D.-M., Chung, Y.-T., & Wang, C. C. N. (2024). Using machine learning and natural language processing in triage for prediction of clinical disposition in the emergency department. *BMC Emergency Medicine, 24*(1), 57. https://doi.org/10.1186/s12873-025-01211-1
 *   Federal Emergency Management Agency [FEMA]. (2024). Hazus: FEMA's Methodology for Estimating Potential Losses from Disasters. https://www.fema.gov/flood-maps/products-tools/hazus
 *   Banco Interamericano de Desarrollo [BID]. (2023). Gestión de Riesgos de Desastres en América Latina: Inversiones y Políticas Públicas. BID Publications.
 *   United Nations Office for Disaster Risk Reduction [UNDRR]. (2023). Global Assessment Report on Disaster Risk Reduction 2023. UNDRR Publications.
