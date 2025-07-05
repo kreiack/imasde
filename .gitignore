@@ -1,0 +1,64 @@
+# Archivos del sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Archivos de backup
+*.bak
+*.backup
+*~
+
+# Archivos de configuración local
+.env
+.env.local
+.env.*.local
+
+# Carpetas de cache
+.cache/
+*.cache
+
+# Archivos de Office temporales
+~$*
+
+# Archivos de compilación
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Directorios de dependencias
+node_modules/
+venv/
+env/
+.venv/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Archivos de datos grandes (opcional)
+# *.csv
+# *.xlsx
+# *.json
+
+# Archivos de resultados de simulación (si son muy grandes)
+# results/
+# output/ 
